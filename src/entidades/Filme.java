@@ -1,16 +1,20 @@
 package entidades;
+
 public class Filme {
 	
-	private String nomeFilme, generoFilme, diretor, ator1, ator2, ator3;//instancia aqui as caracteristicas dos filmes
-	private int anoLancamento, numeroDeEstrelas=0, auxNumeroDeEstrelas=0, numeroAvaliacoes;
+	private String nomeFilme, generoFilme;//instancia aqui as caracteristicas dos filmes
+	private int _IDFilme, anoLancamento, numeroDeEstrelas=0, numeroAvaliacoes=0;
 	private float mediaNumeroDeEstrelas;
-	
-	
+	private Ator ator1, ator2, ator3;
+	private Diretor diretor;
 	
 	
 	public Filme() {
 	}
-	public Filme(String nomeFilme, String generoFilme, String diretor, int anoLancamento, String ator1, String ator2, String ator3) {
+
+	
+	public Filme(int _IDFilme, String nomeFilme, String generoFilme, Diretor diretor, int anoLancamento, Ator ator1, Ator ator2, Ator ator3) {
+		this._IDFilme=_IDFilme;
 		this.nomeFilme=nomeFilme;
 		this.generoFilme=generoFilme;
 		this.diretor=diretor;
@@ -18,10 +22,9 @@ public class Filme {
 		this.ator1=ator1;
 		this.ator2=ator2;
 		this.ator3=ator3;
-		int numeroDeEstrelas=0;
-		auxNumeroDeEstrelas+=numeroDeEstrelas;
-		numeroDeEstrelas=0;
-		//float mediaNumeroDeEstrelas = auxNumeroDeEstrelas/numeroAvaliacoes;
+		this.numeroDeEstrelas=0;
+		int numeroAvaliacoes=0;
+		float mediaNumeroDeEstrelas= numeroDeEstrelas/(float)numeroAvaliacoes;
 	}
 	
 	
@@ -29,23 +32,25 @@ public class Filme {
 	
 	
 	// métodos getters
-	
+	public int getIDFilme() {
+		return _IDFilme;
+	}
 	public String getNomeFilme() {
 		return nomeFilme;
 	}
 	public String getGeneroFilme() {
 		return generoFilme;
 	}
-	public String getDiretor() {
+	public Diretor getDiretor() {
 		return diretor;
 	}
-	public String getAtor1() {
+	public Ator getAtor1() {
 		return ator1;
 	}
-	public String getAtor2() {
+	public Ator getAtor2() {
 		return ator2;
 	}
-	public String getAtor3() {
+	public Ator getAtor3() {
 		return ator3;
 	}
 	/*public String[] getAtoresPrincipais() {
@@ -69,27 +74,25 @@ public class Filme {
 	public void setGeneroFilme(String generoFilme) {
 		this.generoFilme=generoFilme;
 	}
-	public void setDiretor(String diretor) {
+	public void setDiretor(Diretor diretor) {
 		this.diretor=diretor;
 	}
-	public void setAtor1(String ator1) {
+	public void setAtor1(Ator ator1) {
 		this.ator1=ator1;
 	}
-	public void setAtor2(String ator2) {
+	public void setAtor2(Ator ator2) {
 		this.ator2=ator2;
 	}
-	public void setAtor3(String ator3) {
+	public void setAtor3(Ator ator3) {
 		this.ator3=ator3;
 	}
 	public void setAnoLancamento(int anoLancamento) {
 		this.anoLancamento=anoLancamento;
 	}
-	public void setNumeroDeEstrelas(int numeroDeEstrelas) {
-		this.numeroDeEstrelas=numeroDeEstrelas;
+	public void adicionaEstrelas(Filme filme, int numeroDeEstrelas) {
+		filme.numeroDeEstrelas+=numeroDeEstrelas;
 	}
-	public void setMediaNumeroDeEstrelas(float mediaNumeroDeEstrelas) {
-		this.mediaNumeroDeEstrelas=mediaNumeroDeEstrelas;
-	}
+	
 	
 	
 }
