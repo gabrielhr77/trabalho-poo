@@ -12,10 +12,10 @@ import java.util.ArrayList;
 public class Main {
 
 	public static void main(String[] args) {
-		ArrayList<Filme> todosOsFilmes = new ArrayList<>();
-		ArrayList<Ator> todosOsAtores = new ArrayList<>();
-		ArrayList<Diretor> todosOsDiretores = new ArrayList<>();
-		
+//		ArrayList<Filme> todosOsFilmes = new ArrayList<>();
+//		ArrayList<Ator> todosOsAtores = new ArrayList<>();
+//		ArrayList<Diretor> todosOsDiretores = new ArrayList<>();
+		//os arrailists sao desnecessários a partir do momento que tu consegue ler o que tu quiser no arquivo, o quela vai se aberto logo no inicio do programa
 		
 		
 		
@@ -34,7 +34,7 @@ public class Main {
 		
 		Filme filme1 = new Filme(20001,"22 milhas","acao",Peter_Berg ,2021, ator1, ator2, ator3);
 		Filme filme2 = new Filme(20002,"21 milhas","terror",Peter_Berg ,2021, ator1, ator2, ator3);
-		Filme filme3 = new Filme(20003,"19 milhas","drama",Peter_Berg ,2021, ator1, ator2, ator3);
+		Filme filme3 = new Filme(20003,"Norbit","terror",Peter_Berg ,2010, ator1, ator2, ator3);
 		
 		FilmeCSV filmeCSV = new FilmeCSV(); 
 		filmeCSV.adicionaFilme(filme1);
