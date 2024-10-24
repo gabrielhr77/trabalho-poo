@@ -1,3 +1,4 @@
+ TrabalhoPOO
 package entidades;
 
 public class Filme {
@@ -11,6 +12,7 @@ public class Filme {
 	
 	public Filme() {
 	}
+
 	
 	public Filme(int _IDFilme, String nomeFilme, String generoFilme, Diretor diretor, int anoLancamento, Ator ator1, Ator ator2, Ator ator3) {
 		this._IDFilme=_IDFilme;
@@ -95,3 +97,4 @@ public class Filme {
 	
 	
 }
+ main
