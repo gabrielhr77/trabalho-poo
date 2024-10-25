@@ -12,13 +12,13 @@ import java.util.ArrayList;
 
 public class Main {
 
+	public static final String caminhoArquivoFilmes = "./dados/Filmes.csv";
+	public static final String caminhoArquivoDiretores = "./dados/Diretores.csv";
+	public static final String caminhoArquivoAtores = "./dados/Atores.csv";
+	
 	public static void main(String[] args) {
-//		ArrayList<Filme> todosOsFilmes = new ArrayList<>();
-//		ArrayList<Ator> todosOsAtores = new ArrayList<>();
-//		ArrayList<Diretor> todosOsDiretores = new ArrayList<>();
+		
 		//os arrailists sao desnecessários a partir do momento que tu consegue ler o que tu quiser no arquivo, o quela vai se aberto logo no inicio do programa
-		
-		
 		
 		Scanner scanner = new Scanner(System.in);
 		LocalDate dateAtor1 = LocalDate.of(1971,6,5);
@@ -52,6 +52,18 @@ public class Main {
 	
 	public static void show(String a) {
 		System.out.println(a);
+	}
+	public static final String retornaCaminhoArquivo(String entidadeDoArquivo) {
+		switch(entidadeDoArquivo) {
+		case "filme":
+			return caminhoArquivoFilmes;
+		case "diretor":
+			return caminhoArquivoDiretores;
+		case "ator":
+			return caminhoArquivoAtores;
+		default: 
+			return "-1";
+		}
 	}
 }
  main
