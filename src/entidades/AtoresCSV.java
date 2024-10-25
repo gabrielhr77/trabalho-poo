@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 
 public class AtoresCSV {
-	private String caminhoArquivo = "./dados/AtoresPrincipais.csv";
+	private String caminhoArquivo = "./dados/Atores.csv";
 
 	
 	
@@ -34,31 +34,11 @@ public class AtoresCSV {
 			//Fecha o escritor
 			escritor.close();
 			
-			
-			
-			
-			
-			
-			
 		
 		} catch(IOException e) {
 			e.printStackTrace();
 		}
 	}
-
-
-
-
-
-
-	private Object File(String caminhoArquivo2) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-
-
-
 
 
 }
