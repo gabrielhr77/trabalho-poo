@@ -1,3 +1,4 @@
+ TrabalhoPOO
 package entidades;
 
 import java.util.ArrayList;
@@ -59,3 +60,4 @@ public class Diretor {
 	
 
 
+main

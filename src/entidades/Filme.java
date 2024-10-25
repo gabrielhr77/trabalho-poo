@@ -1,3 +1,4 @@
+ TrabalhoPOO
 package entidades;
 
 public class Filme {
@@ -96,3 +97,4 @@ public class Filme {
 	
 	
 }
+ main
