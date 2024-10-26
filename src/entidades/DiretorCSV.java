@@ -1,4 +1,3 @@
- TrabalhoPOO
 package entidades;
 
 import java.io.BufferedReader;
@@ -84,4 +83,4 @@ public class DiretorCSV {
 
 
 }
- main
+

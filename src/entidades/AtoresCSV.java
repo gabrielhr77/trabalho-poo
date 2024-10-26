@@ -1,4 +1,3 @@
-TrabalhoPOO
 package entidades;
 
 import java.io.File;
@@ -42,7 +41,7 @@ public class AtoresCSV {
 	}
 
 
-}
+
 
 
 
@@ -58,4 +57,4 @@ public class AtoresCSV {
 
 
 }
-main
+
