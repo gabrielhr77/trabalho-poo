@@ -15,6 +15,7 @@ import java.nio.charset.StandardCharsets;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Catalogo {
 	
@@ -23,23 +24,21 @@ public class Catalogo {
 	ArrayList<Diretor> todosOsDiretores = new ArrayList<>();
 	
 	boolean flagLeitorFilmes = false;
-//	boolean flagLeitorAtores = false;
-//	boolean flagLeitorDiretores = false;
+//	boolean flagLeitorUsuarios = false;
 
 	String caminhoArquivoFilmes = Main.retornaCaminhoArquivo("filme");
-//	String caminhoArquivoAtores = Main.retornaCaminhoArquivo("ator");
-//	String caminhoArquivoDiretores = Main.retornaCaminhoArquivo("diretor");
+//	String caminhoArquivoUsuarios = Main.retornaCaminhoArquivo("usuario");
 	
 	BufferedReader leitorFilmes;// = new BufferedReader(new FileReader(caminhoArquivoFilmes));
-//	BufferedReader leitorAtores;// = new BufferedReader(new FileReader(caminhoArquivoAtores));
-//	BufferedReader leitorDiretores;// = new BufferedReader(new FileReader(caminhoArquivoDiretores));
+//	BufferedReader leitorUsuarios;// = new BufferedReader(new FileReader(caminhoArquivoUsuarios));
+
 	
 	String linha;
 	
 //	aqui vou aplicar uma "técnica" que um usuário do stack overflow recomendou, que é a LAZY LOADING,
 //	ou seja, só inicializar o leitor quando for usá-lo, não diretamente no corpo principal da classe
 	
-	public BufferedReader getLeitorFilmes() {
+	public BufferedReader getLeitorFilmesAtoresDiretores() {
 		try {
 			leitorFilmes = new BufferedReader(new FileReader(caminhoArquivoFilmes));	
 			flagLeitorFilmes = false;
@@ -48,43 +47,35 @@ public class Catalogo {
 		}
 		return leitorFilmes;
 	}
-//	public BufferedReader getLeitorAtores() {
+//	public BufferedReader getLeitorUsuarios() {
 //		try {
-//			leitorAtores = new BufferedReader(new FileReader(caminhoArquivoAtores));	
-//			flagLeitorAtores = false;
+//			leitorUsuarios = new BufferedReader(new FileReader(caminhoArquivoUsuarios));	
+//			flagLeitorUsuarios = false;
 //		} catch(IOException e) {
 //			e.printStackTrace();
 //		}
-//		return leitorAtores;
+//		return leitorUsuarios;
 //	}
-//	public BufferedReader getLeitorDiretores() {
-//		try {
-//			leitorDiretores = new BufferedReader(new FileReader(caminhoArquivoDiretores));	
-//			flagLeitorDiretores = true;
-//		} catch(IOException e) {
-//			e.printStackTrace();
-//		}
-//		return leitorDiretores;
-//	}
+
+	
 	
 	//função para fechar os leitores após o uso
 	public void fechaLeitores() throws IOException {
 		if(flagLeitorFilmes) {
 			leitorFilmes.close();
 		}
-//		if(flagLeitorAtores) {
-//			leitorAtores.close();
-//		}
-//		if(flagLeitorDiretores) {
-//			leitorDiretores.close();
+//		else if(flagLeitorUsuarios) {
+//			leitorUsuarios.close();
 //		}
 	}
 	
 	
 
 	//função que recebe o caminho do arquivo e um arraylist de tipo, como visto em aula, genérico
+	
 	public <T> void copiaDadosDoArquivo(String caminho, BufferedReader leitor, ArrayList<T> arraylist, Class<T> classe) throws IOException{
 		boolean primeiraLinha = true;
+		boolean jaExiste = false;
 		while((linha = leitor.readLine())!=null) {
 			//ignoramos o cabecalho
 			if(primeiraLinha) {
@@ -95,6 +86,7 @@ public class Catalogo {
 			String[] partesDaLinha = linha.split(";");
 			//esse ".class" vai retornar um objeto da classe correnspondente em TEMPO DE EXECUÇÃO, ou seja, a classe genérica terá seu tipo explicitado durante o programa
 			if(classe == Filme.class) {
+				flagLeitorFilmes = true;
 				DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 				LocalDate dataAtor1 = LocalDate.parse(partesDaLinha[9]);
 				LocalDate dataAtor2 = LocalDate.parse(partesDaLinha[12]);
@@ -105,15 +97,49 @@ public class Catalogo {
 				Ator ator2 = new Ator(Integer.parseInt(partesDaLinha[10]),partesDaLinha[11],dataAtor2);
 				Ator ator3 = new Ator(Integer.parseInt(partesDaLinha[13]),partesDaLinha[14],dataAtor3);
 				
+				for(int i=0;i<=todosOsAtores.size();i++) {
+					if(todosOsAtores.get(i).getIDAtor()==ator1.getIDAtor()) {
+						jaExiste=true;
+					}
+				}
+				if(!jaExiste) {
+					todosOsAtores.add(ator1);
+				}
+				jaExiste=false;
+				
+				
 				Diretor diretor = new Diretor(Integer.parseInt(partesDaLinha[4]),partesDaLinha[5],dataDiretor);
 				
+				for(int i=0;i<=todosOsDiretores.size();i++) {
+					if(todosOsDiretores.get(i).getIDDiretor()==diretor.getIDDiretor()) {
+						jaExiste=true;
+					}
+				}
+				if(!jaExiste) {
+					todosOsDiretores.add(diretor);
+				}
+				jaExiste=false;
+				
+				//verifica se o filme já existe, se não existir ele adiciona ao arraylist
 				Filme filme = new Filme(Integer.parseInt(partesDaLinha[0]),partesDaLinha[1],partesDaLinha[2],diretor,Integer.parseInt(partesDaLinha[3]),ator1,ator2,ator3);
 				
-				todosOsFilmes.add(filme);
+				for(int i=0;i<=todosOsFilmes.size();i++) {
+					if(todosOsFilmes.get(i).getIDFilme()==filme.getIDFilme()) {
+						jaExiste=true;
+					}
+				}
+				if(!jaExiste) {
+					todosOsFilmes.add(filme);
+				}
+				jaExiste=false;
 			}
-		//pego o arquivo aberto, pego as infos e crio as instancias para colocar nos arrays, tudo isso dentro de um método
 		}
+		fechaLeitores();
 	}
+	//esse "List<?>" vem da biblioteca util.list e serve para declarar um parâmetro sem saber seu tipo, perfeito para essa função que pode receber 
+//	public void adicionaEntidade(List<?> entidade) {
+//		
+//	}
 }
 	
 

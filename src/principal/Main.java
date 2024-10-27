@@ -16,41 +16,31 @@ import java.util.ArrayList;
 public class Main {
 	//variáveis globais que podem ser vistas por qualquer método na main
 	public static final String caminhoArquivoFilmes = "./dados/Filmes.csv";
-	public static final String caminhoArquivoDiretores = "./dados/Diretores.csv";
-	public static final String caminhoArquivoAtores = "./dados/Atores.csv";
+	public static final String caminhoArquivoUsuarios = "./dados/Usuarios.csv";
 	
 	public static void main(String[] args) throws IOException {
 		
 		//*************************************************************************************
-		//abrir os 3 arquivos 
+		//abrir os 2 arquivos 
 		//*************************************************************************************
 		//FILMES
 		File arquivoFilmes = new File(caminhoArquivoFilmes);
 		boolean existeArquivoFilmes = arquivoFilmes.exists();
 		FileWriter escritorFilmes = new FileWriter(caminhoArquivoFilmes, StandardCharsets.ISO_8859_1, existeArquivoFilmes);
 		if(!existeArquivoFilmes) {
-			escritorFilmes.write("FILME_ID;NOME;GENERO;DIRETOR;ANO_LANCAMENTO;ATOR1;ATOR2;ATOR3;novacoluna\n");
+			escritorFilmes.write("FILME_ID;FILME_NOME;GENERO;ANO_LANCAMENTO;DIRETOR_ID;DIRETOR_NOME;DIR_DATA_NASC;ATOR1_ID;ATOR1_NOME;ATOR1_DATA_NASC;ATOR2_ID;ATOR2_NOME;ATOR2_DATA_NASC;ATOR3_ID;ATOR3_NOME;ATOR3_DATA_NASC\n");
+			escritorFilmes.close();
 		}
-		escritorFilmes.close();
 		//*************************************************************************************
-		//FILMES
-		File arquivoDiretores = new File(caminhoArquivoDiretores);
-		boolean existeArquivoDiretores = arquivoDiretores.exists();
-		FileWriter escritorDiretores = new FileWriter(caminhoArquivoDiretores, StandardCharsets.ISO_8859_1, existeArquivoDiretores);
-		if(!existeArquivoDiretores) {
+		//USUARIOS
+		File arquivoUsuarios = new File(caminhoArquivoUsuarios);
+		boolean existeArquivoUsuarios = arquivoUsuarios.exists();
+		FileWriter escritorDiretores = new FileWriter(caminhoArquivoUsuarios, StandardCharsets.ISO_8859_1, existeArquivoUsuarios);
+		if(!existeArquivoUsuarios) {
 			escritorDiretores.write("FILME_ID;NOME;GENERO;DIRETOR;ANO_LANCAMENTO;ATOR1;ATOR2;ATOR3;novacoluna\n");
+			escritorDiretores.close();
 		}
-		escritorDiretores.close();
 		//*************************************************************************************		
-		//FILMES
-		File arquivoAtores = new File(caminhoArquivoAtores);
-		boolean existeArquivoAtores = arquivoAtores.exists();
-		FileWriter escritorAtores = new FileWriter(caminhoArquivoAtores, StandardCharsets.ISO_8859_1, existeArquivoAtores);
-		if(!existeArquivoAtores) {
-			escritorAtores.write("FILME_ID;NOME;GENERO;DIRETOR;ANO_LANCAMENTO;ATOR1;ATOR2;ATOR3;novacoluna\n");
-		}
-		escritorAtores.close();
-		//*************************************************************************************	
 		
 		
 		
@@ -84,19 +74,13 @@ public class Main {
 	}
 
 	
-	
-	public static void show(String a) {
-		System.out.println(a);
-	}
 	//função que permite enviar o caminho dos arquivos à classe Catalogo
 	public static final String retornaCaminhoArquivo(String entidadeDoArquivo) {
 		switch(entidadeDoArquivo) {
 		case "filme":
 			return caminhoArquivoFilmes;
 		case "diretor":
-			return caminhoArquivoDiretores;
-		case "ator":
-			return caminhoArquivoAtores;
+			return caminhoArquivoUsuarios;
 		default: 
 			return "-1";
 		}

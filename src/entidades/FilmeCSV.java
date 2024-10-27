@@ -40,7 +40,7 @@ public class FilmeCSV {
 			}
 			
 			//Escrevendo os dados do filme 
-			escritor.write(filme.getIDFilme()+";"+filme.getNomeFilme()+";"+filme.getGeneroFilme()+";"+filme.getAnoLancamento()+";"+filme.getDiretor().getIDDiretor()+";"+filme.getDiretor().getNomeDiretor()+";"+filme.getDiretor().getDataNascimentoDiretor()+";"+filme.getAtor2().getIDAtor()+";"+filme.getAtor2().getNomeAtor()+";"+filme.getAtor2().getDataNascimentoAtor()+";"+filme.getAtor3().getIDAtor()+";"+filme.getAtor3().getNomeAtor()+";"+filme.getAtor3().getDataNascimentoAtor()+"\n");
+			escritor.write(filme.getIDFilme()+";"+filme.getNomeFilme()+";"+filme.getGeneroFilme()+";"+filme.getAnoLancamento()+";"+filme.getDiretor().getIDDiretor()+";"+filme.getDiretor().getNomeDiretor()+";"+filme.getDiretor().getDataNascimentoDiretor()+";"+filme.getAtor1().getIDAtor()+";"+filme.getAtor1().getNomeAtor()+";"+filme.getAtor1().getDataNascimentoAtor()+";"+filme.getAtor2().getIDAtor()+";"+filme.getAtor2().getNomeAtor()+";"+filme.getAtor2().getDataNascimentoAtor()+";"+filme.getAtor3().getIDAtor()+";"+filme.getAtor3().getNomeAtor()+";"+filme.getAtor3().getDataNascimentoAtor()+"\n");
 //			escritor.write(filme.getIDFilme()+";"+filme.getNomeFilme()+";"+filme.getGeneroFilme()+";"+filme.getAnoLancamento()+";"+filme.getDiretor().getNomeDiretor()+";"+filme.getAtor2().getNomeAtor()+";"+filme.getAtor3().getNomeAtor()+"\n");
 			//Escrever todos os dados do buffer do arquivo
 			escritor.flush();
