@@ -36,12 +36,12 @@ public class FilmeCSV {
 			//Abrir o escritor --> esse charset permite escrever com caracteres do português
 			FileWriter escritor = new FileWriter(caminhoArquivo, StandardCharsets.ISO_8859_1, existe);
 			if(!existe) {
-				escritor.write("FILME_ID;NOME;GENERO;DIRETOR;ANO_LANCAMENTO;ATOR1;ATOR2;ATOR3;novacoluna\n");
+				escritor.write("FILME_ID;FILME_NOME;GENERO;ANO_LANCAMENTO;DIRETOR_ID;DIRETOR_NOME;DIR_DATA_NASC;ATOR1_ID;ATOR1_NOME;ATOR1_DATA_NASC;ATOR2_ID;ATOR2_NOME;ATOR2_DATA_NASC;ATOR3_ID;ATOR3_NOME;ATOR3_DATA_NASC\n");
 			}
 			
 			//Escrevendo os dados do filme 
 			escritor.write(filme.getIDFilme()+";"+filme.getNomeFilme()+";"+filme.getGeneroFilme()+";"+filme.getAnoLancamento()+";"+filme.getDiretor().getIDDiretor()+";"+filme.getDiretor().getNomeDiretor()+";"+filme.getDiretor().getDataNascimentoDiretor()+";"+filme.getAtor2().getIDAtor()+";"+filme.getAtor2().getNomeAtor()+";"+filme.getAtor2().getDataNascimentoAtor()+";"+filme.getAtor3().getIDAtor()+";"+filme.getAtor3().getNomeAtor()+";"+filme.getAtor3().getDataNascimentoAtor()+"\n");
-			
+//			escritor.write(filme.getIDFilme()+";"+filme.getNomeFilme()+";"+filme.getGeneroFilme()+";"+filme.getAnoLancamento()+";"+filme.getDiretor().getNomeDiretor()+";"+filme.getAtor2().getNomeAtor()+";"+filme.getAtor3().getNomeAtor()+"\n");
 			//Escrever todos os dados do buffer do arquivo
 			escritor.flush();
 			
