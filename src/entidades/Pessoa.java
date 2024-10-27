@@ -33,4 +33,6 @@ public abstract class Pessoa {
         return this.dataDeNascimento;
     }
     
+    public abstract boolean isGerenciador();
+    
 }

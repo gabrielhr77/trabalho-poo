@@ -23,6 +23,10 @@ public class Usuario extends Pessoa{
     public void setPesoClassificacao(float peso){
         this.pesoClassificacao = peso;
     }
+    
+    public float getPesoClassificacao() {
+    	return pesoClassificacao;
+    }
 
 
     public void suspender(boolean suspender){
@@ -38,5 +42,9 @@ public class Usuario extends Pessoa{
             return true;
         return false;
     }
+    
+    public boolean isGerenciador() {
+		return false;
+	}
 
 }
