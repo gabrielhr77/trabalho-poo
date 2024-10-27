@@ -1,4 +1,3 @@
- TrabalhoPOO
 package entidades;
 
 import java.util.Date;
@@ -35,4 +34,3 @@ public abstract class Pessoa {
     }
     
 }
- main
