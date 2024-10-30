@@ -52,7 +52,7 @@ public class Main {
 		//copiar os dados dos arquivos para os arraylists 
 		//*************************************************************************************
 		
-		Catalogo.copiaDadosDoArquivo(caminhoArquivoFilmes,Catalogo.getLeitorFilmesAtoresDiretores(),todosOsFilmes,todosOsAtores,todosOsDiretores,Filme.class);
+		Catalogo.copiaDadosDoArquivo(caminhoArquivoFilmes,Catalogo.getLeitorFilmesAtoresDiretores(),todosOsFilmes,todosOsAtores,todosOsDiretores);
 		
 		
 		Scanner scanner = new Scanner(System.in);
@@ -69,15 +69,16 @@ public class Main {
 		Diretor Peter_Berg = new Diretor(50001,"Peter Berg", dateDiretor1);
 		
 		Filme filme1 = new Filme(20001,"22 milhas","acao",Peter_Berg ,2021, ator1, ator2, ator3);
-		Filme filme2 = new Filme(20002,"21 milhas","terror",Peter_Berg ,2021, ator1, ator2, ator3);
+		Filme filme2 = new Filme(20002,"King Kong","acao",Peter_Berg ,2016, ator1, ator2, ator3);
 		Filme filme3 = new Filme(20003,"Norbit","terror",Peter_Berg ,2010, ator1, ator2, ator3);
 		
 		FilmeCSV filmeCSV = new FilmeCSV(); 
-		filmeCSV.adicionaFilme(filme1);
-		filmeCSV.adicionaFilme(filme2);
-		filmeCSV.adicionaFilme(filme3);
+//		Catalogo catalogo = new Catalogo();
+		Catalogo.adicionaFilme(filme1,todosOsFilmes);
+		Catalogo.adicionaFilme(filme2,todosOsFilmes);
+		Catalogo.adicionaFilme(filme3,todosOsFilmes);
 		filmeCSV.imprimirFilme(20003);
-		
+		Catalogo.salvaDadosNoArquivo(caminhoArquivoFilmes, arquivoFilmes, todosOsFilmes);
 		
 		
 		

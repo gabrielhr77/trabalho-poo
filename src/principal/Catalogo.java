@@ -68,9 +68,14 @@ public class Catalogo {
 //		}
 	}
 	
+	//TENHO QUE TER UMA FUNÇÃO IGUAL A ESSA NA CLASSE DE MEIO-CAMPO DOS USUÁRIOS
 	//função que copia os dados do arquivo CSV e os coloca dentro do arraylist	
-	public static <T>  void copiaDadosDoArquivo(String caminho, BufferedReader leitor, ArrayList<Filme> arraylistFilmes, ArrayList<Ator> arraylistAtores, ArrayList<Diretor> arraylistDiretores, Class<T> classe) throws IOException{
+	public static void copiaDadosDoArquivo(String caminho, BufferedReader leitor, ArrayList<Filme> arraylistFilmes, ArrayList<Ator> arraylistAtores, ArrayList<Diretor> arraylistDiretores) throws IOException{
 		boolean primeiraLinha = true;
+		boolean primeiroCicloFilmes = true;
+		boolean primeiroCicloAtores = true;
+		boolean primeiroCicloDiretores = true;
+		
 		boolean jaExiste = false;
 		boolean jaExisteAtor1 = false;
 		boolean jaExisteAtor2= false;
@@ -84,19 +89,19 @@ public class Catalogo {
 			//agora pego o ; para separar as frases da linha para achar qual a linha do filme em questão
 			String[] partesDaLinha = linha.split(";");
 			//esse ".class" vai retornar um objeto da classe correnspondente em TEMPO DE EXECUÇÃO, ou seja, a classe genérica terá seu tipo explicitado durante o programa
-			if(classe == Filme.class) {
-				flagLeitorFilmes = true;
-				DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-				LocalDate dataAtor1 = LocalDate.parse(partesDaLinha[9]);
-				LocalDate dataAtor2 = LocalDate.parse(partesDaLinha[12]);
-				LocalDate dataAtor3 = LocalDate.parse(partesDaLinha[15]);
-				LocalDate dataDiretor = LocalDate.parse(partesDaLinha[6]);
 				
-				Ator ator1 = new Ator(Integer.parseInt(partesDaLinha[7]),partesDaLinha[8],dataAtor1);
-				Ator ator2 = new Ator(Integer.parseInt(partesDaLinha[10]),partesDaLinha[11],dataAtor2);
-				Ator ator3 = new Ator(Integer.parseInt(partesDaLinha[13]),partesDaLinha[14],dataAtor3);
-				
-				for(int i=0;i<=arraylistAtores.size();i++) {
+			flagLeitorFilmes = true;
+			LocalDate dataAtor1 = LocalDate.parse(partesDaLinha[9]);
+			LocalDate dataAtor2 = LocalDate.parse(partesDaLinha[12]);
+			LocalDate dataAtor3 = LocalDate.parse(partesDaLinha[15]);
+			LocalDate dataDiretor = LocalDate.parse(partesDaLinha[6]);
+			
+			Ator ator1 = new Ator(Integer.parseInt(partesDaLinha[7]),partesDaLinha[8],dataAtor1);
+			Ator ator2 = new Ator(Integer.parseInt(partesDaLinha[10]),partesDaLinha[11],dataAtor2);
+			Ator ator3 = new Ator(Integer.parseInt(partesDaLinha[13]),partesDaLinha[14],dataAtor3);
+			
+			if(!primeiroCicloAtores) {
+				for(int i=0;i<arraylistAtores.size();i++) {
 					if(arraylistAtores.get(i).getIDAtor()==ator1.getIDAtor()) {
 						jaExisteAtor1=true;
 					}
@@ -116,14 +121,20 @@ public class Catalogo {
 				if(!jaExisteAtor3) {
 					arraylistAtores.add(ator3);
 				}
-				jaExisteAtor1=false;
-				jaExisteAtor2=false;
-				jaExisteAtor3=false;
-				
-				
-				Diretor diretor = new Diretor(Integer.parseInt(partesDaLinha[4]),partesDaLinha[5],dataDiretor);
-				
-				for(int i=0;i<=arraylistDiretores.size();i++) {
+			}else {
+				arraylistAtores.add(ator1);
+				arraylistAtores.add(ator2);
+				arraylistAtores.add(ator3);
+			}
+			primeiroCicloAtores = false;
+			jaExisteAtor1=false;
+			jaExisteAtor2=false;
+			jaExisteAtor3=false;
+			
+			
+			Diretor diretor = new Diretor(Integer.parseInt(partesDaLinha[4]),partesDaLinha[5],dataDiretor);
+			if(!primeiroCicloDiretores)	{
+				for(int i=0;i<arraylistDiretores.size();i++) {
 					if(arraylistDiretores.get(i).getIDDiretor()==diretor.getIDDiretor()) {
 						jaExiste=true;
 					}
@@ -131,13 +142,16 @@ public class Catalogo {
 				if(!jaExiste) {
 					arraylistDiretores.add(diretor);
 				}
-				jaExiste=false;
-				
-				
-				//verifica se o filme já existe, se não existir ele adiciona ao arraylist
-				Filme filme = new Filme(Integer.parseInt(partesDaLinha[0]),partesDaLinha[1],partesDaLinha[2],diretor,Integer.parseInt(partesDaLinha[3]),ator1,ator2,ator3);
-				
-				for(int i=0;i<=arraylistFilmes.size();i++) {
+				jaExiste=false;	
+			}else {
+				arraylistDiretores.add(diretor);
+			}
+			
+			//verifica se o filme já existe, se não existir ele adiciona ao arraylist
+			Filme filme = new Filme(Integer.parseInt(partesDaLinha[0]),partesDaLinha[1],partesDaLinha[2],diretor,Integer.parseInt(partesDaLinha[3]),ator1,ator2,ator3);
+			
+			if(!primeiroCicloFilmes) {
+				for(int i=0;i<arraylistFilmes.size();i++) {
 					if(arraylistFilmes.get(i).getIDFilme()==filme.getIDFilme()) {
 						jaExiste=true;
 					}
@@ -145,15 +159,39 @@ public class Catalogo {
 				if(!jaExiste) {
 					arraylistFilmes.add(filme);
 				}
+			
 				jaExiste=false;
+			}else {
+				arraylistFilmes.add(filme);
 			}
+			
 		}
 		fechaLeitores();
+
+	}
+	
+	
+	//função que salva os dados do arraylist no arquivo CSV ao finalizar o programa
+	public static <T> void salvaDadosNoArquivo(String caminho, File arquivo, ArrayList<Filme> lista) throws IOException {
+		boolean existe = arquivo.exists();
+		//abro o escritor com o Charset de símbolos do português
+		FileWriter escritor = new FileWriter(caminho, StandardCharsets.ISO_8859_1,existe);
+		if(!existe) {
+			escritor.write("FILME_ID;FILME_NOME;GENERO;ANO_LANCAMENTO;DIRETOR_ID;DIRETOR_NOME;DIR_DATA_NASC;ATOR1_ID;ATOR1_NOME;ATOR1_DATA_NASC;ATOR2_ID;ATOR2_NOME;ATOR2_DATA_NASC;ATOR3_ID;ATOR3_NOME;ATOR3_DATA_NASC\n");
+		}
+		//escrevo os dados no arquivo
+		for(int i=0;i<lista.size();i++) {
+			escritor.write(lista.get(i).getIDFilme()+";"+lista.get(i).getNomeFilme()+";"+lista.get(i).getGeneroFilme()+";"+lista.get(i).getAnoLancamento()+";"+lista.get(i).getDiretor().getIDDiretor()+";"+lista.get(i).getDiretor().getNomeDiretor()+";"+lista.get(i).getDiretor().getDataNascimentoDiretor()+";"+lista.get(i).getAtor1().getIDAtor()+";"+lista.get(i).getAtor1().getNomeAtor()+";"+lista.get(i).getAtor1().getDataNascimentoAtor()+";"+lista.get(i).getAtor2().getIDAtor()+";"+lista.get(i).getAtor2().getNomeAtor()+";"+lista.get(i).getAtor2().getDataNascimentoAtor()+";"+lista.get(i).getAtor3().getIDAtor()+";"+lista.get(i).getAtor3().getNomeAtor()+";"+lista.get(i).getAtor3().getDataNascimentoAtor()+"\n");
+			escritor.flush();
+		}
+		escritor.close();
+	
+	
 	}
 	
 	
 	
-	//função para adicionar filme
+	//funções para filme
 	public static void adicionaFilme(Filme filme, ArrayList<Filme> arraylistFilmes) {
 		arraylistFilmes.add(filme);
 	}
@@ -167,7 +205,7 @@ public class Catalogo {
 	//função para encontrar a posição do filme dentro do arraylist com todos os filmes
 	private static int buscaFilmePorNome(String nome, ArrayList<Filme> arraylistFilmes) {
 		for(int i=0;i<arraylistFilmes.size();i++) {
-			if(arraylistFilmes.get(i).getNomeFilme()==nome) {
+			if(arraylistFilmes.get(i).getNomeFilme().equals(nome)) {
 				return i;
 			}
         }
@@ -175,8 +213,7 @@ public class Catalogo {
 	}
 
 	
-	
-	//função para adicionar diretor
+	//funções para diretor
 	public static void adicionaDiretor(Diretor diretor, ArrayList<Diretor> arraylistDiretores) {
 		arraylistDiretores.add(diretor);
 	}
@@ -190,17 +227,16 @@ public class Catalogo {
 	//função para encontrar a posição do diretor dentro do arraylist com todos os diretores
 	private static int buscaDiretorPorNome(String nome, ArrayList<Diretor> arraylistDiretores) {
 		for(int i=0;i<arraylistDiretores.size();i++) {
-			if(arraylistDiretores.get(i).getNomeDiretor()==nome) {
+			if(arraylistDiretores.get(i).getNomeDiretor().equals(nome)) {
 				return i;
 			}
         }
 		return -1;
 	}
-
 	
 	
-	//função para adicionar ator
-		public static void adicionaAtor(Ator ator, ArrayList<Ator> arraylistAtores) {
+	//funções para ator
+	public static void adicionaAtor(Ator ator, ArrayList<Ator> arraylistAtores) {
 			arraylistAtores.add(ator);
 		}
 		
@@ -213,7 +249,7 @@ public class Catalogo {
 	//função para encontrar a posição do ator dentro do arraylist com todos os atores
 	private static int buscaAtorPorNome(String nome, ArrayList<Ator> arraylistAtores) {
 		for(int i=0;i<arraylistAtores.size();i++) {
-			if(arraylistAtores.get(i).getNomeAtor()==nome) {
+			if(arraylistAtores.get(i).getNomeAtor().equals(nome)) {
 				return i;
 			}
         }
