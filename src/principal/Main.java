@@ -40,9 +40,19 @@ public class Main {
 			escritorDiretores.write("FILME_ID;NOME;GENERO;DIRETOR;ANO_LANCAMENTO;ATOR1;ATOR2;ATOR3;novacoluna\n");
 			escritorDiretores.close();
 		}
-		//*************************************************************************************		
+		//*************************************************************************************	
+		//*************************************************************************************
+		//criação dos arraylists
 		
+		ArrayList<Filme> todosOsFilmes = new ArrayList<>();
+		ArrayList<Ator> todosOsAtores = new ArrayList<>();
+		ArrayList<Diretor> todosOsDiretores = new ArrayList<>();
 		
+		//*************************************************************************************
+		//copiar os dados dos arquivos para os arraylists 
+		//*************************************************************************************
+		
+		Catalogo.copiaDadosDoArquivo(caminhoArquivoFilmes,Catalogo.getLeitorFilmesAtoresDiretores(),todosOsFilmes,todosOsAtores,todosOsDiretores,Filme.class);
 		
 		
 		Scanner scanner = new Scanner(System.in);
