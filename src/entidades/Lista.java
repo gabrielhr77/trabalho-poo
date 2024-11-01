@@ -4,13 +4,13 @@ import java.util.ArrayList;
 
 public class Lista extends Publicacao {
 	private String titulo;
-	private ArrayList<String> idFilmes;
+	private ArrayList<Filme> Filmes;
 		
 	
-	public Lista(String id, String idUsuario, String nome) {
-		super(id, idUsuario);
+	public Lista(String id, Usuario Usuario, String nome) {
+		super(id, Usuario);
 		this.titulo = nome;
-		idFilmes = new ArrayList<>();
+		Filmes = new ArrayList<>();
 	}
 	
 	public void setNome(String nome) {
@@ -21,23 +21,23 @@ public class Lista extends Publicacao {
 		return titulo;
 	}
 	
-	public void addFilme(String idFilme) {
-		idFilmes.add(idFilme);
+	public void addFilme(Filme Filme) {
+		Filmes.add(Filme);
 	}
 
-	public boolean contemFilme(String idFilme) {
-		for (String s : idFilmes) {
-			if(s.equals(idFilme)) 
+	public boolean contemFilme(Filme Filme) {
+		for (Filme f : Filmes) {
+			if(f == Filme) 
 				return true;
 		}
 		return false;
 	}
 	
-	public int indiceFilme(String idFilme) {
-		return idFilmes.indexOf(idFilme);
+	public int indiceFilme(Filme Filme) {
+		return Filmes.indexOf(Filme);
 	}
 	
-	public void removeFilme(String idFilme) {
-		idFilmes.remove(idFilmes.indexOf(idFilme));
+	public void removeFilme(Filme Filme) {
+		Filmes.remove(Filmes.indexOf(Filme));
 	}
 }

@@ -2,11 +2,11 @@ package entidades;
 
 public class Comentario extends Publicacao {
 	private String conteudo;
-	private String idFilme;
+	private Filme Filme;
 	
-	public Comentario(String id, String idUsuario, String idFilme, String conteudo) {
-		super(id, idUsuario);
-		this.idFilme = idFilme;
+	public Comentario(String id, Usuario Usuario, Filme Filme, String conteudo) {
+		super(id, Usuario);
+		this.Filme = Filme;
 		this.conteudo = conteudo;
 	}
 	
@@ -14,8 +14,8 @@ public class Comentario extends Publicacao {
 		return conteudo;
 	}
 	
-	public String getIDFilme() {
-		return idFilme;
+	public Filme getFilme() {
+		return Filme;
 	}
 	
 	public void setConteudo(String conteudo) {

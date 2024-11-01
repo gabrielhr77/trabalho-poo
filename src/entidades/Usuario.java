@@ -7,12 +7,15 @@ public class Usuario extends Pessoa{
     private String senha;
     private boolean flagSuspenso;
     private float pesoClassificacao;
+    private boolean critico;
+    private Date dataDeAprovacao;
 
     public Usuario(String nome, int id, Date dataDeNascimento, String senha, float pesoClassificacao){
         super (nome, id, dataDeNascimento);
         this.senha = senha;
         this.flagSuspenso = false;
         this.pesoClassificacao = pesoClassificacao;
+        this.critico = false;
     }
 
     public void setSenha(String senha){
@@ -38,13 +41,24 @@ public class Usuario extends Pessoa{
     }
 
     public boolean verificaSenha(String senha){
-        if(senha.equals(this.senha))
-            return true;
-        return false;
+        return senha.equals(this.senha);
     }
     
     public boolean isGerenciador() {
 		return false;
 	}
+
+    public void setCritico(){
+        this.critico = true;
+        pesoClassificacao *= 2;
+    }
+
+    public Date getDataAprovacao() {
+		return dataDeAprovacao;
+	}
+
+    public boolean isCritico(){
+        return critico;
+    }
 
 }

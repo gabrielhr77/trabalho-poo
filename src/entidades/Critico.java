@@ -1,3 +1,5 @@
+/*Essa classe provavelmente não será mais usada. Lembrar de apagar antes de ser concluída a versão definitiva do projeto*/
+
 package entidades;
 
 import java.util.Date;

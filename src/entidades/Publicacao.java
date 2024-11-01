@@ -2,18 +2,18 @@ package entidades;
 
 public class Publicacao {
 	private String id;
-	private String idUsuario;
+	private Usuario Usuario;
 	
-	public Publicacao(String id, String idUsuario) {
+	public Publicacao(String id, Usuario Usuario) {
 		this.id = id;
-		this.idUsuario = idUsuario;
+		this.Usuario = Usuario;
 	}
 	
 	public String getID() {
 		return id;
 	}
 	
-	public String getIDUsuario() {
-		return idUsuario;
+	public Usuario getUsuario() {
+		return Usuario;
 	}
 }

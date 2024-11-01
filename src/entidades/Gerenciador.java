@@ -14,6 +14,10 @@ public class Gerenciador extends Pessoa {
 	public String getSenha(){
 		return senha;
 	}
+
+	public boolean verificaSenha(String senha){
+		return senha.equals(this.senha);
+	}
 	
 	public boolean isGerenciador() {
 		return true;

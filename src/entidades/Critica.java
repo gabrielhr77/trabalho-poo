@@ -3,14 +3,14 @@ package entidades;
 public class Critica extends Publicacao {
 	private String titulo;
 	private String conteudo;
-	private String idFilme;
+	private Filme Filme;
 	private float nota;
 	
-	public Critica(String id, String idUsuario, String titulo, String conteudo, String idFilme, float nota) {
-		super(id, idUsuario);
+	public Critica(String id, Usuario Usuario, String titulo, String conteudo, Filme Filme, float nota) {
+		super(id, Usuario);
 		this.titulo = titulo;
 		this.conteudo = conteudo;
-		this.idFilme = idFilme;
+		this.Filme = Filme;
 		this.nota = nota;
 	}
 	
@@ -22,8 +22,8 @@ public class Critica extends Publicacao {
 		return conteudo;
 	}
 	
-	public String getIDFilme() {
-		return idFilme;
+	public Filme getFilme() {
+		return Filme;
 	}
 	
 	public float getNota() {
