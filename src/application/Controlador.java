@@ -1,6 +1,66 @@
 package application;
 
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.TextField;
+
 public class Controlador {
+	@FXML
+	private RadioButton loginRButton, registroRButton;
+	@FXML
+	private TextField userLogin,senhaLogin,emailRegistro,userRegistro,senhaRegistro;
+	
+	
+	
+	
+	//métodos ACTIONEVENT, ou seja, não precisam ser chamados na "main", eles ocorrem quando há "ação" no app
+	public String escolhaLoginRegistro(ActionEvent event) {
+		if(loginRButton.isSelected()) {
+			userLogin.setDisable(false);
+			senhaLogin.setDisable(false);
+			emailRegistro.setDisable(true);
+			userRegistro.setDisable(true);
+			senhaRegistro.setDisable(true);
+			return "login";
+		}else {
+			userLogin.setDisable(true);
+			senhaLogin.setDisable(true);
+			emailRegistro.setDisable(false);
+			userRegistro.setDisable(false);
+			senhaRegistro.setDisable(false);
+			return "registro";
+		}
+	}
+	
+//	public void permiteTextFields(String escolhaLoginRegistro) {
+//		if()
+//		
+//	}
+	
+	public String retornaUserLogin(ActionEvent event) {
+		return userLogin.getText();
+	}
+	public String retornaSenhaLogin(ActionEvent event) {
+		return senhaLogin.getText();
+	}
+	
+	public String retornaEmailRegistro(ActionEvent event) {
+		return emailRegistro.getText();
+	}
+	public String retornaUserRegistro(ActionEvent event) {
+		return userRegistro.getText();
+	}
+	public String retornaSenhaRegistro(ActionEvent event) {
+		return senhaRegistro.getText();
+	}
+	
+	
+	
+	
+	
+	
+	
 	
 //
 //    @FXML

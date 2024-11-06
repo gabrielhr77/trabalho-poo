@@ -4,6 +4,7 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -12,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controlador">
    <children>
       <ImageView fitHeight="510.0" fitWidth="950.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -57,7 +58,7 @@
                </font>
             </Text>
             <Line endX="100.0" layoutX="140.0" layoutY="68.0" startX="-100.0" stroke="#dba15c" strokeWidth="3.0" />
-            <TextField layoutX="39.0" layoutY="153.0" prefHeight="26.0" prefWidth="157.0" />
+            <TextField fx:id="userRegistro" layoutX="39.0" layoutY="153.0" prefHeight="26.0" prefWidth="157.0" />
             <Text fill="WHITE" layoutX="39.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="USUÁRIO">
                <font>
                   <Font name="Corbel Bold" size="14.0" />
@@ -68,8 +69,8 @@
                   <Font name="Corbel Bold" size="14.0" />
                </font>
             </Text>
-            <PasswordField layoutX="39.0" layoutY="211.0" prefHeight="25.0" prefWidth="157.0" />
-            <TextField layoutX="39.0" layoutY="93.0" prefHeight="26.0" prefWidth="209.0" />
+            <PasswordField fx:id="senhaRegistro" layoutX="39.0" layoutY="211.0" prefHeight="25.0" prefWidth="157.0" />
+            <TextField fx:id="emailRegistro" layoutX="39.0" layoutY="93.0" prefHeight="26.0" prefWidth="209.0" />
             <Text fill="WHITE" layoutX="39.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-MAIL">
                <font>
                   <Font name="Corbel Bold" size="14.0" />
@@ -78,7 +79,7 @@
          </children></Pane>
       <Pane id="painelTelaInicialLogin" layoutX="140.0" layoutY="250.0" prefHeight="245.0" prefWidth="237.0" style="-fx-background-color: #323232;">
          <children>
-            <TextField layoutX="37.0" layoutY="100.0" prefHeight="26.0" prefWidth="157.0" />
+            <TextField fx:id="userLogin" layoutX="37.0" layoutY="100.0" prefHeight="26.0" prefWidth="157.0" />
             <Text fill="WHITE" layoutX="37.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login">
                <font>
                   <Font name="Century751 No2 BT Italic" size="34.0" />
@@ -95,19 +96,22 @@
                   <Font name="Corbel Bold" size="14.0" />
                </font>
             </Text>
-            <PasswordField layoutX="37.0" layoutY="170.0" prefHeight="25.0" prefWidth="157.0" />
+            <PasswordField fx:id="senhaLogin" layoutX="37.0" layoutY="170.0" prefHeight="25.0" prefWidth="157.0" />
          </children></Pane>
       <ImageView fitHeight="65.0" fitWidth="184.0" layoutX="900.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true" rotate="-30.0">
          <image>
             <Image url="@imagens/fitaDeFundo1.png" />
          </image>
       </ImageView>
-      <RadioButton layoutX="141.0" layoutY="537.0" mnemonicParsing="false" text="Login" textFill="WHITE">
+      <RadioButton fx:id="loginRButton" layoutX="141.0" layoutY="537.0" mnemonicParsing="false" onAction="#escolhaLoginRegistro" text="Login" textFill="WHITE">
          <font>
             <Font name="Corbel Bold" size="18.0" />
          </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="loginRegistro" />
+         </toggleGroup>
       </RadioButton>
-      <RadioButton layoutX="141.0" layoutY="579.0" mnemonicParsing="false" text="Registrar-se" textFill="WHITE">
+      <RadioButton fx:id="registroRButton" layoutX="141.0" layoutY="579.0" mnemonicParsing="false" onAction="#escolhaLoginRegistro" text="Registrar-se" textFill="WHITE" toggleGroup="$loginRegistro">
          <font>
             <Font name="Corbel Bold" size="18.0" />
          </font>
