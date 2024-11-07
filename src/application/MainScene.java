@@ -38,13 +38,14 @@ public class MainScene extends Application {
             System.out.println("Tentando carregar o arquivo FXML...");
 
             //Carrega o arquivo FXML
-            //Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
-            Parent root = FXMLLoader.load(getClass().getResource("PaginaInicial.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
+            //Parent root = FXMLLoader.load(getClass().getResource("PaginaInicial.fxml"));
             
             System.out.println("FXML carregado com sucesso.");
 
             // Define a cena e configura o palco
             Scene scene = new Scene(root, 950, 650);
+            primaryStage.setResizable(false);
             primaryStage.setScene(scene);
             primaryStage.setTitle("ROTTEN POTATOES");
             primaryStage.show();
@@ -59,6 +60,8 @@ public class MainScene extends Application {
     public static void main(String[] args) {
         Application.launch(MainScene.class, args);
         //Controlador.escolhaLoginRegistro();
+        
+      
     }
 }
 
