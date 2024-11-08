@@ -38,8 +38,9 @@ public class MainScene extends Application {
             System.out.println("Tentando carregar o arquivo FXML...");
 
             //Carrega o arquivo FXML
-            Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
+            //Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
             //Parent root = FXMLLoader.load(getClass().getResource("PaginaInicial.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("Filme.fxml"));
             
             System.out.println("FXML carregado com sucesso.");
 

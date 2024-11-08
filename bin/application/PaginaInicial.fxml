@@ -34,7 +34,7 @@
             <Image url="@imagens/fitaTopo.png" />
          </image>
       </ImageView>
-      <TextField alignment="CENTER" layoutX="675.0" layoutY="95.0" prefHeight="25.0" prefWidth="192.0" promptText="Pesquisar no site">
+      <TextField fx:id="barraDePesquisa" alignment="CENTER" layoutX="675.0" layoutY="95.0" prefHeight="25.0" prefWidth="192.0" promptText="Pesquisar no site">
          <font>
             <Font name="Corbel Bold" size="13.0" />
          </font>
@@ -45,14 +45,14 @@
          </image>
       </ImageView>
       <Button id="botaoPesquisar" fx:id="botaoPesquisar" layoutX="870.0" layoutY="86.0" mnemonicParsing="false" opacity="0.0" prefHeight="45.0" prefWidth="49.0" />
-      <Text fill="WHITE" layoutX="573.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INÍCIO">
+      <Text fill="WHITE" layoutX="588.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INÍCIO">
          <font>
             <Font name="Corbel Bold" size="23.0" />
          </font>
       </Text>
-      <ScrollPane hbarPolicy="NEVER" layoutX="39.0" layoutY="187.0" prefHeight="493.0" prefWidth="950.0" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="157.0">
+      <ScrollPane hbarPolicy="NEVER" layoutX="39.0" layoutY="187.0" prefHeight="1403.0" prefWidth="950.0" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="-910.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="157.0">
          <content>
-            <AnchorPane maxWidth="950.0" prefHeight="1261.0" prefWidth="950.0" style="-fx-background-color: #202020;">
+            <AnchorPane maxWidth="950.0" prefHeight="1974.0" prefWidth="950.0" style="-fx-background-color: #202020;">
                <children>
                   <AnchorPane layoutY="57.0" maxWidth="977.0" prefHeight="210.0" prefWidth="950.0" style="-fx-background-color: #323232;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                      <children>
@@ -109,12 +109,12 @@
                      </font>
                   </Text>
                   <Line endX="675.0" layoutX="177.0" layoutY="422.0" startX="-100.0" stroke="#dba15c" strokeWidth="3.0" AnchorPane.leftAnchor="75.5" AnchorPane.rightAnchor="85.5" />
-                  <ImageView fitHeight="40.0" fitWidth="30.0" layoutX="824.0" layoutY="483.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="40.0" fitWidth="30.0" layoutX="775.0" layoutY="524.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@imagens/passaImagemFundoEscuro.png" />
                      </image>
                   </ImageView>
-                  <Text fx:id="textoFilmeCarrossel1" fill="WHITE" layoutX="765.0" layoutY="544.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mais como estes">
+                  <Text fx:id="textoFilmeCarrossel1" fill="WHITE" layoutX="726.0" layoutY="585.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mais como estes">
                      <font>
                         <Font name="Corbel" size="18.0" />
                      </font>
@@ -150,9 +150,9 @@
                         <Image url="@imagens/estrelaBranca.png" />
                      </image>
                   </ImageView>
-                  <Text fx:id="textoFilmeCarrossel2" fill="WHITE" layoutX="77.0" layoutY="710.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Duna">
+                  <Text fx:id="textoFilmeCarrossel2" fill="WHITE" layoutX="77.0" layoutY="707.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Duna">
                      <font>
-                        <Font name="Corbel" size="18.0" />
+                        <Font name="Corbel" size="15.0" />
                      </font>
                   </Text>
                   <ImageView fitHeight="34.0" fitWidth="144.0" layoutX="76.0" layoutY="722.0" pickOnBounds="true" preserveRatio="true">
@@ -160,7 +160,7 @@
                         <Image url="@imagens/textoNavegarParaPaginaDoFilme.png" />
                      </image>
                   </ImageView>
-                  <Button layoutX="67.0" layoutY="715.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
+                  <Button fx:id="botaoFilme1Lista" layoutX="64.0" layoutY="715.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
                   <ImageView fitHeight="190.0" fitWidth="144.0" layoutX="237.0" layoutY="453.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@imagens/capaLugarSilenciosoDia1.jpg" />
@@ -191,13 +191,13 @@
                         <Image url="@imagens/estrelaBranca.png" />
                      </image>
                   </ImageView>
-                  <Text fx:id="textoFilmeCarrossel21" fill="WHITE" layoutX="238.0" layoutY="709.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Um Lugar Silencioso">
+                  <Text fx:id="textoFilmeCarrossel21" fill="WHITE" layoutX="238.0" layoutY="706.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Um Lugar Silencioso">
                      <font>
-                        <Font name="Corbel" size="18.0" />
+                        <Font name="Corbel" size="15.0" />
                      </font>
                   </Text>
                   <Button layoutX="228.0" layoutY="714.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
-                  <ImageView fitHeight="34.0" fitWidth="144.0" layoutX="239.0" layoutY="722.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="34.0" fitWidth="144.0" layoutX="236.0" layoutY="722.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@imagens/textoNavegarParaPaginaDoFilme.png" />
                      </image>
@@ -232,9 +232,9 @@
                         <Image url="@imagens/estrelaBranca.png" />
                      </image>
                   </ImageView>
-                  <Text fx:id="textoFilmeCarrossel22" fill="WHITE" layoutX="400.0" layoutY="708.0" strokeType="OUTSIDE" strokeWidth="0.0" text="O Poço 2">
+                  <Text fx:id="textoFilmeCarrossel22" fill="WHITE" layoutX="400.0" layoutY="705.0" strokeType="OUTSIDE" strokeWidth="0.0" text="O Poço 2">
                      <font>
-                        <Font name="Corbel" size="18.0" />
+                        <Font name="Corbel" size="15.0" />
                      </font>
                   </Text>
                   <Button layoutX="390.0" layoutY="713.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
@@ -245,7 +245,7 @@
                   </ImageView>
                   <ImageView fitHeight="190.0" fitWidth="144.0" layoutX="559.0" layoutY="452.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@imagens/capaDuna1.jpg" />
+                        <Image url="@imagens/capaPequenosInvasores.jpg" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="559.0" layoutY="655.0" pickOnBounds="true" preserveRatio="true">
@@ -273,9 +273,9 @@
                         <Image url="@imagens/estrelaBranca.png" />
                      </image>
                   </ImageView>
-                  <Text fx:id="textoFilmeCarrossel212" fill="WHITE" layoutX="560.0" layoutY="708.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Duna">
+                  <Text fx:id="textoFilmeCarrossel212" fill="WHITE" layoutX="560.0" layoutY="705.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pequenos Invasores">
                      <font>
-                        <Font name="Corbel" size="18.0" />
+                        <Font name="Corbel" size="15.0" />
                      </font>
                   </Text>
                   <ImageView fitHeight="34.0" fitWidth="144.0" layoutX="561.0" layoutY="721.0" pickOnBounds="true" preserveRatio="true">
@@ -283,13 +283,216 @@
                         <Image url="@imagens/textoNavegarParaPaginaDoFilme.png" />
                      </image>
                   </ImageView>
-                  <Button layoutX="231.0" layoutY="713.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
-                  <Button layoutX="391.0" layoutY="716.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
-                  <Button layoutX="553.0" layoutY="716.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
+                  <Button fx:id="botaoFilme2Lista" layoutX="229.0" layoutY="716.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
+                  <Button fx:id="botaoFilme3Lista" layoutX="388.0" layoutY="716.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
+                  <Button fx:id="botaoFilme4Lista" layoutX="550.0" layoutY="716.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
+                  <Button fx:id="botaoEntraNaLista" layoutX="760.0" layoutY="510.0" mnemonicParsing="false" opacity="0.0" prefHeight="57.0" prefWidth="56.0" />
+                  <Text fx:id="textoGeneroCarrossel11" fill="WHITE" layoutX="237.0" layoutY="406.0" strokeType="OUTSIDE" strokeWidth="0.0" text="POR__Pac" AnchorPane.rightAnchor="100.0">
+                     <font>
+                        <Font name="Corbel Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="textoGeneroCarrossel12" fill="WHITE" layoutX="75.0" layoutY="826.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AÇÃO E AVENTURA">
+                     <font>
+                        <Font name="Corbel Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Line endX="675.0" layoutX="177.0" layoutY="841.0" startX="-100.0" stroke="#dba15c" strokeWidth="3.0" />
+                  <Text fx:id="textoFilmeCarrossel11" fill="WHITE" layoutX="726.0" layoutY="1004.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mais como estes">
+                     <font>
+                        <Font name="Corbel" size="18.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="190.0" fitWidth="144.0" layoutX="76.0" layoutY="873.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/capaDuna1.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="76.0" layoutY="1076.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="101.0" layoutY="1076.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="126.0" layoutY="1076.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="151.0" layoutY="1076.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="177.0" layoutY="1076.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaBranca.png" />
+                     </image>
+                  </ImageView>
+                  <Text fx:id="textoFilmeCarrossel23" fill="WHITE" layoutX="77.0" layoutY="1126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Duna">
+                     <font>
+                        <Font name="Corbel" size="15.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="34.0" fitWidth="144.0" layoutX="76.0" layoutY="1141.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/textoNavegarParaPaginaDoFilme.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="64.0" layoutY="1134.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
+                  <Button layoutX="760.0" layoutY="929.0" mnemonicParsing="false" opacity="0.0" prefHeight="57.0" prefWidth="56.0" />
+                  <Text fx:id="textoGeneroCarrossel111" fill="WHITE" layoutX="662.0" layoutY="825.0" strokeType="OUTSIDE" strokeWidth="0.0" text="POR__Neto" AnchorPane.rightAnchor="100.0">
+                     <font>
+                        <Font name="Corbel Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="40.0" fitWidth="30.0" layoutX="773.0" layoutY="945.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/passaImagemFundoEscuro.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="190.0" fitWidth="144.0" layoutX="239.0" layoutY="873.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/capaLugarSilenciosoDia1.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="239.0" layoutY="1076.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="264.0" layoutY="1076.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="289.0" layoutY="1076.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="314.0" layoutY="1076.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="340.0" layoutY="1076.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaBranca.png" />
+                     </image>
+                  </ImageView>
+                  <Text fx:id="textoFilmeCarrossel211" fill="WHITE" layoutX="240.0" layoutY="1126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Um Lugar Silencioso">
+                     <font>
+                        <Font name="Corbel" size="15.0" />
+                     </font>
+                  </Text>
+                  <Button layoutX="230.0" layoutY="1134.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
+                  <ImageView fitHeight="34.0" fitWidth="144.0" layoutX="238.0" layoutY="1142.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/textoNavegarParaPaginaDoFilme.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="190.0" fitWidth="144.0" layoutX="401.0" layoutY="872.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/capaOPoco2.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="401.0" layoutY="1075.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="426.0" layoutY="1075.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="451.0" layoutY="1075.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="476.0" layoutY="1075.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="502.0" layoutY="1075.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaBranca.png" />
+                     </image>
+                  </ImageView>
+                  <Text fx:id="textoFilmeCarrossel221" fill="WHITE" layoutX="402.0" layoutY="1125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="O Poço 2">
+                     <font>
+                        <Font name="Corbel" size="15.0" />
+                     </font>
+                  </Text>
+                  <Button layoutX="392.0" layoutY="1133.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
+                  <ImageView fitHeight="34.0" fitWidth="144.0" layoutX="401.0" layoutY="1143.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/textoNavegarParaPaginaDoFilme.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="190.0" fitWidth="144.0" layoutX="561.0" layoutY="872.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/capaPequenosInvasores.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="561.0" layoutY="1075.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="586.0" layoutY="1075.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="611.0" layoutY="1075.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="636.0" layoutY="1075.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="662.0" layoutY="1075.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaBranca.png" />
+                     </image>
+                  </ImageView>
+                  <Text fx:id="textoFilmeCarrossel2121" fill="WHITE" layoutX="562.0" layoutY="1125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pequenos Invasores">
+                     <font>
+                        <Font name="Corbel" size="15.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="34.0" fitWidth="144.0" layoutX="563.0" layoutY="1141.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/textoNavegarParaPaginaDoFilme.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="231.0" layoutY="1136.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
+                  <Button layoutX="234.0" layoutY="1135.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
+                  <Button layoutX="393.0" layoutY="1135.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
+                  <Button layoutX="555.0" layoutY="1135.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
                </children>
             </AnchorPane>
          </content>
       </ScrollPane>
       <Button fx:id="botaoInicio" layoutX="563.0" layoutY="63.0" mnemonicParsing="false" opacity="0.0" prefHeight="34.0" prefWidth="85.0" />
+      <Text fill="WHITE" layoutX="472.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PERFIL">
+         <font>
+            <Font name="Corbel Bold" size="23.0" />
+         </font>
+      </Text>
+      <Button fx:id="botaoInicio" layoutX="583.0" layoutY="88.0" mnemonicParsing="false" opacity="0.0" prefHeight="34.0" prefWidth="76.0" />
+      <Button fx:id="botaoPerfil" layoutX="467.0" layoutY="91.0" mnemonicParsing="false" opacity="0.0" prefHeight="34.0" prefWidth="76.0" />
+      <Line endY="40.0" layoutX="567.0" layoutY="85.0" stroke="#dba15c" strokeWidth="3.0" />
    </children>
 </AnchorPane>

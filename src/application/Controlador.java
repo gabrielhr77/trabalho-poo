@@ -15,7 +15,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 
-public class Controlador implements Initializable {
+public class Controlador/* implements Initializable*/ {
 	//LOGIN
 	@FXML
 	private RadioButton loginRButton, registroRButton;
@@ -64,7 +64,7 @@ public class Controlador implements Initializable {
 	}
 	
 	
-	
+	/*
 	
 	//PAGINA INICIAL
 	@FXML
@@ -219,7 +219,7 @@ public class Controlador implements Initializable {
 	
 	
 	
-	
+	*/
 	
 	
 //

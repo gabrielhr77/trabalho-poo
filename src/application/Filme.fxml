@@ -1,48 +1,184 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.ListView?>
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.SeparatorMenuItem?>
-<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controlador">
    <children>
-      <MenuBar layoutY="2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-        <menus>
-          <Menu mnemonicParsing="false" text="File">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
-                  <SeparatorMenuItem mnemonicParsing="false" />
-                  <MenuItem mnemonicParsing="false" text="Open" />
-                  <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-                  <Menu mnemonicParsing="false" text="Unspecified Menu">
-                    <items>
-                      <MenuItem mnemonicParsing="false" text="Action 1" />
-                        <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-                    </items>
-                  </Menu>
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
-            </items>
-          </Menu>
-        </menus>
-      </MenuBar>
-      <SplitPane dividerPositions="0.29797979797979796" layoutX="6.0" layoutY="25.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
-        <items>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+      <ImageView fitHeight="200.0" fitWidth="950.0" layoutX="47.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@imagens/bgtopocerto1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="326.0" fitWidth="368.0" layoutX="49.0" layoutY="-85.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="15.0">
+         <image>
+            <Image url="@imagens/logo.PNG" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="261.0" fitWidth="333.0" layoutX="-143.0" layoutY="-57.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0" AnchorPane.leftAnchor="-143.0" AnchorPane.rightAnchor="760.0" AnchorPane.topAnchor="-57.0">
+         <image>
+            <Image url="@imagens/fitaTopo.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="barraDePesquisa" alignment="CENTER" layoutX="675.0" layoutY="95.0" prefHeight="25.0" prefWidth="192.0" promptText="Pesquisar no site">
+         <font>
+            <Font name="Corbel Bold" size="13.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="30.0" fitWidth="31.0" layoutX="880.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imagens/lupa.png" />
+         </image>
+      </ImageView>
+      <Button id="botaoPesquisar" fx:id="botaoPesquisar" layoutX="870.0" layoutY="86.0" mnemonicParsing="false" opacity="0.0" prefHeight="45.0" prefWidth="49.0" />
+      <Text fill="WHITE" layoutX="588.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INÍCIO">
+         <font>
+            <Font name="Corbel Bold" size="23.0" />
+         </font>
+      </Text>
+      <ScrollPane hbarPolicy="NEVER" layoutX="39.0" layoutY="187.0" prefHeight="495.0" prefWidth="950.0" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="157.0">
+         <content>
+            <AnchorPane maxWidth="950.0" prefHeight="1750.0" prefWidth="950.0" style="-fx-background-color: #202020;">
                <children>
-                  <ListView layoutX="-25.0" layoutY="14.0" prefHeight="373.0" prefWidth="175.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <ImageView fitHeight="226.0" fitWidth="173.0" layoutX="88.0" layoutY="544.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/fundoFilmePaginaDoFilme.png" />
+                     </image>
+                  </ImageView>
+                  <AnchorPane layoutY="83.0" maxWidth="977.0" prefHeight="308.0" prefWidth="950.0" style="-fx-background-color: #323232;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <ImageView fitHeight="308.0" fitWidth="550.0" layoutX="239.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-8.0" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="0.0">
+                           <image>
+                              <Image url="@imagens/posterInterestelar.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <Text fill="WHITE" layoutX="87.0" layoutY="505.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Interestelar" wrappingWidth="276.0">
+                     <font>
+                        <Font name="Corbel Bold" size="55.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="210.0" fitWidth="201.0" layoutX="96.0" layoutY="552.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/capaInterestelar.jpg" />
+                     </image>
+                  </ImageView>
+                  <Line endY="226.0" layoutX="289.0" layoutY="544.0" stroke="#dba15c" strokeWidth="3.0" />
+                  <Text fill="WHITE" layoutX="315.0" layoutY="610.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="Lançamento: ">
+                     <font>
+                        <Font name="Corbel Bold" size="22.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="150.0" fitWidth="35.0" layoutX="315.0" layoutY="546.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="35.0" layoutX="350.0" layoutY="546.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="35.0" layoutX="384.0" layoutY="546.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="35.0" layoutX="418.0" layoutY="546.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="35.0" layoutX="453.0" layoutY="546.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <Text fx:id="lancamentoFilme" fill="WHITE" layoutX="452.0" layoutY="611.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2014">
+                     <font>
+                        <Font name="Corbel Bold" size="26.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="315.0" layoutY="637.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Direção:">
+                     <font>
+                        <Font name="Corbel Bold" size="22.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="lancamentoFilme1" fill="WHITE" layoutX="453.0" layoutY="638.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Christopher Nolan">
+                     <font>
+                        <Font name="Corbel Bold" size="22.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="315.0" layoutY="663.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Elenco:">
+                     <font>
+                        <Font name="Corbel Bold" size="22.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="lancamentoFilme11" fill="WHITE" layoutX="453.0" layoutY="665.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Matthew McConaughey">
+                     <font>
+                        <Font name="Corbel Bold" size="22.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="lancamentoFilme111" fill="WHITE" layoutX="453.0" layoutY="689.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jessica Chastain">
+                     <font>
+                        <Font name="Corbel Bold" size="22.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="lancamentoFilme1111" fill="WHITE" layoutX="452.0" layoutY="713.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Anne Hathaway">
+                     <font>
+                        <Font name="Corbel Bold" size="22.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="315.0" layoutY="738.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Duração:">
+                     <font>
+                        <Font name="Corbel Bold" size="22.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="lancamentoFilme12" fill="WHITE" layoutX="453.0" layoutY="739.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2h 49'">
+                     <font>
+                        <Font name="Corbel Bold" size="22.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="315.0" layoutY="764.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Faixa etária:">
+                     <font>
+                        <Font name="Corbel Bold" size="22.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="lancamentoFilme121" fill="WHITE" layoutX="453.0" layoutY="765.0" strokeType="OUTSIDE" strokeWidth="0.0" text="14">
+                     <font>
+                        <Font name="Corbel Bold" size="22.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="750.0" fitWidth="950.0" layoutX="284.0" layoutY="960.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="850.0">
+                     <image>
+                        <Image url="@imagens/fundoSinopseCriticas.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="83.0" layoutY="952.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="712.5">
+                     <font>
+                        <Font name="Corbel Bold" size="18.0" />
+                     </font>
+                  </Text>
                </children>
             </AnchorPane>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
-        </items>
-      </SplitPane>
+         </content>
+      </ScrollPane>
+      <Button fx:id="botaoInicio" layoutX="563.0" layoutY="63.0" mnemonicParsing="false" opacity="0.0" prefHeight="34.0" prefWidth="85.0" />
+      <Text fill="WHITE" layoutX="472.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PERFIL">
+         <font>
+            <Font name="Corbel Bold" size="23.0" />
+         </font>
+      </Text>
+      <Button fx:id="botaoInicio" layoutX="583.0" layoutY="88.0" mnemonicParsing="false" opacity="0.0" prefHeight="34.0" prefWidth="76.0" />
+      <Button fx:id="botaoPerfil" layoutX="467.0" layoutY="91.0" mnemonicParsing="false" opacity="0.0" prefHeight="34.0" prefWidth="76.0" />
+      <Line endY="40.0" layoutX="567.0" layoutY="85.0" stroke="#dba15c" strokeWidth="3.0" />
    </children>
 </AnchorPane>
