@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -45,8 +47,13 @@
       </Text>
       <ScrollPane hbarPolicy="NEVER" layoutX="39.0" layoutY="187.0" prefHeight="495.0" prefWidth="950.0" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="157.0">
          <content>
-            <AnchorPane maxWidth="950.0" prefHeight="1750.0" prefWidth="950.0" style="-fx-background-color: #202020;">
+            <AnchorPane maxWidth="1143.0" prefHeight="650.0" prefWidth="950.0" style="-fx-background-color: #202020;">
                <children>
+                  <ImageView fitHeight="1275.0" fitWidth="950.0" layoutX="284.0" layoutY="960.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="808.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="850.0">
+                     <image>
+                        <Image url="@imagens/fundoSinopseCriticas.png" />
+                     </image>
+                  </ImageView>
                   <ImageView fitHeight="226.0" fitWidth="173.0" layoutX="88.0" layoutY="544.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@imagens/fundoFilmePaginaDoFilme.png" />
@@ -157,16 +164,127 @@
                         <Font name="Corbel Bold" size="22.0" />
                      </font>
                   </Text>
-                  <ImageView fitHeight="750.0" fitWidth="950.0" layoutX="284.0" layoutY="960.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="850.0">
-                     <image>
-                        <Image url="@imagens/fundoSinopseCriticas.png" />
-                     </image>
-                  </ImageView>
-                  <Text layoutX="83.0" layoutY="952.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="712.5">
+                  <Text layoutX="105.0" layoutY="957.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SINOPSE" wrappingWidth="108.00001525878906">
                      <font>
-                        <Font name="Corbel Bold" size="18.0" />
+                        <Font name="Corbel" size="26.0" />
                      </font>
                   </Text>
+                  <Line endY="180.0" layoutX="197.0" layoutY="886.0" rotate="90.0" stroke="#dba15c" strokeWidth="3.0" />
+                  <Text layoutX="105.0" layoutY="1019.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Após ver a Terra consumindo boa parte de suas reservas naturais, um grupo de astronautas recebe a missão de verificar possíveis planetas para receberem a população mundial, possibilitando a continuação da espécie. Cooper (Matthew McConaughey) é chamado para liderar o grupo e aceita a missão sabendo que pode nunca mais ver os filhos. Ao lado de Brand (Anne Hathaway), Jenkins (Marlon Sanders) e Doyle (Wes Bentley), ele seguirá em busca de uma nova casa. Com o passar dos anos, sua filha Murph (Mackenzie Foy e Jessica Chastain) investirá numa própria jornada para também tentar salvar a população do planeta." wrappingWidth="732.0000610351562">
+                     <font>
+                        <Font name="Corbel" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="105.0" layoutY="1268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CRÍTICA" wrappingWidth="108.00001525878906">
+                     <font>
+                        <Font name="Corbel" size="26.0" />
+                     </font>
+                  </Text>
+                  <Line endY="180.0" layoutX="197.0" layoutY="1197.0" rotate="90.0" stroke="#dba15c" strokeWidth="3.0" />
+                  <Text layoutX="105.0" layoutY="1367.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aliando os gêneros terror, mistério, aventura, comédia e um toque de romance, o filme “IT – A coisa”, de 2017, é uma adaptação do livro de mesmo nome escrito por Stephen King e lançado em 1986. O livro já havia sido adaptado para os cinemas em 1990, com a obra intitulada “It”, e, para mim, o atual remake conseguiu resgatar de forma primorosa o terror que arrepiou a criançada nos anos 90.  Na obra acompanhamos as aventuras do Clube dos Perdedores em 1984, crianças que vivem em um contexto de bullyng na escola e que apresentam problemas no convívio familiar.  Nesse sentido, apesar da trama principal ser a busca por Georgie, acredito que o diretor Andrés Muschietti fez um ótimo trabalho nos envolvendo na vida de todos os personagens, permitindo que nos apeguemos a eles. A cena inicial em que Georgie, irmão do protagonista Bill, é pego pelo palhaço, me permitiu imergir na história logo de cara, devido a peculiaridade e horror da cena. Dá para perceber, logo nesse começo, que será um filme que não medirá esforços em criar uma atmosfera macabra.  Além disso, por abordar situações como bullying, racismo, estupro, intolerância religiosa e outras agressões, " wrappingWidth="732.0000610351562">
+                     <font>
+                        <Font name="Corbel" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="107.0" layoutY="1318.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Escrito por:">
+                     <font>
+                        <Font name="Corbel Bold" size="15.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="187.0" layoutY="1318.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Laura Righi">
+                     <font>
+                        <Font name="Corbel Bold" size="15.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="107.0" layoutY="1876.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ENVIE  SUA CRÍTICA" wrappingWidth="230.66668701171875" AnchorPane.leftAnchor="107.0">
+                     <font>
+                        <Font name="Corbel" size="26.0" />
+                     </font>
+                  </Text>
+                  <Line endY="220.0" layoutX="218.0" layoutY="1787.0" rotate="90.0" stroke="#dba15c" strokeWidth="3.0" />
+                  <TextField fx:id="usuarioCredenciaisCriticoFilme" alignment="CENTER" layoutX="107.0" layoutY="1951.0" promptText="USUÁRIO" AnchorPane.leftAnchor="107.0" />
+                  <Text fill="WHITE" layoutX="106.0" layoutY="1929.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Credenciais do crítico" AnchorPane.leftAnchor="107.0">
+                     <font>
+                        <Font name="Corbel Bold" size="15.0" />
+                     </font>
+                  </Text>
+                  <TextArea fx:id="criticaPaginaFilme" layoutX="107.0" layoutY="2046.0" prefHeight="117.0" prefWidth="736.0" AnchorPane.leftAnchor="107.0" AnchorPane.rightAnchor="107.0" />
+                  <Text fill="WHITE" layoutX="107.0" layoutY="2241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ENVIE  SEU COMENTÁRIO" wrappingWidth="293.3333435058594" AnchorPane.leftAnchor="107.0">
+                     <font>
+                        <Font name="Corbel" size="26.0" />
+                     </font>
+                  </Text>
+                  <Line endY="220.0" layoutX="218.5" layoutY="2152.0" rotate="90.0" stroke="#dba15c" strokeWidth="3.0" AnchorPane.leftAnchor="217.0" />
+                  <TextField fx:id="usuarioCredenciaisUsuarioFilme" alignment="CENTER" layoutX="136.0" layoutY="2290.0" promptText="USUÁRIO" AnchorPane.leftAnchor="107.0" />
+                  <TextArea fx:id="comentarioPaginaFilme1" layoutX="136.0" layoutY="2385.0" prefHeight="117.0" prefWidth="736.0" AnchorPane.leftAnchor="107.0" />
+                  <Text fill="WHITE" layoutX="531.0" layoutY="1876.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SEÇÃO DE CRÍTICAS E COMENTÁRIOS DA OBRA" wrappingWidth="306.66668701171875" AnchorPane.rightAnchor="107.0">
+                     <font>
+                        <Font name="Corbel" size="26.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="botaoCriticasComentariosDoFilme" layoutX="491.0" layoutY="1833.0" mnemonicParsing="false" opacity="0.0" prefHeight="95.0" prefWidth="364.0" />
+                  <PasswordField fx:id="senhaCredenciaisCriticoFilme" alignment="CENTER" layoutX="107.0" layoutY="1998.0" promptText="SENHA" AnchorPane.leftAnchor="107.0" />
+                  <PasswordField fx:id="senhaCredenciaisUsuárioFilme1" alignment="CENTER" layoutX="107.0" layoutY="2337.0" promptText="SENHA" />
+                  <ImageView fitHeight="150.0" fitWidth="35.0" layoutX="670.0" layoutY="1990.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaBranca.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="35.0" layoutX="705.0" layoutY="1990.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaBranca.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="35.0" layoutX="739.0" layoutY="1990.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaBranca.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="35.0" layoutX="773.0" layoutY="1990.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaBranca.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="35.0" layoutX="808.0" layoutY="1990.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaBranca.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="35.0" layoutX="670.0" layoutY="2329.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaBranca.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="35.0" layoutX="705.0" layoutY="2329.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaBranca.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="35.0" layoutX="739.0" layoutY="2329.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaBranca.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="35.0" layoutX="773.0" layoutY="2329.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaBranca.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="35.0" layoutX="808.0" layoutY="2329.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaBranca.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="estrela1Critico" layoutX="672.0" layoutY="1991.0" mnemonicParsing="false" opacity="0.0" prefHeight="32.0" prefWidth="30.0" />
+                  <Button fx:id="estrela2Critico" layoutX="707.0" layoutY="1991.0" mnemonicParsing="false" opacity="0.0" prefHeight="32.0" prefWidth="30.0" />
+                  <Button fx:id="estrela3Critico" layoutX="742.0" layoutY="1991.0" mnemonicParsing="false" opacity="0.0" prefHeight="32.0" prefWidth="30.0" />
+                  <Button fx:id="estrela4Critico" layoutX="776.0" layoutY="1991.0" mnemonicParsing="false" opacity="0.0" prefHeight="32.0" prefWidth="30.0" />
+                  <Button fx:id="estrela5Critico" layoutX="811.0" layoutY="1991.0" mnemonicParsing="false" opacity="0.0" prefHeight="32.0" prefWidth="30.0" />
+                  <Button fx:id="estrela1Usuario" layoutX="672.0" layoutY="2330.0" mnemonicParsing="false" opacity="0.0" prefHeight="32.0" prefWidth="30.0" />
+                  <Button fx:id="estrela2Usuario" layoutX="707.0" layoutY="2330.0" mnemonicParsing="false" opacity="0.0" prefHeight="32.0" prefWidth="30.0" />
+                  <Button fx:id="estrela3Usuario" layoutX="742.0" layoutY="2330.0" mnemonicParsing="false" opacity="0.0" prefHeight="32.0" prefWidth="30.0" />
+                  <Button fx:id="estrela4Usuario" layoutX="776.0" layoutY="2330.0" mnemonicParsing="false" opacity="0.0" prefHeight="32.0" prefWidth="30.0" />
+                  <Button fx:id="estrela5Usuario" layoutX="811.0" layoutY="2330.0" mnemonicParsing="false" opacity="0.0" prefHeight="32.0" prefWidth="30.0" />
                </children>
             </AnchorPane>
          </content>

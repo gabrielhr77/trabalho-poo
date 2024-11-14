@@ -64,8 +64,8 @@ public class Controlador/* implements Initializable*/ {
 	}
 	
 	
-	/*
 	
+	/*
 	//PAGINA INICIAL
 	@FXML
 	private Text textoFilmeCarrossel,textoGeneroCarrossel;
@@ -217,9 +217,9 @@ public class Controlador/* implements Initializable*/ {
 	
 
 	
-	
-	
 	*/
+	
+	
 	
 	
 //
