@@ -1,5 +1,4 @@
-
-package entidades;
+package entidadesFilmes;
 
 import java.util.ArrayList;
 import java.time.LocalDate;
@@ -58,4 +57,3 @@ public class Diretor {
         }
     }
 	
-

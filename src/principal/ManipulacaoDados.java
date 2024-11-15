@@ -1,9 +1,6 @@
 package principal;
 
 import principal.Main;
-import entidades.Ator;
-import entidades.Diretor;
-import entidades.Filme;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -13,6 +10,10 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.time.LocalDate;
 import java.util.ArrayList;
+
+import entidadesFilmes.Ator;
+import entidadesFilmes.Diretor;
+import entidadesFilmes.Filme;
 
 public class ManipulacaoDados {
 

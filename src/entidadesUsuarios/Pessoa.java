@@ -1,5 +1,6 @@
+package entidadesUsuarios;
 
-package entidades;
+
 
 import java.util.Date;
 
@@ -34,5 +35,6 @@ public abstract class Pessoa {
         return this.dataDeNascimento;
     }
     
+    public abstract boolean isGerenciador();
+    
 }
-

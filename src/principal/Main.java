@@ -1,16 +1,17 @@
 package principal;
-import entidades.Filme;
-import entidades.FilmeCSV;
-import entidades.Pessoa;
-import entidades.Diretor;
-import entidades.Ator;
-
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.time.LocalDate;
 import java.util.Scanner;
+
+import entidadesFilmes.Ator;
+import entidadesFilmes.Diretor;
+import entidadesFilmes.Filme;
+import entidadesFilmes.FilmeCSV;
+import entidadesFilmes.Pessoa;
+
 import java.util.ArrayList;
 
 public class Main {
