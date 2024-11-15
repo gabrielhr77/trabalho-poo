@@ -52,7 +52,7 @@ public class Main {
 		//copiar os dados dos arquivos para os arraylists 
 		//*************************************************************************************
 		
-		Catalogo.copiaDadosDoArquivo(caminhoArquivoFilmes,Catalogo.getLeitorFilmesAtoresDiretores(),todosOsFilmes,todosOsAtores,todosOsDiretores);
+		Arquivos.copiaDadosDoArquivo(caminhoArquivoFilmes,Arquivos.getLeitorFilmesAtoresDiretores(),todosOsFilmes,todosOsAtores,todosOsDiretores);
 		
 		
 		Scanner scanner = new Scanner(System.in);
@@ -74,11 +74,11 @@ public class Main {
 		
 		FilmeCSV filmeCSV = new FilmeCSV(); 
 //		Catalogo catalogo = new Catalogo();
-		Catalogo.adicionaFilme(filme1,todosOsFilmes);
-		Catalogo.adicionaFilme(filme2,todosOsFilmes);
-		Catalogo.adicionaFilme(filme3,todosOsFilmes);
+		ManipulacaoDados.adicionaFilme(filme1,todosOsFilmes);
+		ManipulacaoDados.adicionaFilme(filme2,todosOsFilmes);
+		ManipulacaoDados.adicionaFilme(filme3,todosOsFilmes);
 		filmeCSV.imprimirFilme(20003);
-		Catalogo.salvaDadosNoArquivo(caminhoArquivoFilmes, arquivoFilmes, todosOsFilmes);
+		Arquivos.salvaDadosNoArquivo(caminhoArquivoFilmes, arquivoFilmes, todosOsFilmes);
 		
 		
 		

@@ -54,9 +54,6 @@ public class Filme {
 	public Ator getAtor3() {
 		return ator3;
 	}
-	/*public String[] getAtoresPrincipais() {
-		return atoresPrincipais[];
-	}*/
 	public int getAnoLancamento() {
 		return anoLancamento;
 	}
@@ -68,7 +65,6 @@ public class Filme {
 	}
 	
 	// métodos setters
-	
 	public void setNomeFilme(String nomeFilme) {
 		this.nomeFilme=nomeFilme;
 	}

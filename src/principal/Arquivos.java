@@ -7,17 +7,15 @@ import entidades.Filme;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.List;
 
-public class Catalogo {
+
+public class Arquivos {
 	
 //	ArrayList<Filme> todosOsFilmes = new ArrayList<>();
 //	ArrayList<Ator> todosOsAtores = new ArrayList<>();
@@ -191,70 +189,70 @@ public class Catalogo {
 	
 	
 	
-	//funções para filme
-	public static void adicionaFilme(Filme filme, ArrayList<Filme> arraylistFilmes) {
-		arraylistFilmes.add(filme);
-	}
-	
-	//função para remover filme
-	public static void removeFilme(String nomeFilme, ArrayList<Filme> arraylistFilmes) {
-		int i = buscaFilmePorNome(nomeFilme,arraylistFilmes);
-		arraylistFilmes.remove(i);
-	}
-	
-	//função para encontrar a posição do filme dentro do arraylist com todos os filmes
-	private static int buscaFilmePorNome(String nome, ArrayList<Filme> arraylistFilmes) {
-		for(int i=0;i<arraylistFilmes.size();i++) {
-			if(arraylistFilmes.get(i).getNomeFilme().equals(nome)) {
-				return i;
-			}
-        }
-		return -1;
-	}
-
-	
-	//funções para diretor
-	public static void adicionaDiretor(Diretor diretor, ArrayList<Diretor> arraylistDiretores) {
-		arraylistDiretores.add(diretor);
-	}
-	
-	//função para remover diretor
-	public static void removeDiretor(String nomeDiretor, ArrayList<Diretor> arraylistDiretores) {
-		int i = buscaDiretorPorNome(nomeDiretor,arraylistDiretores);
-		arraylistDiretores.remove(i);
-	}
-	
-	//função para encontrar a posição do diretor dentro do arraylist com todos os diretores
-	private static int buscaDiretorPorNome(String nome, ArrayList<Diretor> arraylistDiretores) {
-		for(int i=0;i<arraylistDiretores.size();i++) {
-			if(arraylistDiretores.get(i).getNomeDiretor().equals(nome)) {
-				return i;
-			}
-        }
-		return -1;
-	}
-	
-	
-	//funções para ator
-	public static void adicionaAtor(Ator ator, ArrayList<Ator> arraylistAtores) {
-			arraylistAtores.add(ator);
-		}
-		
-	//função para remover ator
-	public static void removeAtor(String nomeAtor, ArrayList<Ator> arraylistAtores) {
-		int i = buscaAtorPorNome(nomeAtor,arraylistAtores);
-		arraylistAtores.remove(i);
-	}
-	
-	//função para encontrar a posição do ator dentro do arraylist com todos os atores
-	private static int buscaAtorPorNome(String nome, ArrayList<Ator> arraylistAtores) {
-		for(int i=0;i<arraylistAtores.size();i++) {
-			if(arraylistAtores.get(i).getNomeAtor().equals(nome)) {
-				return i;
-			}
-        }
-		return -1;
-	}
+//	//função para adicionar filme
+//	public static void adicionaFilme(Filme filme, ArrayList<Filme> arraylistFilmes) {
+//		arraylistFilmes.add(filme);
+//	}
+//	
+//	//função para remover filme
+//	public static void removeFilme(String nomeFilme, ArrayList<Filme> arraylistFilmes) {
+//		int i = buscaFilmePorNome(nomeFilme,arraylistFilmes);
+//		arraylistFilmes.remove(i);
+//	}
+//	
+//	//função para encontrar a posição do filme dentro do arraylist com todos os filmes
+//	private static int buscaFilmePorNome(String nome, ArrayList<Filme> arraylistFilmes) {
+//		for(int i=0;i<arraylistFilmes.size();i++) {
+//			if(arraylistFilmes.get(i).getNomeFilme().equals(nome)) {
+//				return i;
+//			}
+//        }
+//		return -1;
+//	}
+//
+//	
+//	//função para adicionar diretor
+//	public static void adicionaDiretor(Diretor diretor, ArrayList<Diretor> arraylistDiretores) {
+//		arraylistDiretores.add(diretor);
+//	}
+//	
+//	//função para remover diretor
+//	public static void removeDiretor(String nomeDiretor, ArrayList<Diretor> arraylistDiretores) {
+//		int i = buscaDiretorPorNome(nomeDiretor,arraylistDiretores);
+//		arraylistDiretores.remove(i);
+//	}
+//	
+//	//função para encontrar a posição do diretor dentro do arraylist com todos os diretores
+//	private static int buscaDiretorPorNome(String nome, ArrayList<Diretor> arraylistDiretores) {
+//		for(int i=0;i<arraylistDiretores.size();i++) {
+//			if(arraylistDiretores.get(i).getNomeDiretor().equals(nome)) {
+//				return i;
+//			}
+//        }
+//		return -1;
+//	}
+//	
+//	
+//	//função para adicionar ator
+//	public static void adicionaAtor(Ator ator, ArrayList<Ator> arraylistAtores) {
+//			arraylistAtores.add(ator);
+//		}
+//		
+//	//função para remover ator
+//	public static void removeAtor(String nomeAtor, ArrayList<Ator> arraylistAtores) {
+//		int i = buscaAtorPorNome(nomeAtor,arraylistAtores);
+//		arraylistAtores.remove(i);
+//	}
+//	
+//	//função para encontrar a posição do ator dentro do arraylist com todos os atores
+//	private static int buscaAtorPorNome(String nome, ArrayList<Ator> arraylistAtores) {
+//		for(int i=0;i<arraylistAtores.size();i++) {
+//			if(arraylistAtores.get(i).getNomeAtor().equals(nome)) {
+//				return i;
+//			}
+//        }
+//		return -1;
+//	}
 
 }
 	
