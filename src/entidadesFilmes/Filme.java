@@ -1,5 +1,5 @@
 
-package entidades;
+package entidadesFilmes;
 
 public class Filme {
 	
