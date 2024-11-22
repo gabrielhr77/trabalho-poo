@@ -9,11 +9,13 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
+import principal.Main;
 
 public class Controlador implements Initializable {
 	
@@ -47,7 +49,7 @@ public class Controlador implements Initializable {
 	}
 	
 	public void botaoPaginaInicial(ActionEvent evento) {
-		MainScene.mudarPagina(1);
+		Main.mudarPagina(1);
 	}
 	
 	public String retornaUserLogin(ActionEvent event) {
@@ -87,6 +89,42 @@ public class Controlador implements Initializable {
 	@FXML
 	private Button botaoPassaCarrosselImagens, botaoVoltaCarrosselImagens;	
 	
+	@FXML
+	private ChoiceBox<String> opcoesNavegacao;
+	//tem que ser do tipo não primitivo String pois o método para add os itens só pode adicionar uma collection
+	private String[] palavrasOpcoesNavegacao = {"PERFIL","ADICIONAR FILME","ADICIONAR LISTA"};
+	
+	
+	
+	
+	
+	
+	
+	public void selecaoNavegacao(ActionEvent event) {
+		String escolha = opcoesNavegacao.getValue();
+		switch(escolha) {
+			case "PERFIL":
+				Main.mudarPagina(0);
+				break;
+			case "ADICIONAR FILME":
+				Main.mudarPagina(4);
+				break;
+			case "ADICIONAR LISTA":
+				Main.mudarPagina(5);
+				break;
+		}
+	}
+	
+//	public void botaoPerfil(ActionEvent evento) {
+//		Main.mudarPagina(3);
+//	}
+//	public void botaoFilme(ActionEvent evento) {
+//		Main.mudarPagina(4);
+//	}
+//	public void botaoLista(ActionEvent evento) {
+//		Main.mudarPagina(5);
+//	}
+	
 	
 	//criando um arraylist com as imagens do carrossel
 	private ArrayList<Image> imagens = new ArrayList<>();
@@ -106,6 +144,8 @@ public class Controlador implements Initializable {
 	    if (capaFilmeCarrossel != null) {
 	        iniciaCarrossel(); // Inicia o carrossel ao carregar a interface
 	        atualizaCarrossel(); // Exibe a primeira imagem e texto do carrossel
+	        opcoesNavegacao.getItems().addAll(palavrasOpcoesNavegacao);
+	        opcoesNavegacao.setOnAction(this::selecaoNavegacao);
 	    }
 	}
 	

@@ -77,26 +77,26 @@
                </font>
             </Text>
          </children></Pane>
-      <Pane id="painelTelaInicialLogin" layoutX="140.0" layoutY="250.0" prefHeight="245.0" prefWidth="237.0" style="-fx-background-color: #323232;">
+      <Pane id="painelTelaInicialLogin" layoutX="140.0" layoutY="250.0" prefHeight="224.0" prefWidth="237.0" style="-fx-background-color: #323232;">
          <children>
-            <TextField fx:id="userLogin" layoutX="37.0" layoutY="100.0" prefHeight="26.0" prefWidth="157.0" />
+            <TextField fx:id="userLogin" layoutX="37.0" layoutY="93.0" prefHeight="26.0" prefWidth="157.0" />
             <Text fill="WHITE" layoutX="37.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login">
                <font>
                   <Font name="Century751 No2 BT Italic" size="34.0" />
                </font>
             </Text>
             <Line endX="55.0" layoutX="138.0" layoutY="68.0" startX="-100.0" stroke="#dba15c" strokeWidth="3.0" />
-            <Text fill="WHITE" layoutX="37.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="USUÁRIO">
+            <Text fill="WHITE" layoutX="37.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="USUÁRIO">
                <font>
                   <Font name="Corbel Bold" size="14.0" />
                </font>
             </Text>
-            <Text fill="WHITE" layoutX="37.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SENHA">
+            <Text fill="WHITE" layoutX="37.0" layoutY="198.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SENHA">
                <font>
                   <Font name="Corbel Bold" size="14.0" />
                </font>
             </Text>
-            <PasswordField fx:id="senhaLogin" layoutX="37.0" layoutY="170.0" prefHeight="25.0" prefWidth="157.0" />
+            <PasswordField fx:id="senhaLogin" layoutX="37.0" layoutY="153.0" prefHeight="25.0" prefWidth="157.0" />
          </children></Pane>
       <ImageView fitHeight="65.0" fitWidth="184.0" layoutX="900.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true" rotate="-30.0">
          <image>
