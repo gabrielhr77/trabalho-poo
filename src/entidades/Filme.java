@@ -1,6 +1,8 @@
  package entidades;
+ 
+import java.io.Serializable;
 
-public class Filme {
+public class Filme implements Serializable{
 	
 	private String nomeFilme, generoFilme;//instancia aqui as caracteristicas dos filmes
 	private int _IDFilme, anoLancamento, numeroDeEstrelas=0, numeroAvaliacoes=0;

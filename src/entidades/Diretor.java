@@ -1,9 +1,10 @@
 package entidades;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.time.LocalDate;
 
-public class Diretor {
+public class Diretor implements Serializable{
 	private int _IDDiretor;
 	private String nomeDiretor;
 	private LocalDate dataNascimentoDiretor;

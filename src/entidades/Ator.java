@@ -1,8 +1,9 @@
 package entidades;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Ator {
+public class Ator implements Serializable {
 	
 	private String nomeAtor;
 	private int _IDAtor;
