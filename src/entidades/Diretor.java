@@ -8,7 +8,7 @@ public class Diretor implements Serializable{
 	private int _IDDiretor;
 	private String nomeDiretor;
 	private LocalDate dataNascimentoDiretor;
-	private ArrayList<Filme> filmesDirigidos;
+	private ArrayList<Integer> filmesDirigidos;
 	
 	public Diretor(int _IDDiretor, String nomeDiretor, LocalDate dataNascimentoDiretor){
 		this._IDDiretor=_IDDiretor;
@@ -30,7 +30,7 @@ public class Diretor implements Serializable{
 	public LocalDate getDataNascimentoDiretor() {
 		return dataNascimentoDiretor;
 	}
-	public ArrayList<Filme> getFilmesDirigidos() {
+	public ArrayList<Integer> getFilmesDirigidos() {
 		return filmesDirigidos;
 	}
 	
@@ -44,10 +44,10 @@ public class Diretor implements Serializable{
 	public void setdataNascimentoDiretor(LocalDate dataNascimentoDiretor) {
 		this.dataNascimentoDiretor=dataNascimentoDiretor;
 	}
-	public void adicionarFilmeDirigido(ArrayList<Filme> todosFilmes, Filme filmeADD) {
+	public void adicionarFilmeDirigido(ArrayList<Integer> todosFilmes, int filmeADD) {
 		filmesDirigidos.add(filmeADD);
 	}
-	private int buscarFilmeDoDiretor(String nomeFilme) {//RETORNA A POSICAO DO FILME NO ARRAY DOS FILMES DO DIRETOR		
+/*	private int buscarFilmeDoDiretor(String nomeFilme) {//RETORNA A POSICAO DO FILME NO ARRAY DOS FILMES DO DIRETOR		
 		for (int i=0;i<filmesDirigidos.size();i++) {
             if (filmesDirigidos.get(i).getNomeFilme() == nomeFilme) {
                 return i;
@@ -55,7 +55,7 @@ public class Diretor implements Serializable{
         }
         System.out.println("Nome de filme inválido!"); // Retorna -1 se o aluno não for encontrado
         return -1;
-        }
+        }*/
     }
 	
 

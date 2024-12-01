@@ -5,25 +5,26 @@ import java.io.Serializable;
 public class Filme implements Serializable{
 	
 	private String nomeFilme, generoFilme;//instancia aqui as caracteristicas dos filmes
-	private int _IDFilme, anoLancamento, numeroDeEstrelas=0, numeroAvaliacoes=0;
+	private int anoLancamento, numeroDeEstrelas=0, numeroAvaliacoes=0;
 	private float mediaNumeroDeEstrelas;
-	private Ator ator1, ator2, ator3;
-	private Diretor diretor;
+	private int _IDAtor1, _IDAtor2, _IDAtor3;
+	private int _IDDiretor;
+	private int _IDFilme;
 	
 	
 	public Filme() {
 	}
 
 	
-	public Filme(int _IDFilme, String nomeFilme, String generoFilme, Diretor diretor, int anoLancamento, Ator ator1, Ator ator2, Ator ator3) {
+	public Filme(int _IDFilme, String nomeFilme, String generoFilme, int diretor, int anoLancamento, int ator1, int ator2, int ator3) {
 		this._IDFilme=_IDFilme;
 		this.nomeFilme=nomeFilme;
 		this.generoFilme=generoFilme;
-		this.diretor=diretor;
-		this.anoLancamento=anoLancamento;
-		this.ator1=ator1;
-		this.ator2=ator2;
-		this.ator3=ator3;
+		this._IDDiretor=diretor;
+		this.anoLancamento = anoLancamento;
+		this._IDAtor1=ator1;
+		this._IDAtor2=ator2;
+		this._IDAtor3=ator3;
 		this.numeroDeEstrelas=0;
 		int numeroAvaliacoes=0;
 		float mediaNumeroDeEstrelas= numeroDeEstrelas/(float)numeroAvaliacoes;
@@ -43,17 +44,17 @@ public class Filme implements Serializable{
 	public String getGeneroFilme() {
 		return generoFilme;
 	}
-	public Diretor getDiretor() {
-		return diretor;
+	public int getDiretor() {
+		return _IDDiretor;
 	}
-	public Ator getAtor1() {
-		return ator1;
+	public int getAtor1() {
+		return _IDAtor1;
 	}
-	public Ator getAtor2() {
-		return ator2;
+	public int  getAtor2() {
+		return _IDAtor2;
 	}
-	public Ator getAtor3() {
-		return ator3;
+	public int getAtor3() {
+		return _IDAtor3;
 	}
 	/*public String[] getAtoresPrincipais() {
 		return atoresPrincipais[];
@@ -76,17 +77,17 @@ public class Filme implements Serializable{
 	public void setGeneroFilme(String generoFilme) {
 		this.generoFilme=generoFilme;
 	}
-	public void setDiretor(Diretor diretor) {
-		this.diretor=diretor;
+	public void setDiretor(int  diretor) {
+		this._IDDiretor=diretor;
 	}
-	public void setAtor1(Ator ator1) {
-		this.ator1=ator1;
+	public void setAtor1(int  ator1) {
+		this._IDAtor1=ator1;
 	}
-	public void setAtor2(Ator ator2) {
-		this.ator2=ator2;
+	public void setAtor2(int ator2) {
+		this._IDAtor2=ator2;
 	}
-	public void setAtor3(Ator ator3) {
-		this.ator3=ator3;
+	public void setAtor3(int ator3) {
+		this._IDAtor3=ator3;
 	}
 	public void setAnoLancamento(int anoLancamento) {
 		this.anoLancamento=anoLancamento;

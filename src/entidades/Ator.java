@@ -11,7 +11,7 @@ public class Ator implements Serializable {
 	
 	
 	public Ator(int _IDAtor, String nomeAtor, LocalDate dataNascimentoAtor) {
-		this._IDAtor=_IDAtor;
+		this._IDAtor =_IDAtor;
 		this.nomeAtor=nomeAtor;
 		this.dataNascimentoAtor=dataNascimentoAtor;	
 	}
