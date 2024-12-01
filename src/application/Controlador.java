@@ -68,11 +68,12 @@ public class Controlador implements Initializable {
 
 	
 	public void enviarParaVerificacao(ActionEvent event) {
-		String nome = retornaUserLogin();
-		String senha = retornaSenhaLogin();
-		boolean existente = ManipulacaoDados.verificaLoginESenha(nome,senha);
-		if(existente) Main.mudarPagina(1);
-		else alertaErroLogin();		
+		Main.mudarPagina(1);
+//		String nome = retornaUserLogin();
+//		String senha = retornaSenhaLogin();
+//		boolean existente = ManipulacaoDados.verificaLoginESenha(nome,senha);
+//		if(existente) Main.mudarPagina(1);
+//		else alertaErroLogin();		
 	}
 	
 //	public void botaoPaginaInicial(ActionEvent event) {
@@ -142,7 +143,7 @@ public class Controlador implements Initializable {
 				Main.mudarPagina(4);
 				break;
 			case "ADICIONAR LISTA":
-				Main.mudarPagina(5);
+				Main.mudarPagina(0);
 				break;
 		}
 	}
