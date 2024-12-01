@@ -33,6 +33,7 @@ public class Main extends Application{
 	private static Scene paginaInicialScene;
 	private static Scene filmeScene;
 	private static Scene addFilmeScene;
+	private static Scene addListaScene;
 	
 	private static ArrayList<Filme> todosOsFilmes = new ArrayList<>();
 	private static ArrayList<Ator> todosOsAtores = new ArrayList<>();
@@ -60,7 +61,8 @@ public class Main extends Application{
             Parent fxmlAddFilme = FXMLLoader.load(getClass().getResource("/application/AdicionarFilme.fxml"));
             addFilmeScene = new Scene(fxmlAddFilme, 950, 650);
             
-            
+            Parent fxmlAddLista = FXMLLoader.load(getClass().getResource("/application/AdicionarLista.fxml"));
+            addListaScene = new Scene(fxmlAddLista, 950, 650);
             
             System.out.println("FXML carregado com sucesso.");
 
@@ -111,9 +113,9 @@ public class Main extends Application{
         		case 4:
         			stage.setScene(addFilmeScene);
         			break;
-//        		case 5:
-//        			stage.setScene(addLista);
-//        			break;
+        		case 5:
+        			stage.setScene(addListaScene);
+        			break;
         		default: 
         			stage.setScene(paginaInicialScene);
         			break;

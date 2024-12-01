@@ -76,9 +76,7 @@ public class Controlador implements Initializable {
 //		else alertaErroLogin();		
 	}
 	
-//	public void botaoPaginaInicial(ActionEvent event) {
-//		Main.mudarPagina(1);
-//	}
+
 	
 	public String retornaUserLogin() {
 		return userLogin.getText();
@@ -118,11 +116,11 @@ public class Controlador implements Initializable {
 	private Button botaoPassaCarrosselImagens,botaoVoltaCarrosselImagens,botaoProximaPagina,botaoPaginaAnterior;
 	
 	@FXML
-	private ChoiceBox<String> opcoesNavegacao;
+	private ChoiceBox<String> opcoesNavegacaoPagInicial, opcoesNavegacaoAddFilme, opcoesNavegacaoAddLista;
 	//tem que ser do tipo não primitivo String pois o método para add os itens só pode adicionar uma collection
-	private String[] palavrasOpcoesNavegacao = {"PERFIL","ADICIONAR FILME","ADICIONAR LISTA"};
-	
-	
+	private String[] palavrasOpcoesNavegacaoPagIni = {"PERFIL","ADICIONAR FILME","ADICIONAR LISTA"};
+	private String[] palavrasOpcoesNavegacaoAddFilme = {"PERFIL","ADICIONAR LISTA"};
+	private String[] palavrasOpcoesNavegacaoAddLista = {"PERFIL","ADICIONAR FILME"};
 	
 	
 	private int numeroDaPaginaAtual=0;
@@ -133,8 +131,8 @@ public class Controlador implements Initializable {
 		
 	}
 	
-	public void selecaoNavegacao(ActionEvent event) {
-		String escolha = opcoesNavegacao.getValue();
+	public void selecaoNavegacaoPagIni(ActionEvent event) {
+		String escolha = opcoesNavegacaoPagInicial.getValue();
 		switch(escolha) {
 			case "PERFIL":
 				Main.mudarPagina(0);
@@ -143,20 +141,51 @@ public class Controlador implements Initializable {
 				Main.mudarPagina(4);
 				break;
 			case "ADICIONAR LISTA":
+				Main.mudarPagina(5);
+				break;
+			default: 
+				Main.mudarPagina(1);
+				break;
+		}
+	}
+	public void selecaoNavegacaoAddFilme(ActionEvent event) {
+		String escolha = opcoesNavegacaoAddFilme.getValue();
+		switch(escolha) {
+			case "PERFIL":
 				Main.mudarPagina(0);
+				break;
+			case "ADICIONAR LISTA":
+				Main.mudarPagina(5);
+				break;
+			default: 
+				Main.mudarPagina(1);
+				break;
+		}
+	}
+	public void selecaoNavegacaoAddLista(ActionEvent event) {
+		String escolha = opcoesNavegacaoAddLista.getValue();
+		switch(escolha) {
+			case "PERFIL":
+				Main.mudarPagina(0);
+				break;
+			case "ADICIONAR FILME":
+				Main.mudarPagina(4);
+				break;
+			default: 
+				Main.mudarPagina(1);
 				break;
 		}
 	}
 	
-//	public void botaoPerfil(ActionEvent evento) {
-//		Main.mudarPagina(3);
-//	}
-//	public void botaoFilme(ActionEvent evento) {
-//		Main.mudarPagina(4);
-//	}
-//	public void botaoLista(ActionEvent evento) {
-//		Main.mudarPagina(5);
-//	}
+	public void botaoPerfil(ActionEvent event) {
+		Main.mudarPagina(0);
+	}
+	public void botaoFilme(ActionEvent event) {
+		Main.mudarPagina(4);
+	}
+	public void botaoLista(ActionEvent event) {
+		Main.mudarPagina(5);
+	}
 	
 	
 	//criando um arraylist com as imagens do carrossel
@@ -173,12 +202,37 @@ public class Controlador implements Initializable {
 //	
 	
 	
+//	public void initialize(URL location, ResourceBundle resources) {
+//	    if (capaFilmeCarrossel != null) {
+//	        iniciaCarrossel(); // Inicia o carrossel ao carregar a interface
+//	        atualizaCarrossel(); // Exibe a primeira imagem e texto do carrossel
+//	        opcoesNavegacaoPagInicial.getItems().addAll(palavrasOpcoesNavegacaoPagIni);
+//	        opcoesNavegacaoPagInicial.setOnAction(this::selecaoNavegacaoPagIni);
+//	        opcoesNavegacaoAddFilme.getItems().addAll(palavrasOpcoesNavegacaoAddFilme);
+//	        opcoesNavegacaoAddFilme.setOnAction(this::selecaoNavegacaoAddFilme);
+//	        opcoesNavegacaoAddLista.getItems().addAll(palavrasOpcoesNavegacaoAddLista);
+//	        opcoesNavegacaoAddLista.setOnAction(this::selecaoNavegacaoAddLista);
+//	    }
+//	}
 	public void initialize(URL location, ResourceBundle resources) {
 	    if (capaFilmeCarrossel != null) {
 	        iniciaCarrossel(); // Inicia o carrossel ao carregar a interface
 	        atualizaCarrossel(); // Exibe a primeira imagem e texto do carrossel
-	        opcoesNavegacao.getItems().addAll(palavrasOpcoesNavegacao);
-	        opcoesNavegacao.setOnAction(this::selecaoNavegacao);
+	    }
+
+	    if (opcoesNavegacaoPagInicial != null) {
+	        opcoesNavegacaoPagInicial.getItems().addAll(palavrasOpcoesNavegacaoPagIni);
+	        opcoesNavegacaoPagInicial.setOnAction(this::selecaoNavegacaoPagIni);
+	    }
+
+	    if (opcoesNavegacaoAddFilme != null) {
+	        opcoesNavegacaoAddFilme.getItems().addAll(palavrasOpcoesNavegacaoAddFilme);
+	        opcoesNavegacaoAddFilme.setOnAction(this::selecaoNavegacaoAddFilme);
+	    }
+
+	    if (opcoesNavegacaoAddLista != null) {
+	        opcoesNavegacaoAddLista.getItems().addAll(palavrasOpcoesNavegacaoAddLista);
+	        opcoesNavegacaoAddLista.setOnAction(this::selecaoNavegacaoAddLista);
 	    }
 	}
 	
