@@ -11,16 +11,41 @@ import java.nio.charset.StandardCharsets;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-import entidadesFilmes.Ator;
-import entidadesFilmes.Diretor;
-import entidadesFilmes.Filme;
+import entidadesFilmes. *;
+import entidadesUsuarios. *;
 
 public class ManipulacaoDados {
-
+	
+	//-----------------------------------------------USUÁRIOS-----------------------------------------------
+	
+	public static boolean verificaLoginESenha(String usuario, String senha) {
+		ArrayList<Usuario> usuarios = Main.retornaArrayListUsuarios(); 
+		for(int i=0;i<usuarios.size();i++) {
+			if(usuarios.get(i).getNome()==usuario) {
+				if(usuarios.get(i).getSenha()==senha);
+				return true;
+			}
+		}
+		return false;
+	}
 	
 	
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	//-------------------------------------FILMES, ATORES E DIRETORES----------------------------------------
 	
 	//função para adicionar filme
 	public static void adicionaFilme(Filme filme, ArrayList<Filme> arraylistFilmes) {

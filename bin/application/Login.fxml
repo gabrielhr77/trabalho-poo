@@ -116,7 +116,7 @@
             <Font name="Corbel Bold" size="18.0" />
          </font>
       </RadioButton>
-      <Button layoutX="522.0" layoutY="558.0" mnemonicParsing="false" onAction="#botaoPaginaInicial" prefHeight="45.0" prefWidth="95.0" text="ENVIAR">
+      <Button fx:id="botaoEnviarTelaLogin" layoutX="522.0" layoutY="558.0" mnemonicParsing="false" onAction="#enviarParaVerificacao" prefHeight="45.0" prefWidth="95.0" text="ENVIAR">
          <font>
             <Font name="Corbel Bold" size="18.0" />
          </font>

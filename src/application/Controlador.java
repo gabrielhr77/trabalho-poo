@@ -8,6 +8,8 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.RadioButton;
@@ -15,7 +17,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
-import principal.Main;
+import javafx.stage.FileChooser;
+import principal. *;
 
 public class Controlador implements Initializable {
 	
@@ -48,24 +51,42 @@ public class Controlador implements Initializable {
 		}
 	}
 	
-	public void botaoPaginaInicial(ActionEvent evento) {
-		Main.mudarPagina(1);
+	private void alertaErroLogin() {
+        
+        Alert alerta = new Alert(AlertType.ERROR);
+        alerta.setTitle("Erro");
+      
+        alerta.setContentText("Usuário e/ou senha incorretos\nVerifique se suas credenciais foram digitadas corretamente.");
+        
+        alerta.showAndWait();
+    }
+	
+	public void enviarParaVerificacao(ActionEvent event) {
+		String nome = retornaUserLogin();
+		String senha = retornaSenhaLogin();
+		boolean existente = ManipulacaoDados.verificaLoginESenha(nome,senha);
+		if(existente) Main.mudarPagina(1);
+		else alertaErroLogin();		
 	}
 	
-	public String retornaUserLogin(ActionEvent event) {
+//	public void botaoPaginaInicial(ActionEvent event) {
+//		Main.mudarPagina(1);
+//	}
+	
+	public String retornaUserLogin() {
 		return userLogin.getText();
 	}
-	public String retornaSenhaLogin(ActionEvent event) {
+	public String retornaSenhaLogin() {
 		return senhaLogin.getText();
 	}
 	
-	public String retornaEmailRegistro(ActionEvent event) {
+	public String retornaEmailRegistro() {
 		return emailRegistro.getText();
 	}
-	public String retornaUserRegistro(ActionEvent event) {
+	public String retornaUserRegistro() {
 		return userRegistro.getText();
 	}
-	public String retornaSenhaRegistro(ActionEvent event) {
+	public String retornaSenhaRegistro() {
 		return senhaRegistro.getText();
 	}
 	
@@ -78,7 +99,7 @@ public class Controlador implements Initializable {
 	private Text textoFilmeCarrossel,textoGeneroCarrossel;
 	
 	@FXML
-	private ImageView capaFilmeCarrossel;
+	private ImageView capaFilmeCarrossel,filme1Lista1,filme2Lista1,filme3Lista1,filme4Lista1,filme1Lista2,filme2Lista2,filme3Lista2,filme4Lista2,filme1Lista3,filme2Lista3,filme3Lista3,filme4Lista3,filme1Lista4,filme2Lista4,filme3Lista4,filme4Lista4;
 	
 	@FXML
 	private Image imagem;
@@ -87,7 +108,7 @@ public class Controlador implements Initializable {
 	private RadioButton filme1Carrossel,filme2Carrossel,filme3Carrossel,filme4Carrossel,filme5Carrossel;
 	
 	@FXML
-	private Button botaoPassaCarrosselImagens, botaoVoltaCarrosselImagens;	
+	private Button botaoPassaCarrosselImagens,botaoVoltaCarrosselImagens,botaoProximaPagina,botaoPaginaAnterior;
 	
 	@FXML
 	private ChoiceBox<String> opcoesNavegacao;
@@ -97,8 +118,13 @@ public class Controlador implements Initializable {
 	
 	
 	
-	
-	
+	private int numeroDaPaginaAtual=0;
+	public void passaListasDaPaginaInicial(ActionEvent event) {
+		
+	}
+	public void voltaListasDaPaginaInicial(ActionEvent event) {
+		
+	}
 	
 	public void selecaoNavegacao(ActionEvent event) {
 		String escolha = opcoesNavegacao.getValue();
@@ -133,11 +159,6 @@ public class Controlador implements Initializable {
 	//precisa ter esse nome pois é uma função da interface INITIALIZABLE, a qual nos obriga a ter essa função "initialize"
 	//PQ USAR INITIALIZABLE? pq ela permite que, quando o FXML é executado, automaticamente o que a gente quiser de métodos
 	//será iniciado em primeiro lugar, evitando os erros que eu tava enfrentando para iniciar o carrossel
-//	public void initialize(URL location, ResourceBundle resources) {
-//        iniciaCarrossel(); // Inicia o carrossel ao carregar a interface
-//        atualizaCarrossel(); // Exibe a primeira imagem e texto do carrossel
-//    }
-//	
 	
 	
 	public void initialize(URL location, ResourceBundle resources) {
@@ -268,5 +289,32 @@ public class Controlador implements Initializable {
 				break;
 		}
 	}
+	
+	
+	
+	//------------------------------ADICIONA FILME OU LISTA-------------------------------------------------------------------------
+	
+	
+	
+	
+	
+	
+	
+	
+	public static void selecionaArquivo() {
+		FileChooser arqSelecionado = new FileChooser();
+		
+		arqSelecionado.setTitle("Selecione uma imagem");
+		arqSelecionado.getExtensionFilters().add(new FileChooser.ExtensionFilter("Arquivos JPG", "*.jpg"));
+		arqSelecionado.getExtensionFilters().add(new FileChooser.ExtensionFilter("Arquivos PNG", "*.png"));
+		
+		java.io.File arquivoCerto = arqSelecionado.showOpenDialog(Main.retornaStage());
+		
+		if(arquivoCerto!=null) {
+			System.out.println("Arquivo selecionado: " + arquivoCerto.getAbsolutePath());
+		}
+		
+	}
+	
 	
 }

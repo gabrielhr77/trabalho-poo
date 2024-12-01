@@ -13,6 +13,7 @@ import javafx.stage.Stage;
 import javafx.scene.Parent;
 
 import entidadesFilmes. *;
+import entidadesUsuarios. *;
 //import entidadesFilmes.Diretor;
 //import entidadesFilmes.Filme;
 //import entidadesFilmes.FilmeCSV;
@@ -30,6 +31,11 @@ public class Main extends Application{
 	private static Scene loginScene;
 	private static Scene paginaInicialScene;
 	private static Scene filmeScene;
+	
+	private static ArrayList<Filme> todosOsFilmes = new ArrayList<>();
+	private static ArrayList<Ator> todosOsAtores = new ArrayList<>();
+	private static ArrayList<Diretor> todosOsDiretores = new ArrayList<>();
+	private static ArrayList<Usuario> todosOsUsuarios = new ArrayList<>();
 	
     @Override
     public void start(Stage primaryStage) {
@@ -63,7 +69,24 @@ public class Main extends Application{
         }
     }
         
-        public static void mudarPagina(int pagina) {
+    public static Stage retornaStage() {
+    	return stage;
+    }
+    
+    public static ArrayList<Filme> retornaArrayListFilmes(){
+    	return todosOsFilmes;
+    }
+    public static ArrayList<Ator> retornaArrayListAtores(){
+    	return todosOsAtores;
+    }
+    public static ArrayList<Diretor> retornaArrayListDiretores(){
+    	return todosOsDiretores;
+    }
+    public static ArrayList<Usuario> retornaArrayListUsuarios(){
+    	return todosOsUsuarios;
+    }
+    
+    public static void mudarPagina(int pagina) {
         	switch(pagina) {
         		case 0:
         			stage.setScene(loginScene);
@@ -86,10 +109,75 @@ public class Main extends Application{
         			break;
         		*/
         	}
+        }
         
-    
-    }
-      //===========================aplicação========================================
+        
+        
+    public static ArrayList<Filme> retorna4Filmes(int pagina) {
+    	  ArrayList<Filme> arrayComFilmes=new ArrayList<>();
+    	  switch(pagina) {
+    	  	case 0:
+    	  		for(int i=0;i<4;i++) {
+    	  			arrayComFilmes.set(i,todosOsFilmes.get(i));//o SET é para atualizar os elementos do arraylist
+    	  		}
+    	  		return arrayComFilmes;
+    	  	case 1:
+    	  		for(int i=4;i<8;i++) {
+    	  			arrayComFilmes.set(i,todosOsFilmes.get(i));
+    	  		}
+    	  		return arrayComFilmes;
+    	  	case 2:
+    	  		for(int i=8;i<12;i++) {
+    	  			arrayComFilmes.set(i,todosOsFilmes.get(i));
+    	  		}
+    	  		return arrayComFilmes;
+    	  	case 3:
+    	  		for(int i=12;i<16;i++) {
+    	  			arrayComFilmes.set(i,todosOsFilmes.get(i));
+    	  		}
+    	  		return arrayComFilmes;
+    	  	case 4:
+    	  		for(int i=16;i<20;i++) {
+    	  			arrayComFilmes.set(i,todosOsFilmes.get(i));
+    	  		}
+    	  		return arrayComFilmes;
+    	  	case 5:
+    	  		for(int i=20;i<24;i++) {
+    	  			arrayComFilmes.set(i,todosOsFilmes.get(i));
+    	  		}
+    	  		return arrayComFilmes;
+    	  	case 6:
+    	  		for(int i=24;i<28;i++) {
+    	  			arrayComFilmes.set(i,todosOsFilmes.get(i));
+    	  		}
+    	  		return arrayComFilmes;
+    	  	case 7:
+    	  		for(int i=28;i<32;i++) {
+    	  			arrayComFilmes.set(i,todosOsFilmes.get(i));
+    	  		}
+    	  		return arrayComFilmes;
+    	  	case 8:
+    	  		for(int i=32;i<36;i++) {
+    	  			arrayComFilmes.set(i,todosOsFilmes.get(i));
+    	  		}
+    	  		return arrayComFilmes;
+    	  	case 9:
+    	  		for(int i=36;i<40;i++) {
+    	  			arrayComFilmes.set(i,todosOsFilmes.get(i));
+    	  		}
+    	  		return arrayComFilmes;
+    	  	case 10:
+    	  		for(int i=40;i<44;i++) {
+    	  			arrayComFilmes.set(i,todosOsFilmes.get(i));
+    	  		}
+    	  		return arrayComFilmes;
+    	  	default:
+    	  		return arrayComFilmes;
+    	  }
+      }
+        
+        
+    //===========================aplicação========================================
    
         
 	public static void main(String[] args)  {
@@ -118,9 +206,9 @@ public class Main extends Application{
 			//*************************************************************************************
 			//criação dos arraylists
 			
-			ArrayList<Filme> todosOsFilmes = new ArrayList<>();
-			ArrayList<Ator> todosOsAtores = new ArrayList<>();
-			ArrayList<Diretor> todosOsDiretores = new ArrayList<>();
+//			ArrayList<Filme> todosOsFilmes = new ArrayList<>();
+//			ArrayList<Ator> todosOsAtores = new ArrayList<>();
+//			ArrayList<Diretor> todosOsDiretores = new ArrayList<>();
 			
 			//*************************************************************************************
 			//copiar os dados dos arquivos para os arraylists 
@@ -172,4 +260,6 @@ public class Main extends Application{
 			return "-1";
 		}
 	}
+	
+	
 }

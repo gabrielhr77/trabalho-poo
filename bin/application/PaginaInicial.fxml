@@ -51,9 +51,9 @@
             <Font name="Corbel Bold" size="23.0" />
          </font>
       </Text>
-      <ScrollPane hbarPolicy="NEVER" layoutX="39.0" layoutY="187.0" prefHeight="503.0" prefWidth="950.0" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="-10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="157.0">
+      <ScrollPane hbarPolicy="NEVER" layoutX="39.0" layoutY="187.0" prefHeight="2234.0" prefWidth="950.0" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="-1741.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="157.0">
          <content>
-            <AnchorPane maxWidth="950.0" prefHeight="3423.0" prefWidth="950.0" style="-fx-background-color: #202020;">
+            <AnchorPane maxWidth="950.0" prefHeight="2235.0" prefWidth="950.0" style="-fx-background-color: #202020;">
                <children>
                   <AnchorPane layoutY="57.0" maxWidth="977.0" prefHeight="210.0" prefWidth="950.0" style="-fx-background-color: #323232;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                      <children>
@@ -120,33 +120,32 @@
                         <Font name="Corbel" size="18.0" />
                      </font>
                   </Text>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="108.0" layoutY="476.0" pickOnBounds="true" preserveRatio="true" />
-                  <ImageView fitHeight="190.0" fitWidth="144.0" layoutX="76.0" layoutY="454.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="filme1Lista1" fitHeight="190.0" fitWidth="144.0" layoutX="76.0" layoutY="454.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@imagens/capaDuna1.jpg" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="76.0" layoutY="657.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="estrela1F1L1" fitHeight="25.0" fitWidth="25.0" layoutX="76.0" layoutY="657.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@imagens/estrelaDourada.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="101.0" layoutY="657.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="estrela2F1L1" fitHeight="25.0" fitWidth="25.0" layoutX="101.0" layoutY="657.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@imagens/estrelaDourada.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="126.0" layoutY="657.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="estrela3F1L1" fitHeight="25.0" fitWidth="25.0" layoutX="126.0" layoutY="657.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@imagens/estrelaDourada.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="151.0" layoutY="657.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="estrela4F1L1" fitHeight="25.0" fitWidth="25.0" layoutX="151.0" layoutY="657.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@imagens/estrelaDourada.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="177.0" layoutY="657.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="estrela5F1L1" fitHeight="25.0" fitWidth="25.0" layoutX="177.0" layoutY="657.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@imagens/estrelaBranca.png" />
                      </image>
@@ -162,34 +161,9 @@
                      </image>
                   </ImageView>
                   <Button fx:id="botaoFilme1Lista" layoutX="64.0" layoutY="715.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
-                  <ImageView fitHeight="190.0" fitWidth="144.0" layoutX="237.0" layoutY="453.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="filme2Lista1" fitHeight="190.0" fitWidth="144.0" layoutX="237.0" layoutY="453.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@imagens/capaLugarSilenciosoDia1.jpg" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="237.0" layoutY="656.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@imagens/estrelaDourada.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="262.0" layoutY="656.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@imagens/estrelaDourada.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="287.0" layoutY="656.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@imagens/estrelaDourada.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="312.0" layoutY="656.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@imagens/estrelaDourada.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="338.0" layoutY="656.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@imagens/estrelaBranca.png" />
                      </image>
                   </ImageView>
                   <Text fx:id="textoFilmeCarrossel21" fill="WHITE" layoutX="238.0" layoutY="706.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Um Lugar Silencioso">
@@ -203,34 +177,9 @@
                         <Image url="@imagens/textoNavegarParaPaginaDoFilme.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="190.0" fitWidth="144.0" layoutX="399.0" layoutY="452.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="filme3Lista1" fitHeight="190.0" fitWidth="144.0" layoutX="399.0" layoutY="452.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@imagens/capaOPoco2.jpg" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="399.0" layoutY="655.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@imagens/estrelaDourada.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="424.0" layoutY="655.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@imagens/estrelaDourada.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="449.0" layoutY="655.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@imagens/estrelaDourada.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="474.0" layoutY="655.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@imagens/estrelaDourada.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="500.0" layoutY="655.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@imagens/estrelaBranca.png" />
                      </image>
                   </ImageView>
                   <Text fx:id="textoFilmeCarrossel22" fill="WHITE" layoutX="400.0" layoutY="705.0" strokeType="OUTSIDE" strokeWidth="0.0" text="O Poço 2">
@@ -244,7 +193,7 @@
                         <Image url="@imagens/textoNavegarParaPaginaDoFilme.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="190.0" fitWidth="144.0" layoutX="559.0" layoutY="452.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="filme4Lista1" fitHeight="190.0" fitWidth="144.0" layoutX="559.0" layoutY="452.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@imagens/capaPequenosInvasores.jpg" />
                      </image>
@@ -304,34 +253,9 @@
                         <Font name="Corbel" size="18.0" />
                      </font>
                   </Text>
-                  <ImageView fitHeight="190.0" fitWidth="144.0" layoutX="76.0" layoutY="873.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="filme1Lista2" fitHeight="190.0" fitWidth="144.0" layoutX="76.0" layoutY="873.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@imagens/capaDuna1.jpg" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="76.0" layoutY="1076.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@imagens/estrelaDourada.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="101.0" layoutY="1076.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@imagens/estrelaDourada.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="126.0" layoutY="1076.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@imagens/estrelaDourada.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="151.0" layoutY="1076.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@imagens/estrelaDourada.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="177.0" layoutY="1076.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@imagens/estrelaBranca.png" />
                      </image>
                   </ImageView>
                   <Text fx:id="textoFilmeCarrossel23" fill="WHITE" layoutX="77.0" layoutY="1126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Duna">
@@ -356,34 +280,9 @@
                         <Image url="@imagens/passaImagemFundoEscuro.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="190.0" fitWidth="144.0" layoutX="239.0" layoutY="873.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="filme2Lista2" fitHeight="190.0" fitWidth="144.0" layoutX="239.0" layoutY="873.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@imagens/capaLugarSilenciosoDia1.jpg" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="239.0" layoutY="1076.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@imagens/estrelaDourada.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="264.0" layoutY="1076.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@imagens/estrelaDourada.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="289.0" layoutY="1076.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@imagens/estrelaDourada.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="314.0" layoutY="1076.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@imagens/estrelaDourada.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="340.0" layoutY="1076.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@imagens/estrelaBranca.png" />
                      </image>
                   </ImageView>
                   <Text fx:id="textoFilmeCarrossel211" fill="WHITE" layoutX="240.0" layoutY="1126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Um Lugar Silencioso">
@@ -397,34 +296,9 @@
                         <Image url="@imagens/textoNavegarParaPaginaDoFilme.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="190.0" fitWidth="144.0" layoutX="401.0" layoutY="872.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="filme3Lista2" fitHeight="190.0" fitWidth="144.0" layoutX="401.0" layoutY="872.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@imagens/capaOPoco2.jpg" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="401.0" layoutY="1075.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@imagens/estrelaDourada.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="426.0" layoutY="1075.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@imagens/estrelaDourada.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="451.0" layoutY="1075.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@imagens/estrelaDourada.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="476.0" layoutY="1075.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@imagens/estrelaDourada.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="502.0" layoutY="1075.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@imagens/estrelaBranca.png" />
                      </image>
                   </ImageView>
                   <Text fx:id="textoFilmeCarrossel221" fill="WHITE" layoutX="402.0" layoutY="1125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="O Poço 2">
@@ -438,34 +312,9 @@
                         <Image url="@imagens/textoNavegarParaPaginaDoFilme.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="190.0" fitWidth="144.0" layoutX="561.0" layoutY="872.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="filme4Lista2" fitHeight="190.0" fitWidth="144.0" layoutX="561.0" layoutY="872.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@imagens/capaPequenosInvasores.jpg" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="561.0" layoutY="1075.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@imagens/estrelaDourada.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="586.0" layoutY="1075.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@imagens/estrelaDourada.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="611.0" layoutY="1075.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@imagens/estrelaDourada.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="636.0" layoutY="1075.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@imagens/estrelaDourada.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="662.0" layoutY="1075.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@imagens/estrelaBranca.png" />
                      </image>
                   </ImageView>
                   <Text fx:id="textoFilmeCarrossel2121" fill="WHITE" layoutX="562.0" layoutY="1125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pequenos Invasores">
@@ -493,7 +342,7 @@
                         <Font name="Corbel" size="18.0" />
                      </font>
                   </Text>
-                  <ImageView fitHeight="190.0" fitWidth="144.0" layoutX="76.0" layoutY="1291.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="filme1Lista3" fitHeight="190.0" fitWidth="144.0" layoutX="76.0" layoutY="1291.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@imagens/capaDuna1.jpg" />
                      </image>
@@ -545,7 +394,7 @@
                         <Image url="@imagens/passaImagemFundoEscuro.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="190.0" fitWidth="144.0" layoutX="239.0" layoutY="1291.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="filme2Lista3" fitHeight="190.0" fitWidth="144.0" layoutX="239.0" layoutY="1291.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@imagens/capaLugarSilenciosoDia1.jpg" />
                      </image>
@@ -586,7 +435,7 @@
                         <Image url="@imagens/textoNavegarParaPaginaDoFilme.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="190.0" fitWidth="144.0" layoutX="401.0" layoutY="1290.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="filme3Lista3" fitHeight="190.0" fitWidth="144.0" layoutX="401.0" layoutY="1290.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@imagens/capaOPoco2.jpg" />
                      </image>
@@ -627,7 +476,7 @@
                         <Image url="@imagens/textoNavegarParaPaginaDoFilme.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="190.0" fitWidth="144.0" layoutX="561.0" layoutY="1290.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="filme4Lista3" fitHeight="190.0" fitWidth="144.0" layoutX="561.0" layoutY="1290.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@imagens/capaPequenosInvasores.jpg" />
                      </image>
@@ -682,7 +531,7 @@
                         <Font name="Corbel" size="18.0" />
                      </font>
                   </Text>
-                  <ImageView fitHeight="190.0" fitWidth="144.0" layoutX="76.0" layoutY="1709.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="filme1Lista4" fitHeight="190.0" fitWidth="144.0" layoutX="76.0" layoutY="1709.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@imagens/capaDuna1.jpg" />
                      </image>
@@ -734,7 +583,7 @@
                         <Image url="@imagens/passaImagemFundoEscuro.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="190.0" fitWidth="144.0" layoutX="239.0" layoutY="1709.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="filme2Lista4" fitHeight="190.0" fitWidth="144.0" layoutX="239.0" layoutY="1709.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@imagens/capaLugarSilenciosoDia1.jpg" />
                      </image>
@@ -775,7 +624,7 @@
                         <Image url="@imagens/textoNavegarParaPaginaDoFilme.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="190.0" fitWidth="144.0" layoutX="401.0" layoutY="1708.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="filme3Lista4" fitHeight="190.0" fitWidth="144.0" layoutX="401.0" layoutY="1708.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@imagens/capaOPoco2.jpg" />
                      </image>
@@ -816,7 +665,7 @@
                         <Image url="@imagens/textoNavegarParaPaginaDoFilme.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="190.0" fitWidth="144.0" layoutX="561.0" layoutY="1708.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="filme4Lista4" fitHeight="190.0" fitWidth="144.0" layoutX="561.0" layoutY="1708.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@imagens/capaPequenosInvasores.jpg" />
                      </image>
@@ -860,6 +709,303 @@
                   <Button layoutX="234.0" layoutY="1971.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
                   <Button layoutX="393.0" layoutY="1971.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
                   <Button layoutX="555.0" layoutY="1971.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
+                  <ImageView fitHeight="40.0" fitWidth="30.0" layoutX="520.0" layoutY="2089.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="400.0">
+                     <image>
+                        <Image url="@imagens/passaImagemFundoEscuro.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="40.0" fitWidth="30.0" layoutX="400.0" layoutY="2089.0" pickOnBounds="true" preserveRatio="true" rotate="180.0" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="520.0">
+                     <image>
+                        <Image url="@imagens/passaImagemFundoEscuro.png" />
+                     </image>
+                  </ImageView>
+                  <Text fx:id="textoFilmeCarrossel1121" fill="WHITE" layoutX="383.0" layoutY="2144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Página anterior" textAlignment="CENTER" wrappingWidth="65.52978515625011">
+                     <font>
+                        <Font name="Corbel" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="textoFilmeCarrossel11211" fill="WHITE" layoutX="501.0" layoutY="2142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Próxima página" textAlignment="CENTER" wrappingWidth="65.25">
+                     <font>
+                        <Font name="Corbel" size="18.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="botaoPaginaAnterior" layoutX="390.0" layoutY="2078.0" mnemonicParsing="false" onAction="#voltaListasDaPaginaInicial" opacity="0.0" prefHeight="51.0" prefWidth="50.0" />
+                  <Button fx:id="botaoProximaPagina" layoutX="509.0" layoutY="2078.0" mnemonicParsing="false" onAction="#passaListasDaPaginaInicial" opacity="0.0" prefHeight="51.0" prefWidth="50.0" />
+                  <ImageView fx:id="estrela1F2L1" fitHeight="25.0" fitWidth="25.0" layoutX="237.0" layoutY="657.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrela2F2L1" fitHeight="25.0" fitWidth="25.0" layoutX="262.0" layoutY="657.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrela3F2L1" fitHeight="25.0" fitWidth="25.0" layoutX="287.0" layoutY="657.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrela4F2L1" fitHeight="25.0" fitWidth="25.0" layoutX="312.0" layoutY="657.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrela5F2L1" fitHeight="25.0" fitWidth="25.0" layoutX="338.0" layoutY="657.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaBranca.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrela1F3L1" fitHeight="25.0" fitWidth="25.0" layoutX="399.0" layoutY="655.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrela2F3L1" fitHeight="25.0" fitWidth="25.0" layoutX="424.0" layoutY="655.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrela3F3L1" fitHeight="25.0" fitWidth="25.0" layoutX="449.0" layoutY="655.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrela4F3L1" fitHeight="25.0" fitWidth="25.0" layoutX="474.0" layoutY="655.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrela5F3L1" fitHeight="25.0" fitWidth="25.0" layoutX="500.0" layoutY="655.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaBranca.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrela1F4L1" fitHeight="25.0" fitWidth="25.0" layoutX="559.0" layoutY="655.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrela2F4L1" fitHeight="25.0" fitWidth="25.0" layoutX="584.0" layoutY="655.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrela3F4L1" fitHeight="25.0" fitWidth="25.0" layoutX="609.0" layoutY="655.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrela4F4L1" fitHeight="25.0" fitWidth="25.0" layoutX="634.0" layoutY="655.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrela5F4L1" fitHeight="25.0" fitWidth="25.0" layoutX="660.0" layoutY="655.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaBranca.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrela1F4L11" fitHeight="25.0" fitWidth="25.0" layoutX="559.0" layoutY="1075.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrela2F4L11" fitHeight="25.0" fitWidth="25.0" layoutX="584.0" layoutY="1075.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrela3F4L11" fitHeight="25.0" fitWidth="25.0" layoutX="609.0" layoutY="1075.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrela4F4L11" fitHeight="25.0" fitWidth="25.0" layoutX="634.0" layoutY="1075.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrela5F4L11" fitHeight="25.0" fitWidth="25.0" layoutX="660.0" layoutY="1075.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaBranca.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrela1F2L11" fitHeight="25.0" fitWidth="25.0" layoutX="237.0" layoutY="1077.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrela2F2L11" fitHeight="25.0" fitWidth="25.0" layoutX="262.0" layoutY="1077.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrela3F2L11" fitHeight="25.0" fitWidth="25.0" layoutX="287.0" layoutY="1077.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrela4F2L11" fitHeight="25.0" fitWidth="25.0" layoutX="312.0" layoutY="1077.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrela5F2L11" fitHeight="25.0" fitWidth="25.0" layoutX="338.0" layoutY="1077.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaBranca.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrela1F1L11" fitHeight="25.0" fitWidth="25.0" layoutX="76.0" layoutY="1077.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrela2F1L11" fitHeight="25.0" fitWidth="25.0" layoutX="101.0" layoutY="1077.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrela3F1L11" fitHeight="25.0" fitWidth="25.0" layoutX="126.0" layoutY="1077.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrela4F1L11" fitHeight="25.0" fitWidth="25.0" layoutX="151.0" layoutY="1077.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrela5F1L11" fitHeight="25.0" fitWidth="25.0" layoutX="177.0" layoutY="1077.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaBranca.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrela1F3L11" fitHeight="25.0" fitWidth="25.0" layoutX="399.0" layoutY="1075.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrela2F3L11" fitHeight="25.0" fitWidth="25.0" layoutX="424.0" layoutY="1075.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrela3F3L11" fitHeight="25.0" fitWidth="25.0" layoutX="449.0" layoutY="1075.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrela4F3L11" fitHeight="25.0" fitWidth="25.0" layoutX="474.0" layoutY="1075.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrela5F3L11" fitHeight="25.0" fitWidth="25.0" layoutX="500.0" layoutY="1075.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaBranca.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrela1F4L111" fitHeight="25.0" fitWidth="25.0" layoutX="559.0" layoutY="1493.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrela2F4L111" fitHeight="25.0" fitWidth="25.0" layoutX="584.0" layoutY="1493.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrela3F4L111" fitHeight="25.0" fitWidth="25.0" layoutX="609.0" layoutY="1493.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrela4F4L111" fitHeight="25.0" fitWidth="25.0" layoutX="634.0" layoutY="1493.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrela5F4L111" fitHeight="25.0" fitWidth="25.0" layoutX="660.0" layoutY="1493.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaBranca.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrela1F2L111" fitHeight="25.0" fitWidth="25.0" layoutX="237.0" layoutY="1495.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrela2F2L111" fitHeight="25.0" fitWidth="25.0" layoutX="262.0" layoutY="1495.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrela3F2L111" fitHeight="25.0" fitWidth="25.0" layoutX="287.0" layoutY="1495.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrela4F2L111" fitHeight="25.0" fitWidth="25.0" layoutX="312.0" layoutY="1495.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrela5F2L111" fitHeight="25.0" fitWidth="25.0" layoutX="338.0" layoutY="1495.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaBranca.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrela1F1L111" fitHeight="25.0" fitWidth="25.0" layoutX="76.0" layoutY="1495.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrela2F1L111" fitHeight="25.0" fitWidth="25.0" layoutX="101.0" layoutY="1495.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrela3F1L111" fitHeight="25.0" fitWidth="25.0" layoutX="126.0" layoutY="1495.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrela4F1L111" fitHeight="25.0" fitWidth="25.0" layoutX="151.0" layoutY="1495.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrela5F1L111" fitHeight="25.0" fitWidth="25.0" layoutX="177.0" layoutY="1495.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaBranca.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrela1F3L111" fitHeight="25.0" fitWidth="25.0" layoutX="399.0" layoutY="1493.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrela2F3L111" fitHeight="25.0" fitWidth="25.0" layoutX="424.0" layoutY="1493.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrela3F3L111" fitHeight="25.0" fitWidth="25.0" layoutX="449.0" layoutY="1493.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrela4F3L111" fitHeight="25.0" fitWidth="25.0" layoutX="474.0" layoutY="1493.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaDourada.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="estrela5F3L111" fitHeight="25.0" fitWidth="25.0" layoutX="500.0" layoutY="1493.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/estrelaBranca.png" />
+                     </image>
+                  </ImageView>
                </children>
             </AnchorPane>
          </content>
