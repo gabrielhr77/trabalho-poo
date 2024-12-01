@@ -1,5 +1,6 @@
 package entidadesUsuarios;
 
+
 import java.util.Date;
 
 public class Usuario extends Pessoa{
@@ -21,10 +22,12 @@ public class Usuario extends Pessoa{
     public void setSenha(String senha){
         this.senha = senha;
     }
+
     
     public String getSenha() {
     	return senha;
     }
+
 
 
     public void setPesoClassificacao(float peso){
@@ -65,4 +68,8 @@ public class Usuario extends Pessoa{
         return critico;
     }
 
+
 }
+
+
+

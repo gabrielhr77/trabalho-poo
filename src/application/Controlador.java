@@ -51,6 +51,7 @@ public class Controlador implements Initializable {
 		}
 	}
 	
+
 	private void alertaErroLogin() {
         
         Alert alerta = new Alert(AlertType.ERROR);
@@ -60,6 +61,11 @@ public class Controlador implements Initializable {
         
         alerta.showAndWait();
     }
+
+	public void botaoPaginaInicial(ActionEvent evento) {
+		Main.mudarPagina(1);
+	}
+
 	
 	public void enviarParaVerificacao(ActionEvent event) {
 		String nome = retornaUserLogin();
@@ -159,6 +165,11 @@ public class Controlador implements Initializable {
 	//precisa ter esse nome pois é uma função da interface INITIALIZABLE, a qual nos obriga a ter essa função "initialize"
 	//PQ USAR INITIALIZABLE? pq ela permite que, quando o FXML é executado, automaticamente o que a gente quiser de métodos
 	//será iniciado em primeiro lugar, evitando os erros que eu tava enfrentando para iniciar o carrossel
+//	public void initialize(URL location, ResourceBundle resources) {
+//        iniciaCarrossel(); // Inicia o carrossel ao carregar a interface
+//        atualizaCarrossel(); // Exibe a primeira imagem e texto do carrossel
+//    }
+//	
 	
 	
 	public void initialize(URL location, ResourceBundle resources) {
@@ -290,6 +301,7 @@ public class Controlador implements Initializable {
 		}
 	}
 	
+
 	
 	
 	//------------------------------ADICIONA FILME OU LISTA-------------------------------------------------------------------------
@@ -317,4 +329,5 @@ public class Controlador implements Initializable {
 	}
 	
 	
+
 }

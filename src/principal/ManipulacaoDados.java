@@ -28,17 +28,13 @@ public class ManipulacaoDados {
 		}
 		return false;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+//import entidadesFilmes.Ator;
+//import entidadesFilmes.Diretor;
+//import entidadesFilmes.Filme;
+//
+//public class ManipulacaoDados {
+
+
 	
 	
 	
@@ -65,7 +61,7 @@ public class ManipulacaoDados {
 			if(arraylistFilmes.get(i).getNomeFilme().equals(nome)) {
 				return i;
 			}
-	       }
+	    }
 		return -1;
 	}
 	
