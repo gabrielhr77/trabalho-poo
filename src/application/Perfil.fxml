@@ -46,9 +46,9 @@
             <Font name="Corbel Bold" size="23.0" />
          </font>
       </Text>
-      <ScrollPane hbarPolicy="NEVER" layoutX="39.0" layoutY="187.0" prefHeight="494.0" prefWidth="950.0" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="-0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="157.0">
+      <ScrollPane hbarPolicy="NEVER" layoutX="39.0" layoutY="187.0" prefHeight="494.0" prefWidth="950.0" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="157.0">
          <content>
-            <AnchorPane maxWidth="1244.0" prefHeight="1044.0" prefWidth="950.0" style="-fx-background-color: #202020;">
+            <AnchorPane maxWidth="1244.0" prefHeight="1374.0" prefWidth="950.0" style="-fx-background-color: #202020;">
                <children>
                   <Text fill="WHITE" layoutX="88.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOVO FILME" wrappingWidth="368.0">
                      <font>
@@ -88,7 +88,7 @@
                         <Font name="Corbel Bold" size="19.0" />
                      </font>
                   </Text>
-                  <Line endY="128.1936798095703" layoutX="800.0" layoutY="318.0" rotate="-90.0" stroke="#dba15c" strokeWidth="3.0" />
+                  <Line endY="128.1936798095703" layoutX="800.0" layoutY="306.0" rotate="-90.0" stroke="#dba15c" strokeWidth="3.0" />
                   <TextField fx:id="anoNovoFilme" layoutX="280.0" layoutY="226.0" prefHeight="32.0" prefWidth="88.0" />
                   <Text fill="WHITE" layoutX="96.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ano de lançamento">
                      <font>
@@ -153,7 +153,7 @@
                         <Font name="Corbel Bold" size="19.0" />
                      </font>
                   </Text>
-                  <Text fill="WHITE" layoutX="740.0" layoutY="326.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOTA INICIAL" textAlignment="CENTER" wrappingWidth="120.20947265625">
+                  <Text fill="WHITE" layoutX="764.0" layoutY="354.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOTA">
                      <font>
                         <Font name="Corbel Bold" size="27.0" />
                      </font>
@@ -169,12 +169,18 @@
                      </font>
                   </Text>
                   <TextArea fx:id="sinopseNovoFilme" layoutX="96.0" layoutY="648.0" prefHeight="200.0" prefWidth="741.0" promptText="Faça um texto curto de apenas UM parágrafo sobre o que se trata o filme em questão..." AnchorPane.leftAnchor="96.0" />
-                  <Text fill="WHITE" layoutX="368.0" layoutY="961.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADICIONAR FILME" textAlignment="CENTER">
+                  <Text fill="WHITE" layoutX="96.0" layoutY="905.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Crítica">
+                     <font>
+                        <Font name="Corbel Bold" size="19.0" />
+                     </font>
+                  </Text>
+                  <TextArea fx:id="criticaNovoFilme" layoutX="96.0" layoutY="924.0" prefHeight="200.0" prefWidth="741.0" promptText="Faça um texto curto de apenas UM parágrafo descrevendo sua opinião acerca do filme em questão..." />
+                  <Text fill="WHITE" layoutX="350.0" layoutY="1221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ENVIAR SOLICITAÇÃO">
                      <font>
                         <Font name="Corbel Bold" size="27.0" />
                      </font>
                   </Text>
-                  <Button fx:id="botaoAdicionarFilme" layoutX="337.0" layoutY="931.0" mnemonicParsing="false" opacity="0.0" prefHeight="53.0" prefWidth="287.0" textAlignment="CENTER" />
+                  <Button fx:id="botaoEnviarSolicitacaoFiilmeNovo" layoutX="342.0" layoutY="1184.0" mnemonicParsing="false" opacity="0.0" prefHeight="53.0" prefWidth="287.0" />
                   <Rectangle arcHeight="100.0" arcWidth="5.0" fill="#dba15c" height="42.0" layoutX="445.0" layoutY="222.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeMiterLimit="26.0" width="187.0" />
                   <Text layoutX="458.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Verificar se já existe">
                      <font>

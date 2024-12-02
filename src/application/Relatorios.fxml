@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controlador">
+   <children>
+      <ImageView fitHeight="200.0" fitWidth="950.0" layoutX="47.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@imagens/bgtopocerto1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="326.0" fitWidth="368.0" layoutX="49.0" layoutY="-85.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="15.0">
+         <image>
+            <Image url="@imagens/logo.PNG" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="261.0" fitWidth="333.0" layoutX="-143.0" layoutY="-57.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0" AnchorPane.leftAnchor="-143.0" AnchorPane.rightAnchor="760.0" AnchorPane.topAnchor="-57.0">
+         <image>
+            <Image url="@imagens/fitaTopo.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="barraDePesquisa" alignment="CENTER" layoutX="675.0" layoutY="95.0" prefHeight="25.0" prefWidth="192.0" promptText="Pesquisar no site">
+         <font>
+            <Font name="Corbel Bold" size="13.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="30.0" fitWidth="31.0" layoutX="880.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imagens/lupa.png" />
+         </image>
+      </ImageView>
+      <Button id="botaoPesquisar" fx:id="botaoPesquisar" layoutX="870.0" layoutY="86.0" mnemonicParsing="false" opacity="0.0" prefHeight="45.0" prefWidth="49.0" />
+      <Text fill="WHITE" layoutX="588.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INÍCIO">
+         <font>
+            <Font name="Corbel Bold" size="23.0" />
+         </font>
+      </Text>
+      <ScrollPane hbarPolicy="NEVER" layoutX="39.0" layoutY="187.0" prefHeight="2398.0" prefWidth="950.0" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="157.0">
+         <content>
+            <AnchorPane maxWidth="1244.0" prefHeight="2385.0" prefWidth="950.0" style="-fx-background-color: #202020;">
+               <children>
+                  <Text fill="WHITE" layoutX="88.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RELATÓRIOS" wrappingWidth="368.0">
+                     <font>
+                        <Font name="Corbel Bold" size="34.0" />
+                     </font>
+                  </Text>
+                  <Line endY="300.0" layoutX="241.0" layoutY="-20.0" rotate="-90.0" stroke="#dba15c" strokeWidth="3.0" AnchorPane.topAnchor="-21.5" />
+                  <ImageView fitHeight="1841.0" fitWidth="941.0" layoutY="243.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="9.0">
+                     <image>
+                        <Image url="@imagens/fundoRelatorio.png" />
+                     </image>
+                  </ImageView>
+                  <Line endY="800.0" layoutX="474.5" layoutY="-50.0" rotate="-90.0" stroke="#dba15c" strokeWidth="3.0" AnchorPane.leftAnchor="473.0" AnchorPane.rightAnchor="474.0" />
+                  <Text fill="WHITE" layoutX="508.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gerar relatório de...">
+                     <font>
+                        <Font name="Corbel Bold" size="23.0" />
+                     </font>
+                  </Text>
+                  <RadioButton fx:id="radioUsuarios" layoutX="406.0" layoutY="162.0" mnemonicParsing="false" text="Usuários" textFill="WHITE">
+                     <font>
+                        <Font name="Corbel Bold" size="19.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="ecolhaRelatorio" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="radioFilmes" layoutX="530.0" layoutY="162.0" mnemonicParsing="false" text="Filmes" textFill="WHITE" toggleGroup="$ecolhaRelatorio">
+                     <font>
+                        <Font name="Corbel Bold" size="19.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="radioComentClass" layoutX="639.0" layoutY="162.0" mnemonicParsing="false" text="Comentários e Classificações" textFill="WHITE" toggleGroup="$ecolhaRelatorio">
+                     <font>
+                        <Font name="Corbel Bold" size="19.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="radioUser" layoutX="171.0" layoutY="162.0" mnemonicParsing="false" selected="true" text="Usuário em específico" textFill="WHITE" toggleGroup="$ecolhaRelatorio">
+                     <font>
+                        <Font name="Corbel Bold" size="19.0" />
+                     </font>
+                  </RadioButton>
+                  <Text layoutX="73.0" layoutY="299.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOME DO USUÁRIO:" wrappingWidth="182.41665649414062">
+                     <font>
+                        <Font name="Corbel Bold" size="19.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="nomeUsuarioPesquisado" layoutX="277.0" layoutY="280.0" prefHeight="25.0" prefWidth="276.0" />
+                  <Text layoutX="73.0" layoutY="413.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome do usuário" wrappingWidth="182.41665649414062">
+                     <font>
+                        <Font name="Corbel Bold" size="19.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="nomeUsuario" layoutX="377.0" layoutY="413.0" strokeType="OUTSIDE" strokeWidth="0.0" text="................" wrappingWidth="182.41665649414062">
+                     <font>
+                        <Font name="Corbel Bold" size="19.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="73.0" layoutY="463.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantidade de comentários" wrappingWidth="229.08334350585938">
+                     <font>
+                        <Font name="Corbel Bold" size="19.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="nomeUsuario1" layoutX="377.0" layoutY="463.0" strokeType="OUTSIDE" strokeWidth="0.0" text="................" wrappingWidth="182.41665649414062">
+                     <font>
+                        <Font name="Corbel Bold" size="19.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="73.0" layoutY="515.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantidade de críticas" wrappingWidth="190.41665649414062">
+                     <font>
+                        <Font name="Corbel Bold" size="19.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="nomeUsuario2" layoutX="377.0" layoutY="513.0" strokeType="OUTSIDE" strokeWidth="0.0" text="................" wrappingWidth="182.41665649414062">
+                     <font>
+                        <Font name="Corbel Bold" size="19.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="73.0" layoutY="563.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantidade de comentários" wrappingWidth="229.08334350585938">
+                     <font>
+                        <Font name="Corbel Bold" size="19.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="nomeUsuario11" layoutX="377.0" layoutY="563.0" strokeType="OUTSIDE" strokeWidth="0.0" text="................" wrappingWidth="182.41665649414062">
+                     <font>
+                        <Font name="Corbel Bold" size="19.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="531.0" layoutY="413.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuário é crítico?" wrappingWidth="182.41665649414062">
+                     <font>
+                        <Font name="Corbel Bold" size="19.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="nomeUsuario3" layoutX="735.0" layoutY="413.0" strokeType="OUTSIDE" strokeWidth="0.0" text="................" wrappingWidth="95.74996948242188">
+                     <font>
+                        <Font name="Corbel Bold" size="19.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="user471" layoutX="10.0" layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="USER1" wrappingWidth="370.41668701171875">
+                     <font>
+                        <Font name="Corbel Bold" size="19.0" />
+                     </font>
+                  </Text>
+                  <VBox layoutX="74.0" layoutY="640.0" prefHeight="912.0" prefWidth="315.0">
+                     <children>
+                        <Text fx:id="filme1" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme2" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme3" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme4" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme5" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme6" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme7" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme8" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme9" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme10" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme11" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme12" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme13" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme14" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme15" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme16" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme17" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme18" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme19" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme20" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme21" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme22" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme23" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme24" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme25" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme26" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme27" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme28" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme29" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme30" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme31" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme32" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme33" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme34" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme35" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme36" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme37" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme38" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme39" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme40" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme41" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme42" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme43" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme44" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme45" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme46" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme47" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme48" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme49" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme50" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme51" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme52" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme53" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme54" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme55" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme56" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme57" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme58" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme59" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme60" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme61" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme62" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme63" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme64" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme65" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme66" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme67" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme68" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme69" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="filme70" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <Text layoutX="73.0" layoutY="611.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nomes dos filmes" wrappingWidth="229.08334350585938">
+                     <font>
+                        <Font name="Corbel Bold" size="19.0" />
+                     </font>
+                  </Text>
+                  <VBox layoutX="482.0" layoutY="640.0" prefHeight="800.0" prefWidth="371.0">
+                     <children>
+                        <Text fx:id="lista1" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="lista2" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="lista3" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="lista4" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="lista5" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="lista6" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="lista7" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="lista8" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="lista9" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="lista10" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="lista11" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="lista12" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="lista13" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="lista14" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="lista15" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="lista16" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="lista17" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="lista18" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="lista19" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="lista20" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="lista21" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="lista22" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="lista23" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="lista24" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="lista25" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="lista26" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="lista27" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="lista28" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="lista29" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="lista30" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="lista31" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="lista32" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="lista33" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="lista34" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="lista35" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="lista36" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="lista37" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="lista38" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="lista39" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="lista40" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="lista41" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="lista42" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="lista43" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="lista44" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
+                           <font>
+                              <Font name="Corbel Bold" size="19.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <Text layoutX="481.0" layoutY="611.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nomes das listas" wrappingWidth="229.08334350585938">
+                     <font>
+                        <Font name="Corbel Bold" size="19.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+      <Button fx:id="botaoInicio" layoutX="563.0" layoutY="63.0" mnemonicParsing="false" opacity="0.0" prefHeight="34.0" prefWidth="85.0" />
+      <Text fill="WHITE" layoutX="458.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OPÇÕES">
+         <font>
+            <Font name="Corbel Bold" size="23.0" />
+         </font>
+      </Text>
+      <Button fx:id="botaoInicio" layoutX="583.0" layoutY="88.0" mnemonicParsing="false" onAction="#botaoPaginaInicial" opacity="0.0" prefHeight="34.0" prefWidth="76.0" />
+      <Line endY="40.0" layoutX="567.0" layoutY="85.0" stroke="#dba15c" strokeWidth="3.0" />
+      <ChoiceBox fx:id="opcoesNavegacaoAddFilme" layoutX="459.0" layoutY="93.0" opacity="0.0" prefWidth="87.0" style="-fx-background-color: #323232;" />
+   </children>
+</AnchorPane>

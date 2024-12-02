@@ -118,10 +118,10 @@ public class Controlador implements Initializable {
 	@FXML
 	private ChoiceBox<String> opcoesNavegacaoPagInicial, opcoesNavegacaoAddFilme, opcoesNavegacaoAddLista;
 	//tem que ser do tipo não primitivo String pois o método para add os itens só pode adicionar uma collection
-	private String[] palavrasOpcoesNavegacaoPagIni = {"PERFIL","ADICIONAR FILME","ADICIONAR LISTA"};
+	private String[] palavrasOpcoesNavegacaoPagIni = {"PERFIL","ADICIONAR FILME","ADICIONAR LISTA","GERAR RELATÓRIO"};
 	private String[] palavrasOpcoesNavegacaoAddFilme = {"PERFIL","ADICIONAR LISTA"};
 	private String[] palavrasOpcoesNavegacaoAddLista = {"PERFIL","ADICIONAR FILME"};
-	
+	private String[] palavrasOpcoesNavegacaoRelatorio = {"PERFIL","ADICIONAR FILME","ADICIONAR LISTA"};
 	
 	private int numeroDaPaginaAtual=0;
 	public void passaListasDaPaginaInicial(ActionEvent event) {
