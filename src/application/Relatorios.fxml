@@ -91,7 +91,7 @@
                         <Font name="Corbel Bold" size="19.0" />
                      </font>
                   </RadioButton>
-                  <Text layoutX="73.0" layoutY="299.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOME DO USUÁRIO:" wrappingWidth="182.41665649414062">
+                  <Text fx:id="textoNomeDoUsuario" layoutX="73.0" layoutY="299.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOME DO USUÁRIO:" wrappingWidth="182.41665649414062">
                      <font>
                         <Font name="Corbel Bold" size="19.0" />
                      </font>
@@ -102,7 +102,7 @@
                         <Font name="Corbel Bold" size="19.0" />
                      </font>
                   </Text>
-                  <Text fx:id="nomeUsuario" layoutX="377.0" layoutY="413.0" strokeType="OUTSIDE" strokeWidth="0.0" text="................" wrappingWidth="182.41665649414062">
+                  <Text fx:id="nomeUsuario" layoutX="377.0" layoutY="411.0" strokeType="OUTSIDE" strokeWidth="0.0" text="................" wrappingWidth="144.0">
                      <font>
                         <Font name="Corbel Bold" size="19.0" />
                      </font>
@@ -112,7 +112,7 @@
                         <Font name="Corbel Bold" size="19.0" />
                      </font>
                   </Text>
-                  <Text fx:id="nomeUsuario1" layoutX="377.0" layoutY="463.0" strokeType="OUTSIDE" strokeWidth="0.0" text="................" wrappingWidth="182.41665649414062">
+                  <Text fx:id="nomeUsuario1" layoutX="377.0" layoutY="461.0" strokeType="OUTSIDE" strokeWidth="0.0" text="................" wrappingWidth="144.0">
                      <font>
                         <Font name="Corbel Bold" size="19.0" />
                      </font>
@@ -122,7 +122,7 @@
                         <Font name="Corbel Bold" size="19.0" />
                      </font>
                   </Text>
-                  <Text fx:id="nomeUsuario2" layoutX="377.0" layoutY="513.0" strokeType="OUTSIDE" strokeWidth="0.0" text="................" wrappingWidth="182.41665649414062">
+                  <Text fx:id="nomeUsuario2" layoutX="377.0" layoutY="511.0" strokeType="OUTSIDE" strokeWidth="0.0" text="................" wrappingWidth="144.0">
                      <font>
                         <Font name="Corbel Bold" size="19.0" />
                      </font>
@@ -132,7 +132,7 @@
                         <Font name="Corbel Bold" size="19.0" />
                      </font>
                   </Text>
-                  <Text fx:id="nomeUsuario11" layoutX="377.0" layoutY="563.0" strokeType="OUTSIDE" strokeWidth="0.0" text="................" wrappingWidth="182.41665649414062">
+                  <Text fx:id="nomeUsuario11" layoutX="377.0" layoutY="561.0" strokeType="OUTSIDE" strokeWidth="0.0" text="................" wrappingWidth="144.0">
                      <font>
                         <Font name="Corbel Bold" size="19.0" />
                      </font>
@@ -142,12 +142,7 @@
                         <Font name="Corbel Bold" size="19.0" />
                      </font>
                   </Text>
-                  <Text fx:id="nomeUsuario3" layoutX="735.0" layoutY="413.0" strokeType="OUTSIDE" strokeWidth="0.0" text="................" wrappingWidth="95.74996948242188">
-                     <font>
-                        <Font name="Corbel Bold" size="19.0" />
-                     </font>
-                  </Text>
-                  <Text fx:id="user471" layoutX="10.0" layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="USER1" wrappingWidth="370.41668701171875">
+                  <Text fx:id="nomeUsuario3" layoutX="778.0" layoutY="413.0" strokeType="OUTSIDE" strokeWidth="0.0" text="................" wrappingWidth="95.74996948242188">
                      <font>
                         <Font name="Corbel Bold" size="19.0" />
                      </font>
@@ -740,6 +735,41 @@
                         <Font name="Corbel Bold" size="19.0" />
                      </font>
                   </Text>
+                  <Text layoutX="531.0" layoutY="463.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuário já foi suspenso?" wrappingWidth="205.08328247070312">
+                     <font>
+                        <Font name="Corbel Bold" size="19.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="usuarioJaFoiSuspenso" layoutX="778.0" layoutY="464.0" strokeType="OUTSIDE" strokeWidth="0.0" text="................" wrappingWidth="95.74996948242188">
+                     <font>
+                        <Font name="Corbel Bold" size="19.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="textoNomeDoUsuario1" layoutX="767.0" layoutY="299.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PESQUISAR" wrappingWidth="107.74996948242188">
+                     <font>
+                        <Font name="Corbel Bold" size="19.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="botaoPesquisarUsuario" layoutX="749.0" layoutY="272.0" mnemonicParsing="false" opacity="0.0" prefHeight="41.0" prefWidth="135.0" />
+                  <Line endY="180.0" layoutX="495.0" layoutY="391.0" stroke="#dba15c" strokeWidth="3.0" />
+                  <Text fx:id="textoNomeDoUsuario11" layoutX="522.0" layoutY="541.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DELETAR USUÁRIO" textAlignment="CENTER" wrappingWidth="107.74996948242188">
+                     <font>
+                        <Font name="Corbel Bold" size="19.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="botaoDeletarUsuario" layoutX="504.0" layoutY="514.0" mnemonicParsing="false" opacity="0.0" prefHeight="62.0" prefWidth="116.0" />
+                  <Text fx:id="textoNomeDoUsuario111" layoutX="645.0" layoutY="541.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SUSPENDER USUÁRIO" textAlignment="CENTER" wrappingWidth="107.74996948242188">
+                     <font>
+                        <Font name="Corbel Bold" size="19.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="botaoSuspenderUsuario" layoutX="640.0" layoutY="514.0" mnemonicParsing="false" opacity="0.0" prefHeight="62.0" prefWidth="119.0" />
+                  <Text fx:id="textoNomeDoUsuario1111" layoutX="789.0" layoutY="541.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LIBERAR USUÁRIO" textAlignment="CENTER" wrappingWidth="107.74996948242188">
+                     <font>
+                        <Font name="Corbel Bold" size="19.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="botaoLiberarUsuario" layoutX="771.0" layoutY="514.0" mnemonicParsing="false" opacity="0.0" prefHeight="62.0" prefWidth="132.0" />
                </children>
             </AnchorPane>
          </content>

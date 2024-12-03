@@ -116,11 +116,11 @@ public class Controlador implements Initializable {
 	private Button botaoPassaCarrosselImagens,botaoVoltaCarrosselImagens,botaoProximaPagina,botaoPaginaAnterior;
 	
 	@FXML
-	private ChoiceBox<String> opcoesNavegacaoPagInicial, opcoesNavegacaoAddFilme, opcoesNavegacaoAddLista;
+	private ChoiceBox<String> opcoesNavegacaoPagInicial, opcoesNavegacaoAddFilme, opcoesNavegacaoAddLista, opcoesNavegacaoRelatorio;
 	//tem que ser do tipo não primitivo String pois o método para add os itens só pode adicionar uma collection
 	private String[] palavrasOpcoesNavegacaoPagIni = {"PERFIL","ADICIONAR FILME","ADICIONAR LISTA","GERAR RELATÓRIO"};
-	private String[] palavrasOpcoesNavegacaoAddFilme = {"PERFIL","ADICIONAR LISTA"};
-	private String[] palavrasOpcoesNavegacaoAddLista = {"PERFIL","ADICIONAR FILME"};
+	private String[] palavrasOpcoesNavegacaoAddFilme = {"PERFIL","ADICIONAR LISTA","GERAR RELATÓRIO"};
+	private String[] palavrasOpcoesNavegacaoAddLista = {"PERFIL","ADICIONAR FILME","GERAR RELATÓRIO"};
 	private String[] palavrasOpcoesNavegacaoRelatorio = {"PERFIL","ADICIONAR FILME","ADICIONAR LISTA"};
 	
 	private int numeroDaPaginaAtual=0;
@@ -135,13 +135,16 @@ public class Controlador implements Initializable {
 		String escolha = opcoesNavegacaoPagInicial.getValue();
 		switch(escolha) {
 			case "PERFIL":
-				Main.mudarPagina(0);
+				Main.mudarPagina(3);
 				break;
 			case "ADICIONAR FILME":
 				Main.mudarPagina(4);
 				break;
 			case "ADICIONAR LISTA":
 				Main.mudarPagina(5);
+				break;
+			case "GERAR RELATÓRIO":
+				Main.mudarPagina(6);
 				break;
 			default: 
 				Main.mudarPagina(1);
@@ -152,10 +155,13 @@ public class Controlador implements Initializable {
 		String escolha = opcoesNavegacaoAddFilme.getValue();
 		switch(escolha) {
 			case "PERFIL":
-				Main.mudarPagina(0);
+				Main.mudarPagina(3);
 				break;
 			case "ADICIONAR LISTA":
 				Main.mudarPagina(5);
+				break;
+			case "GERAR RELATÓRIO":
+				Main.mudarPagina(6);
 				break;
 			default: 
 				Main.mudarPagina(1);
@@ -166,10 +172,31 @@ public class Controlador implements Initializable {
 		String escolha = opcoesNavegacaoAddLista.getValue();
 		switch(escolha) {
 			case "PERFIL":
-				Main.mudarPagina(0);
+				Main.mudarPagina(3);
 				break;
 			case "ADICIONAR FILME":
 				Main.mudarPagina(4);
+				break;
+			case "GERAR RELATÓRIO":
+				Main.mudarPagina(6);
+				break;
+			default: 
+				Main.mudarPagina(1);
+				break;
+		}
+	}
+	
+	public void selecaoNavegacaoRelatorio(ActionEvent event) {
+		String escolha = opcoesNavegacaoRelatorio.getValue();
+		switch(escolha) {
+			case "PERFIL":
+				Main.mudarPagina(3);
+				break;
+			case "ADICIONAR FILME":
+				Main.mudarPagina(4);
+				break;
+			case "ADICIONAR LISTA":
+				Main.mudarPagina(5);
 				break;
 			default: 
 				Main.mudarPagina(1);

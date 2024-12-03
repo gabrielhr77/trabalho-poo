@@ -34,6 +34,8 @@ public class Main extends Application{
 	private static Scene filmeScene;
 	private static Scene addFilmeScene;
 	private static Scene addListaScene;
+	private static Scene relatoriosScene;
+	private static Scene perfilScene;
 	
 	private static ArrayList<Filme> todosOsFilmes = new ArrayList<>();
 	private static ArrayList<Ator> todosOsAtores = new ArrayList<>();
@@ -56,13 +58,18 @@ public class Main extends Application{
             
             Parent fxmlFilme = FXMLLoader.load(getClass().getResource("/application/Filme.fxml"));
             filmeScene = new Scene(fxmlFilme, 950, 650);
-            //Parent root = FXMLLoader.load(getClass().getResource("Filme.fxml"));
             
             Parent fxmlAddFilme = FXMLLoader.load(getClass().getResource("/application/AdicionarFilme.fxml"));
             addFilmeScene = new Scene(fxmlAddFilme, 950, 650);
             
             Parent fxmlAddLista = FXMLLoader.load(getClass().getResource("/application/AdicionarLista.fxml"));
             addListaScene = new Scene(fxmlAddLista, 950, 650);
+            
+            Parent fxmlRelatorios = FXMLLoader.load(getClass().getResource("/application/Relatorios.fxml"));
+            relatoriosScene = new Scene(fxmlRelatorios, 950, 650);
+            
+            Parent fxmlPerfil = FXMLLoader.load(getClass().getResource("/application/Perfil.fxml"));
+            perfilScene = new Scene(fxmlPerfil, 950, 650);
             
             System.out.println("FXML carregado com sucesso.");
 
@@ -106,15 +113,17 @@ public class Main extends Application{
         		case 2:
         			stage.setScene(filmeScene);
         			break;
-        			
-//        		case 3:
-//        			stage.setScene(perfil);
-//        			break;
+        		case 3:
+        			stage.setScene(perfilScene);
+        			break;
         		case 4:
         			stage.setScene(addFilmeScene);
         			break;
         		case 5:
         			stage.setScene(addListaScene);
+        			break;
+        		case 6:
+        			stage.setScene(relatoriosScene);
         			break;
         		default: 
         			stage.setScene(paginaInicialScene);
