@@ -8,7 +8,7 @@ public class Critica extends Publicacao {
 	private Filme Filme;
 	private float nota;
 	
-	public Critica(String id, Usuario Usuario, String titulo, String conteudo, Filme Filme, float nota) {
+	public Critica(int id, Usuario Usuario, String titulo, String conteudo, Filme Filme, float nota) {
 		super(id, Usuario);
 		this.titulo = titulo;
 		this.conteudo = conteudo;

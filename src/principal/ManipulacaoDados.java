@@ -18,18 +18,35 @@ public class ManipulacaoDados {
 	
 	//-----------------------------------------------USUÁRIOS-----------------------------------------------
 	
-	public static boolean verificaLoginESenha(String usuario, String senha) {
-		ArrayList<Usuario> usuarios = Main.retornaArrayListUsuarios(); 
-		for(int i=0;i<usuarios.size();i++) {
-			if(usuarios.get(i).getNome()==usuario) {
-				if(usuarios.get(i).getSenha()==senha);
+	public static boolean verificaLoginESenha(String usuario, String senha) { 
+		for(int i=0;i<Main.retornaArrayListUsuarios().size();i++) {
+			if(Main.retornaArrayListUsuarios().get(i).getNome().equals(usuario)) {
+				if(Main.retornaArrayListUsuarios().get(i).getSenha().equals(senha));
 				return true;
 			}
 		}
 		return false;
 	}
 
-	
+	public static boolean verificaNomeExistente(String usuario) {
+        ArrayList<Usuario> usuarios = Main.retornaArrayListUsuarios(); 
+        for(int i=0;i<usuarios.size();i++) {
+            if(usuarios.get(i).getNome().equals(usuario)){
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    public static Usuario buscaUsuarioPorNome(String nomeUsuario) {
+        ArrayList<Usuario> usuarios = Main.retornaArrayListUsuarios(); 
+        for(int i=0;i<usuarios.size();i++) {
+            if(usuarios.get(i).getNome().equalsIgnoreCase(nomeUsuario)){
+                return usuarios.get(i);
+            }
+        }
+        return null;
+    }
 	
 	
 	

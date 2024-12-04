@@ -3,15 +3,15 @@ package entidadesUsuarios;
 
 
 public class Publicacao {
-	private String id;
+	private int id;
 	private Usuario Usuario;
 	
-	public Publicacao(String id, Usuario Usuario) {
+	public Publicacao(int id, Usuario Usuario) {
 		this.id = id;
 		this.Usuario = Usuario;
 	}
 	
-	public String getID() {
+	public int getID() {
 		return id;
 	}
 	

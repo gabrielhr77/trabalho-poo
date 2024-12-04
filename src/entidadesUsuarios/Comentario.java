@@ -5,7 +5,7 @@ public class Comentario extends Publicacao {
 	private String conteudo;
 	private Filme Filme;
 	
-	public Comentario(String id, Usuario Usuario, Filme Filme, String conteudo) {
+	public Comentario(int id, Usuario Usuario, Filme Filme, String conteudo) {
 		super(id, Usuario);
 		this.Filme = Filme;
 		this.conteudo = conteudo;

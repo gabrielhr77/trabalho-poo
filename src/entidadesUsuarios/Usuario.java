@@ -1,24 +1,63 @@
 package entidadesUsuarios;
 
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Usuario extends Pessoa{
+public class Usuario extends Pessoa implements Serializable {
 
     private String senha;
     private boolean flagSuspenso;
     private float pesoClassificacao;
     private boolean critico;
+    public boolean pediuParaSerCritico;
     private Date dataDeAprovacao;
+    public int quantidadeComentarios,quantidadeCriticas,quantidadeListas;
 
+    public Usuario() {
+    	
+    }
     public Usuario(String nome, int id, String senha, float pesoClassificacao){
         super (nome, id);
         this.senha = senha;
         this.flagSuspenso = false;
         this.pesoClassificacao = pesoClassificacao;
         this.critico = false;
+        this.pediuParaSerCritico=false;
+        this.quantidadeComentarios=0;
+        this.quantidadeCriticas=0;
+        this.quantidadeListas=0;
+    }
+    
+    public void aumentaUmaCritica() {
+    	this.quantidadeCriticas++;
+    }
+    
+    public int getQuantidadeCriticas() {
+    	return this.quantidadeCriticas;
+    }
+    
+    public void aumentaUmComentario() {
+    	this.quantidadeComentarios++;
+    }
+   
+    public int getQuantidadeComentarios() {
+    	return this.quantidadeComentarios;
+    }
+    
+    public void aumentaUmaLista() {
+    	this.quantidadeListas++;
+    }
+    
+    public int getQuantidadeListas() {
+    	return this.quantidadeListas;
     }
 
+    
+    public void pediuParaSerCritico() {
+    	this.pediuParaSerCritico=true;
+    }
+    
     public void setSenha(String senha){
         this.senha = senha;
     }
@@ -57,7 +96,7 @@ public class Usuario extends Pessoa{
 
     public void setCritico(){
         this.critico = true;
-        pesoClassificacao *= 2;
+        pesoClassificacao *= 5;
     }
 
     public Date getDataAprovacao() {

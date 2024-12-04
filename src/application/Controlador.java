@@ -60,30 +60,58 @@ public class Controlador implements Initializable {
 	
 
 	private void alertaErroLogin() {
-        
         Alert alerta = new Alert(AlertType.ERROR);
         alerta.setTitle("Erro");
-      
         alerta.setContentText("Usuário e/ou senha incorretos\nVerifique se suas credenciais foram digitadas corretamente.");
-        
         alerta.showAndWait();
     }
-
+	private void alertaErroRegistro() {
+        Alert alerta = new Alert(AlertType.ERROR);
+        alerta.setTitle("Erro");
+        alerta.setContentText("Usuário já está sendo utilizado.");
+        alerta.showAndWait();
+    }
+	private void alertaUsuarioNaoExiste() {
+        Alert alerta = new Alert(AlertType.ERROR);
+        alerta.setTitle("Erro");
+        alerta.setContentText("Usuário não existe.");
+        alerta.showAndWait();
+    }
 	public void botaoPaginaInicial(ActionEvent evento) {
 		Main.mudarPagina(1);
 	}
-
 	
 	public void enviarParaVerificacao(ActionEvent event) {
-		Main.mudarPagina(1);
-//		String nome = retornaUserLogin();
-//		String senha = retornaSenhaLogin();
-//		boolean existente = ManipulacaoDados.verificaLoginESenha(nome,senha);
-//		if(existente) Main.mudarPagina(1);
-//		else alertaErroLogin();		
+//		Main.mudarPagina(1);
+		if(loginRButton.isSelected()) {	
+			String nome = retornaUserLogin();
+			String senha = retornaSenhaLogin();
+//			boolean existente = ManipulacaoDados.verificaLoginESenha(nome,senha);
+			if(ManipulacaoDados.verificaLoginESenha(nome,senha)) Main.mudarPagina(1);
+			else {
+				alertaErroLogin();
+//				for(int i=0;i<Main.retornaArrayListUsuarios().size();i++) {
+//					System.out.println(Main.retornaArrayListUsuarios().get(i).getNome());
+//				}
+			}
+		}else {
+			String nome = retornaUserRegistro();
+			String senha = retornaSenhaRegistro();
+			boolean existente = ManipulacaoDados.verificaNomeExistente(nome);
+			if(existente) alertaErroRegistro();
+			else registraNovoUsuario(nome,senha);
+			Main.mudarPagina(1);
+		}
 	}
 	
-
+	public void registraNovoUsuario(String nome, String senha) {
+		if(ManipulacaoDados.verificaNomeExistente(retornaUserRegistro())) {
+			alertaErroRegistro();
+		}else {
+			Usuario novoUsuario = new Usuario(retornaUserRegistro(),Main.retornaArrayListUsuarios().size()+100,retornaSenhaRegistro(),1);
+			Main.retornaArrayListUsuarios().add(novoUsuario);
+		}
+	}
 	
 	public String retornaUserLogin() {
 		return userLogin.getText();
@@ -461,7 +489,70 @@ public class Controlador implements Initializable {
 	
 
 	
-	
+	public static void adicionaComentario(Usuario Usuario, Filme Filme, String conteudo, ArrayList<Comentario> comentarios) {
+        int id = 2000000 + comentarios.size();
+        Comentario comment = new Comentario(id, Usuario, Filme, conteudo);
+        comentarios.add(comment);
+    }
+    
+    public static void adicionaCritica(Usuario Usuario, Filme Filme, String titulo, String conteudo, float nota, ArrayList<Critica> criticas) {
+        int id = 3000000 + criticas.size();
+        Critica review = new Critica(id, Usuario, titulo, conteudo, Filme, nota);
+        criticas.add(review);
+    }
+    
+    public static void removeComentario(int id, ArrayList<Comentario> comentarios) {
+        int i = buscaComentario(id, comentarios);
+        comentarios.remove(i);
+    }
+    
+    public static void removeCritica(int id, ArrayList<Critica> criticas) {
+        int i = buscaCritica(id, criticas);
+        criticas.remove(i);
+    }
+    
+    public static int buscaComentario(int id, ArrayList<Comentario> comentarios) {
+        for(int i=0;i<comentarios.size();i++) {
+            if(comentarios.get(i).getID() == id){
+                return i;
+            }
+        }
+        return -1;
+    }
+    
+    public static int buscaCritica(int id, ArrayList<Critica> criticas) {
+        for(int i=0;i<criticas.size();i++) {
+            if(criticas.get(i).getID() == id){
+                return i;
+            }
+        }
+        return -1;
+    }
+    
+  //------------------------------PÁGINA DO FILME OU DA LISTA-------------------------------------------------------------------------
+    
+    
+//função para buscar todos os comentários sobre um filme
+    public static ArrayList<Comentario> buscaComentariosFilme(int idFilme, ArrayList<Comentario> comentarios){
+        ArrayList<Comentario> lista = new ArrayList<>();
+        for(int i=0; i<comentarios.size(); i++) {
+            if(comentarios.get(i).getFilme().getIDFilme() == idFilme) {
+                lista.add(comentarios.get(i));
+            }
+        }
+        return lista;
+    }
+    
+    //função para buscar todas as críticas sobre um filme
+    public static ArrayList<Critica> buscaCriticasFilme(int idFilme, ArrayList<Critica> criticas){
+        ArrayList<Critica> lista = new ArrayList<>();
+        for(int i=0; i<criticas.size(); i++) {
+            if(criticas.get(i).getFilme().getIDFilme() == idFilme) {
+                lista.add(criticas.get(i));
+            }
+        }
+        return lista;
+    }
 	//------------------------------ADICIONA FILME OU LISTA-------------------------------------------------------------------------
 	
 	public Image uploadDeImagem(Stage primaryStage) {
@@ -523,8 +614,41 @@ public class Controlador implements Initializable {
 	@FXML
 	private TextField nomeNovoFilme,anoNovoFilme,diretorNovoFilme,ator1NovoFilme,ator2NovoFilme,ator3NovoFilme,horasNovoFilme,minutosNovoFilme,faixaEtariaNovoFilme;
 	
-	public static void adicionarFilme() {
-		Filme filme = new Filme(Main.retornaArrayListFilmes().size()+1000,nomeNovoFilme);
+	
+	
+	public String retornaNomeNovoFilme() {
+		return nomeNovoFilme.getText();
+	}
+	public int retornaAnoNovoFilme() {
+		return Integer.parseInt(anoNovoFilme.getText());
+	}
+	public String retornaAtor1NovoFilme() {
+		return ator1NovoFilme.getText();
+	}
+	public String retornaAtor2NovoFilme() {
+		return ator2NovoFilme.getText();
+	}
+	public String retornaAtor3NovoFilme() {
+		return ator3NovoFilme.getText();
+	}
+	public String retornaDiretorNovoFilme() {
+		return diretorNovoFilme.getText();
+	}
+	public String retornaHorasNovoFilme() {
+		return horasNovoFilme.getText();
+	}
+	public String retornaMinutosNovoFilme() {
+		return minutosNovoFilme.getText();
+	}
+	public int retornafaixaEtariaNovoFilme() {
+		return Integer.parseInt(faixaEtariaNovoFilme.getText());
+	}
+	
+	
+	
+	public void adicionarFilme(ActionEvent event) {
+		Filme filme = new Filme(Main.retornaArrayListFilmes().size()+1000,retornaNomeNovoFilme(),retornaDiretorNovoFilme(),retornaAnoNovoFilme(),retornaAtor1NovoFilme(),retornaAtor2NovoFilme(),retornaAtor3NovoFilme(),retornaHorasNovoFilme(),retornaMinutosNovoFilme(),retornafaixaEtariaNovoFilme());
+		ManipulacaoDados.adicionaFilme(filme,Main.retornaArrayListFilmes());
 	}
 	
 	
@@ -536,28 +660,38 @@ public class Controlador implements Initializable {
 	@FXML
 	private RadioButton radioUser, radioUsuarios, radioFilmes, radioComentClass;
 	@FXML
-	private Text textoPesquisarUsuario,textoNomeDoUsuario,textoNomesDosFilmes,textoNomesDasListas,nomeUsuario,usuarioJaFoiSuspenso,ehCritico,quantidadeListas,quantidadeCriticas,quantidadeComentarios;
+	private Text pediuPraSerCritico,textoPesquisarUsuario,textoNomeDoUsuario,textoNomesDosFilmes,textoNomesDasListas,nomeUsuario,usuarioEstaSuspenso,ehCritico,quantidadeListas,quantidadeCriticas,quantidadeComentarios;
 	@FXML
 	private TextField nomeUsuarioPesquisado;
 	@FXML
 	private VBox listaDasListas,listaDosFilmes;
 	
 	public void declaraNomesDosFilmes(VBox vbox, ArrayList<Filme> listaDeFilmes) {
-		for(int i=0;i<vbox.getChildren().size();i++) {
-			Text texto = (Text) vbox.getChildren().get(i);//força o tipo Node, que é o tipo dos filhos do vbox, para Text para que eu possa usat setText()
-			texto.setText(listaDeFilmes.get(i).getNomeFilme());
+		if(listaDeFilmes.size()>0) {
+			for(int i=0;i<listaDeFilmes.size();i++) {
+				Text texto = (Text) vbox.getChildren().get(i);//força o tipo Node, que é o tipo dos filhos do vbox, para Text para que eu possa usat setText()
+				texto.setText(listaDeFilmes.get(i).getNomeFilme());
+			}
 		}
 	}
 	public void declaraNomesDasListas(VBox vbox, ArrayList<Lista> listaDeListas) {
-		for(int i=0;i<vbox.getChildren().size();i++) {
-			Text texto = (Text) vbox.getChildren().get(i);
-			texto.setText(listaDeListas.get(i).getNome());
+		if(listaDeListas.size()>0) {	
+			for(int i=0;i<listaDeListas.size();i++) {
+				Text texto = (Text) vbox.getChildren().get(i);
+				texto.setText(listaDeListas.get(i).getNome());
+			}
 		}
 	}
 	public void declaraNomesDosUsuarios(VBox vbox, ArrayList<Usuario> listaDosUsuarios) {
-		for(int i=0;i<vbox.getChildren().size();i++) {
-			Text texto = (Text) vbox.getChildren().get(i);
-			texto.setText(listaDosUsuarios.get(i).getNome());
+		if(listaDosUsuarios.size()>0) {	
+			for(int i=0;i<listaDosUsuarios.size();i++) {
+				Text texto = (Text) vbox.getChildren().get(i);
+				texto.setText(listaDosUsuarios.get(i).getNome());
+			}
+			for(int j=listaDosUsuarios.size();j<vbox.getChildren().size();j++) {
+				Text texto = (Text) vbox.getChildren().get(j);
+				texto.setText("");
+			}
 		}
 	}
 	
@@ -567,7 +701,22 @@ public class Controlador implements Initializable {
 			nomeUsuarioPesquisado.setVisible(false);
 			textoNomeDoUsuario.setVisible(false);
 			textoPesquisarUsuario.setVisible(false);
+			listaDasListas.setVisible(true);
+			listaDosFilmes.setVisible(true);
+			nomeUsuarioPesquisado.setVisible(false);
+			textoNomeDoUsuario.setVisible(false);
+			textoPesquisarUsuario.setVisible(false);
+			nomeUsuario.setVisible(false);
+			quantidadeComentarios.setVisible(false);
+			quantidadeCriticas.setVisible(false);
+			quantidadeListas.setVisible(false);
+			usuarioEstaSuspenso.setVisible(false);
+			ehCritico.setVisible(false);
+			pediuPraSerCritico.setVisible(false);
+			textoNomesDosFilmes.setVisible(true);
+			textoNomesDasListas.setVisible(true);
 			textoNomesDosFilmes.setText("Nomes dos usuários existentes");
+			textoNomesDasListas.setText("Nomes dos usuários existentes");
 			if(Main.retornaArrayListUsuarios().size()<70) {
 				declaraNomesDosUsuarios(listaDosFilmes,Main.retornaArrayListUsuarios());
 			}else {
@@ -586,6 +735,17 @@ public class Controlador implements Initializable {
 			nomeUsuarioPesquisado.setVisible(false);
 			textoNomeDoUsuario.setVisible(false);
 			textoPesquisarUsuario.setVisible(false);
+			nomeUsuario.setVisible(false);
+			quantidadeComentarios.setVisible(false);
+			quantidadeCriticas.setVisible(false);
+			quantidadeListas.setVisible(false);
+			usuarioEstaSuspenso.setVisible(false);
+			ehCritico.setVisible(false);
+			pediuPraSerCritico.setVisible(false);
+			listaDasListas.setVisible(true);
+			listaDosFilmes.setVisible(true);
+			textoNomesDosFilmes.setVisible(true);
+			textoNomesDasListas.setVisible(true);
 			textoNomesDosFilmes.setText("Nomes dos filmes existentes");
 			textoNomesDasListas.setText("Nomes das listas existentes");
 			declaraNomesDosFilmes(listaDosFilmes,Main.retornaArrayListFilmes());
@@ -594,12 +754,71 @@ public class Controlador implements Initializable {
 			nomeUsuarioPesquisado.setVisible(false);
 			textoNomeDoUsuario.setVisible(false);
 			textoPesquisarUsuario.setVisible(false);
+			nomeUsuario.setVisible(false);
+			quantidadeComentarios.setVisible(false);
+			quantidadeCriticas.setVisible(false);
+			quantidadeListas.setVisible(false);
+			usuarioEstaSuspenso.setVisible(false);
+			ehCritico.setVisible(false);
+			pediuPraSerCritico.setVisible(false);
+			textoNomesDosFilmes.setVisible(true);
+			textoNomesDasListas.setVisible(true);
+			listaDasListas.setVisible(false);
+			listaDosFilmes.setVisible(false);
 		}else if(radioUser.isSelected()) {
 			nomeUsuarioPesquisado.setVisible(true);
 			textoNomeDoUsuario.setVisible(true);
 			textoPesquisarUsuario.setVisible(true);
+			nomeUsuario.setVisible(true);
+			quantidadeComentarios.setVisible(true);
+			quantidadeCriticas.setVisible(true);
+			quantidadeListas.setVisible(true);
+			usuarioEstaSuspenso.setVisible(true);
+			ehCritico.setVisible(true);
+			pediuPraSerCritico.setVisible(true);
+			textoNomesDosFilmes.setVisible(false);
+			textoNomesDasListas.setVisible(false);
+			listaDasListas.setVisible(false);
+			listaDosFilmes.setVisible(false);
 		}
 	}
 	
+	public void geraRelatorioUsuarioEspecifico(ActionEvent event) {
+		if(ManipulacaoDados.buscaUsuarioPorNome(nomeUsuarioPesquisado.getText())!=null) {	
+			Usuario usuarioPesquisado = ManipulacaoDados.buscaUsuarioPorNome(nomeUsuarioPesquisado.getText());
+			if(usuarioPesquisado.pediuParaSerCritico) pediuPraSerCritico.setText("SIM");
+			else pediuPraSerCritico.setText("NÃO");
+			nomeUsuario.setText(usuarioPesquisado.getNome());
+			quantidadeComentarios.setText(String.valueOf(usuarioPesquisado.quantidadeComentarios));
+			quantidadeCriticas.setText(String.valueOf(usuarioPesquisado.getQuantidadeCriticas()));
+			quantidadeListas.setText(String.valueOf(usuarioPesquisado.getQuantidadeListas()));
+			if(usuarioPesquisado.isSuspenso()) usuarioEstaSuspenso.setText("SIM");
+			else usuarioEstaSuspenso.setText("NÃO");
+			if(usuarioPesquisado.isCritico()) ehCritico.setText("SIM");
+			else ehCritico.setText("NÃO");
+			if(usuarioPesquisado.pediuParaSerCritico) pediuPraSerCritico.setText("SIM");
+			else pediuPraSerCritico.setText("NÃO");
+		}else alertaUsuarioNaoExiste();
+	}
 
+	public void deletarUsuario(ActionEvent event) {
+		Main.retornaArrayListUsuarios().remove(ManipulacaoDados.buscaUsuarioPorNome(nomeUsuario.getText()));
+	}
+	
+	public void tornarCritico(ActionEvent event) {
+		ManipulacaoDados.buscaUsuarioPorNome(nomeUsuario.getText()).setCritico();
+	}
+	
+	public void suspenderUsuario(ActionEvent event) {
+		ManipulacaoDados.buscaUsuarioPorNome(nomeUsuario.getText()).suspender(true);
+	}
+	
+	public void liberarUsuario(ActionEvent event) {
+		ManipulacaoDados.buscaUsuarioPorNome(nomeUsuario.getText()).suspender(false);
+	}
+	
+	
+	
+	
+	
 }

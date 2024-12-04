@@ -1,13 +1,16 @@
 package entidadesUsuarios;
 
-
+import java.io.Serializable;
 
 //import java.util.Date;
 
-public abstract class Pessoa {
+public abstract class Pessoa implements Serializable {
     private String nome;
     private int id;
     
+    public Pessoa() {
+    	
+    }
     public Pessoa(String nome, int id) {
         this.nome = nome;
         this.id = id;

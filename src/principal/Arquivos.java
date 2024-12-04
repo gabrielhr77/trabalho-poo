@@ -69,6 +69,7 @@ public class Arquivos {
 	
 	//TENHO QUE TER UMA FUNÇÃO IGUAL A ESSA NA CLASSE DE MEIO-CAMPO DOS USUÁRIOS
 	//função que copia os dados do arquivo CSV e os coloca dentro do arraylist	
+	/*
 	public static void copiaDadosDoArquivo(String caminho, BufferedReader leitor, ArrayList<Filme> arraylistFilmes, ArrayList<Ator> arraylistAtores, ArrayList<Diretor> arraylistDiretores) throws IOException{
 		boolean primeiraLinha = true;
 		boolean primeiroCicloFilmes = true;
@@ -168,7 +169,7 @@ public class Arquivos {
 		fechaLeitores();
 
 	}
-	
+	*/
 	
 	//função que salva os dados do arraylist no arquivo CSV ao finalizar o programa
 	public static <T> void salvaDadosNoArquivo(String caminho, File arquivo, ArrayList<Filme> lista) throws IOException {
@@ -180,7 +181,7 @@ public class Arquivos {
 		}
 		//escrevo os dados no arquivo
 		for(int i=0;i<lista.size();i++) {
-			escritor.write(lista.get(i).getIDFilme()+";"+lista.get(i).getNomeFilme()+";"+lista.get(i).getGeneroFilme()+";"+lista.get(i).getAnoLancamento()+";"+lista.get(i).getDiretor().getIDDiretor()+";"+lista.get(i).getDiretor().getNomeDiretor()+";"+lista.get(i).getDiretor().getDataNascimentoDiretor()+";"+lista.get(i).getAtor1().getIDAtor()+";"+lista.get(i).getAtor1().getNomeAtor()+";"+lista.get(i).getAtor1().getDataNascimentoAtor()+";"+lista.get(i).getAtor2().getIDAtor()+";"+lista.get(i).getAtor2().getNomeAtor()+";"+lista.get(i).getAtor2().getDataNascimentoAtor()+";"+lista.get(i).getAtor3().getIDAtor()+";"+lista.get(i).getAtor3().getNomeAtor()+";"+lista.get(i).getAtor3().getDataNascimentoAtor()+"\n");
+			//escritor.write(lista.get(i).getIDFilme()+";"+lista.get(i).getNomeFilme()+";"+lista.get(i).getGeneroFilme()+";"+lista.get(i).getAnoLancamento()+";"+lista.get(i).getDiretor().getIDDiretor()+";"+lista.get(i).getDiretor().getNomeDiretor()+";"+lista.get(i).getDiretor().getDataNascimentoDiretor()+";"+lista.get(i).getAtor1().getIDAtor()+";"+lista.get(i).getAtor1().getNomeAtor()+";"+lista.get(i).getAtor1().getDataNascimentoAtor()+";"+lista.get(i).getAtor2().getIDAtor()+";"+lista.get(i).getAtor2().getNomeAtor()+";"+lista.get(i).getAtor2().getDataNascimentoAtor()+";"+lista.get(i).getAtor3().getIDAtor()+";"+lista.get(i).getAtor3().getNomeAtor()+";"+lista.get(i).getAtor3().getDataNascimentoAtor()+"\n");
 			escritor.flush();
 		}
 		escritor.close();

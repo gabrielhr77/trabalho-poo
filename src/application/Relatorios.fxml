@@ -102,9 +102,9 @@
                         <Font name="Corbel Bold" size="19.0" />
                      </font>
                   </Text>
-                  <Text fx:id="nomeUsuario" layoutX="377.0" layoutY="411.0" strokeType="OUTSIDE" strokeWidth="0.0" text="................" wrappingWidth="144.0">
+                  <Text fx:id="nomeUsuario" layoutX="377.0" layoutY="411.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="144.0">
                      <font>
-                        <Font name="Corbel Bold" size="19.0" />
+                        <Font name="Corbel Bold" size="15.0" />
                      </font>
                   </Text>
                   <Text layoutX="73.0" layoutY="463.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantidade de comentários" wrappingWidth="229.08334350585938">
@@ -112,9 +112,9 @@
                         <Font name="Corbel Bold" size="19.0" />
                      </font>
                   </Text>
-                  <Text fx:id="quantidadeComentarios" layoutX="377.0" layoutY="461.0" strokeType="OUTSIDE" strokeWidth="0.0" text="................" wrappingWidth="144.0">
+                  <Text fx:id="quantidadeComentarios" layoutX="377.0" layoutY="461.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="144.0">
                      <font>
-                        <Font name="Corbel Bold" size="19.0" />
+                        <Font name="Corbel Bold" size="15.0" />
                      </font>
                   </Text>
                   <Text layoutX="73.0" layoutY="515.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantidade de críticas" wrappingWidth="190.41665649414062">
@@ -122,9 +122,9 @@
                         <Font name="Corbel Bold" size="19.0" />
                      </font>
                   </Text>
-                  <Text fx:id="quantidadeCriticas" layoutX="377.0" layoutY="511.0" strokeType="OUTSIDE" strokeWidth="0.0" text="................" wrappingWidth="144.0">
+                  <Text fx:id="quantidadeCriticas" layoutX="377.0" layoutY="511.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="144.0">
                      <font>
-                        <Font name="Corbel Bold" size="19.0" />
+                        <Font name="Corbel Bold" size="15.0" />
                      </font>
                   </Text>
                   <Text layoutX="73.0" layoutY="563.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantidade de listas feitas" wrappingWidth="229.08334350585938">
@@ -132,9 +132,9 @@
                         <Font name="Corbel Bold" size="19.0" />
                      </font>
                   </Text>
-                  <Text fx:id="quantidadeListas" layoutX="377.0" layoutY="561.0" strokeType="OUTSIDE" strokeWidth="0.0" text="................" wrappingWidth="144.0">
+                  <Text fx:id="quantidadeListas" layoutX="377.0" layoutY="561.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="144.0">
                      <font>
-                        <Font name="Corbel Bold" size="19.0" />
+                        <Font name="Corbel Bold" size="15.0" />
                      </font>
                   </Text>
                   <Text layoutX="531.0" layoutY="413.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuário é crítico?" wrappingWidth="182.41665649414062">
@@ -142,12 +142,12 @@
                         <Font name="Corbel Bold" size="19.0" />
                      </font>
                   </Text>
-                  <Text fx:id="ehCritico" layoutX="778.0" layoutY="413.0" strokeType="OUTSIDE" strokeWidth="0.0" text="................" wrappingWidth="95.74996948242188">
+                  <Text fx:id="ehCritico" layoutX="778.0" layoutY="413.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="95.74996948242188">
                      <font>
-                        <Font name="Corbel Bold" size="19.0" />
+                        <Font name="Corbel Bold" size="15.0" />
                      </font>
                   </Text>
-                  <VBox fx:id="listaDosFilmes" layoutX="74.0" layoutY="640.0" prefHeight="912.0" prefWidth="315.0">
+                  <VBox fx:id="listaDosFilmes" layoutX="76.0" layoutY="698.0" prefHeight="912.0" prefWidth="315.0">
                      <children>
                         <Text fx:id="filme1" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
                            <font>
@@ -501,12 +501,12 @@
                         </Text>
                      </children>
                   </VBox>
-                  <Text fx:id="textoNomesDosFilmes" layoutX="73.0" layoutY="611.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nomes dos filmes" wrappingWidth="276.0">
+                  <Text fx:id="textoNomesDosFilmes" layoutX="75.0" layoutY="669.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nomes dos filmes" wrappingWidth="276.0">
                      <font>
                         <Font name="Corbel Bold" size="19.0" />
                      </font>
                   </Text>
-                  <VBox fx:id="listaDasListas" layoutX="482.0" layoutY="640.0" prefHeight="800.0" prefWidth="371.0">
+                  <VBox fx:id="listaDasListas" layoutX="484.0" layoutY="698.0" prefHeight="800.0" prefWidth="371.0">
                      <children>
                         <Text fx:id="lista1" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
                            <font>
@@ -730,19 +730,19 @@
                         </Text>
                      </children>
                   </VBox>
-                  <Text fx:id="textoNomesDasListas" layoutX="481.0" layoutY="611.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nomes das listas" wrappingWidth="229.08334350585938">
+                  <Text fx:id="textoNomesDasListas" layoutX="483.0" layoutY="669.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nomes das listas" wrappingWidth="316.0833435058594">
                      <font>
                         <Font name="Corbel Bold" size="19.0" />
                      </font>
                   </Text>
-                  <Text layoutX="531.0" layoutY="463.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuário já foi suspenso?" wrappingWidth="205.08328247070312">
+                  <Text layoutX="73.0" layoutY="612.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuário está suspenso?" wrappingWidth="205.08328247070312">
                      <font>
                         <Font name="Corbel Bold" size="19.0" />
                      </font>
                   </Text>
-                  <Text fx:id="usuarioJaFoiSuspenso" layoutX="778.0" layoutY="464.0" strokeType="OUTSIDE" strokeWidth="0.0" text="................" wrappingWidth="95.74996948242188">
+                  <Text fx:id="usuarioEstaSuspenso" layoutX="377.0" layoutY="612.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="95.74996948242188">
                      <font>
-                        <Font name="Corbel Bold" size="19.0" />
+                        <Font name="Corbel Bold" size="15.0" />
                      </font>
                   </Text>
                   <Text fx:id="textoPesquisarUsuario" layoutX="767.0" layoutY="299.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PESQUISAR" wrappingWidth="107.74996948242188">
@@ -750,26 +750,42 @@
                         <Font name="Corbel Bold" size="19.0" />
                      </font>
                   </Text>
-                  <Button fx:id="botaoPesquisarUsuario" layoutX="749.0" layoutY="272.0" mnemonicParsing="false" opacity="0.0" prefHeight="41.0" prefWidth="135.0" />
-                  <Line endY="180.0" layoutX="495.0" layoutY="391.0" stroke="#dba15c" strokeWidth="3.0" />
-                  <Text fx:id="textoNomeDoUsuario11" layoutX="522.0" layoutY="541.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DELETAR USUÁRIO" textAlignment="CENTER" wrappingWidth="107.74996948242188">
+                  <Button fx:id="botaoPesquisarUsuario" layoutX="749.0" layoutY="272.0" mnemonicParsing="false" onAction="#geraRelatorioUsuarioEspecifico" opacity="0.0" prefHeight="41.0" prefWidth="135.0" />
+                  <Line endY="225.0" layoutX="495.0" layoutY="391.0" stroke="#dba15c" strokeWidth="3.0" />
+                  <Text fx:id="textoNomeDoUsuario11" layoutX="520.0" layoutY="530.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DELETAR USUÁRIO" textAlignment="CENTER" wrappingWidth="107.74996948242188">
                      <font>
                         <Font name="Corbel Bold" size="19.0" />
                      </font>
                   </Text>
-                  <Button fx:id="botaoDeletarUsuario" layoutX="504.0" layoutY="514.0" mnemonicParsing="false" opacity="0.0" prefHeight="62.0" prefWidth="116.0" />
-                  <Text fx:id="textoNomeDoUsuario111" layoutX="645.0" layoutY="541.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SUSPENDER USUÁRIO" textAlignment="CENTER" wrappingWidth="107.74996948242188">
+                  <Button fx:id="botaoDeletarUsuario" layoutX="513.0" layoutY="503.0" mnemonicParsing="false" onAction="#deletarUsuario" opacity="0.0" prefHeight="62.0" prefWidth="116.0" />
+                  <Text fx:id="textoNomeDoUsuario111" layoutX="653.0" layoutY="530.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SUSPENDER USUÁRIO" textAlignment="CENTER" wrappingWidth="107.74996948242188">
                      <font>
                         <Font name="Corbel Bold" size="19.0" />
                      </font>
                   </Text>
-                  <Button fx:id="botaoSuspenderUsuario" layoutX="640.0" layoutY="514.0" mnemonicParsing="false" opacity="0.0" prefHeight="62.0" prefWidth="119.0" />
-                  <Text fx:id="textoNomeDoUsuario1111" layoutX="789.0" layoutY="541.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LIBERAR USUÁRIO" textAlignment="CENTER" wrappingWidth="107.74996948242188">
+                  <Button fx:id="botaoSuspenderUsuario" layoutX="648.0" layoutY="503.0" mnemonicParsing="false" onAction="#suspenderUsuario" opacity="0.0" prefHeight="62.0" prefWidth="119.0" />
+                  <Text fx:id="textoNomeDoUsuario1111" layoutX="653.0" layoutY="597.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LIBERAR USUÁRIO" textAlignment="CENTER" wrappingWidth="107.74996948242188">
                      <font>
                         <Font name="Corbel Bold" size="19.0" />
                      </font>
                   </Text>
-                  <Button fx:id="botaoLiberarUsuario" layoutX="771.0" layoutY="514.0" mnemonicParsing="false" opacity="0.0" prefHeight="62.0" prefWidth="132.0" />
+                  <Button fx:id="botaoLiberarUsuario" layoutX="641.0" layoutY="570.0" mnemonicParsing="false" onAction="#liberarUsuario" opacity="0.0" prefHeight="62.0" prefWidth="132.0" />
+                  <Text layoutX="531.0" layoutY="462.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pedido de upgrade de conta requisitado" wrappingWidth="182.41665649414062">
+                     <font>
+                        <Font name="Corbel Bold" size="19.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="pediuPraSerCritico" layoutX="778.0" layoutY="473.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="95.74996948242188">
+                     <font>
+                        <Font name="Corbel Bold" size="15.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="textoNomeDoUsuario11111" layoutX="769.0" layoutY="530.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TORNAR CRÍTICO" textAlignment="CENTER" wrappingWidth="107.74996948242188">
+                     <font>
+                        <Font name="Corbel Bold" size="19.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="botaoTornarCritico" layoutX="764.0" layoutY="502.0" mnemonicParsing="false" onAction="#tornarCritico" opacity="0.0" prefHeight="62.0" prefWidth="132.0" />
                </children>
             </AnchorPane>
          </content>
