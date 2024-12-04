@@ -176,6 +176,7 @@ public class Controlador implements Initializable {
 		atualizaPaginaPrincipal(listasPaginaAtual);
 	}
 	
+//	public void entraNaLista
 	
 	public void atualizaPaginaPrincipal(ArrayList<Lista> arrayDeListas) {
 		filme1Lista1.setImage(imagem);
@@ -504,7 +505,6 @@ public class Controlador implements Initializable {
 	    }
 	}
 
-	
 	public static void selecionaArquivo() {
 		FileChooser arqSelecionado = new FileChooser();
 		
@@ -519,6 +519,16 @@ public class Controlador implements Initializable {
 		}
 		
 	}
+	
+	@FXML
+	private TextField nomeNovoFilme,anoNovoFilme,diretorNovoFilme,ator1NovoFilme,ator2NovoFilme,ator3NovoFilme,horasNovoFilme,minutosNovoFilme,faixaEtariaNovoFilme;
+	
+	public static void adicionarFilme() {
+		Filme filme = new Filme(Main.retornaArrayListFilmes().size()+1000,nomeNovoFilme);
+	}
+	
+	
+	
 	
 	//------------------------------RELATÓRIO-------------------------------------------------------------------------
 

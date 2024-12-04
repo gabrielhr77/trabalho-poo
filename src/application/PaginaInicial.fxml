@@ -1010,8 +1010,8 @@
                   <Button fx:id="botaoEntraNaLista21" layoutX="769.0" layoutY="942.0" mnemonicParsing="false" opacity="0.0" prefHeight="57.0" prefWidth="56.0" />
                   <Button fx:id="botaoEntraNaLista11" layoutX="769.0" layoutY="521.0" mnemonicParsing="false" opacity="0.0" prefHeight="57.0" prefWidth="56.0" />
                   <Button fx:id="botaoEntraNaLista22" layoutX="769.0" layoutY="942.0" mnemonicParsing="false" opacity="0.0" prefHeight="57.0" prefWidth="56.0" />
-                  <Button fx:id="botaoEntraNaLista12" layoutX="769.0" layoutY="521.0" mnemonicParsing="false" opacity="0.0" prefHeight="57.0" prefWidth="56.0" />
-                  <Button fx:id="botaoEntraNaLista23" layoutX="769.0" layoutY="942.0" mnemonicParsing="false" opacity="0.0" prefHeight="57.0" prefWidth="56.0" />
+                  <Button fx:id="botaoEntraNaLista1" layoutX="766.0" layoutY="507.0" mnemonicParsing="false" opacity="0.0" prefHeight="57.0" prefWidth="56.0" />
+                  <Button fx:id="botaoEntraNaLista2" layoutX="763.0" layoutY="933.0" mnemonicParsing="false" opacity="0.0" prefHeight="57.0" prefWidth="56.0" />
                   <Button fx:id="botaoEntraNaLista3" layoutX="760.0" layoutY="1347.0" mnemonicParsing="false" opacity="0.0" prefHeight="57.0" prefWidth="56.0" />
                   <Button fx:id="botaoEntraNaLista4" layoutX="761.0" layoutY="1765.0" mnemonicParsing="false" opacity="0.0" prefHeight="57.0" prefWidth="56.0" />
                </children>

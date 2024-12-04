@@ -6,8 +6,8 @@ public class Gerenciador extends Pessoa {
 
 	private String senha;
 	
-	public Gerenciador(String nome, int id, Date dataDeNascimento, String senha) {
-		super(nome, id, dataDeNascimento);
+	public Gerenciador(String nome, int id, String senha) {
+		super(nome, id);
 		this.senha = senha;
 	}
 	

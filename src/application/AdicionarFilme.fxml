@@ -46,7 +46,7 @@
             <Font name="Corbel Bold" size="23.0" />
          </font>
       </Text>
-      <ScrollPane hbarPolicy="NEVER" layoutX="39.0" layoutY="187.0" prefHeight="494.0" prefWidth="950.0" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="157.0">
+      <ScrollPane hbarPolicy="NEVER" layoutX="39.0" layoutY="187.0" prefHeight="494.0" prefWidth="950.0" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="-1500.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="157.0">
          <content>
             <AnchorPane maxWidth="1244.0" prefHeight="1044.0" prefWidth="950.0" style="-fx-background-color: #202020;">
                <children>
@@ -174,7 +174,7 @@
                         <Font name="Corbel Bold" size="27.0" />
                      </font>
                   </Text>
-                  <Button fx:id="botaoAdicionarFilme" layoutX="337.0" layoutY="931.0" mnemonicParsing="false" opacity="0.0" prefHeight="53.0" prefWidth="287.0" textAlignment="CENTER" />
+                  <Button fx:id="botaoAdicionarFilme" layoutX="337.0" layoutY="931.0" mnemonicParsing="false" onAction="#adicionarFilme" opacity="0.0" prefHeight="53.0" prefWidth="287.0" textAlignment="CENTER" />
                   <Rectangle arcHeight="100.0" arcWidth="5.0" fill="#dba15c" height="42.0" layoutX="445.0" layoutY="222.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeMiterLimit="26.0" width="187.0" />
                   <Text layoutX="458.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Verificar se já existe">
                      <font>

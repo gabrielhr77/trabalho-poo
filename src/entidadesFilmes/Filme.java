@@ -3,7 +3,7 @@ package entidadesFilmes;
 
 public class Filme {
 	
-	private String nomeFilme, generoFilme;//instancia aqui as caracteristicas dos filmes
+	private String nomeFilme;//, generoFilme;//instancia aqui as caracteristicas dos filmes
 	private int _IDFilme, anoLancamento, numeroDeEstrelas=0, numeroAvaliacoes=0;
 	private float mediaNumeroDeEstrelas;
 	private Ator ator1, ator2, ator3;
@@ -14,10 +14,10 @@ public class Filme {
 	}
 
 	
-	public Filme(int _IDFilme, String nomeFilme, String generoFilme, Diretor diretor, int anoLancamento, Ator ator1, Ator ator2, Ator ator3) {
+	public Filme(int _IDFilme, String nomeFilme, Diretor diretor, int anoLancamento, Ator ator1, Ator ator2, Ator ator3) {
 		this._IDFilme=_IDFilme;
 		this.nomeFilme=nomeFilme;
-		this.generoFilme=generoFilme;
+//		this.generoFilme=generoFilme;
 		this.diretor=diretor;
 		this.anoLancamento=anoLancamento;
 		this.ator1=ator1;
@@ -39,9 +39,9 @@ public class Filme {
 	public String getNomeFilme() {
 		return nomeFilme;
 	}
-	public String getGeneroFilme() {
-		return generoFilme;
-	}
+//	public String getGeneroFilme() {
+//		return generoFilme;
+//	}
 	public Diretor getDiretor() {
 		return diretor;
 	}
@@ -68,9 +68,9 @@ public class Filme {
 	public void setNomeFilme(String nomeFilme) {
 		this.nomeFilme=nomeFilme;
 	}
-	public void setGeneroFilme(String generoFilme) {
-		this.generoFilme=generoFilme;
-	}
+//	public void setGeneroFilme(String generoFilme) {
+//		this.generoFilme=generoFilme;
+//	}
 	public void setDiretor(Diretor diretor) {
 		this.diretor=diretor;
 	}
