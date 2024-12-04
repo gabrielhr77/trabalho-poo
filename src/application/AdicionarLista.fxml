@@ -44,9 +44,9 @@
             <Font name="Corbel Bold" size="23.0" />
          </font>
       </Text>
-      <ScrollPane hbarPolicy="NEVER" layoutX="39.0" layoutY="187.0" prefHeight="494.0" prefWidth="950.0" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="157.0">
+      <ScrollPane hbarPolicy="NEVER" layoutX="39.0" layoutY="187.0" prefHeight="494.0" prefWidth="950.0" vbarPolicy="ALWAYS" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="157.0">
          <content>
-            <AnchorPane maxWidth="1244.0" prefHeight="762.0" prefWidth="950.0" style="-fx-background-color: #202020;">
+            <AnchorPane maxWidth="1244.0" prefHeight="671.0" prefWidth="950.0" style="-fx-background-color: #202020;">
                <children>
                   <Text fill="WHITE" layoutX="88.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOVA LISTA" wrappingWidth="368.0">
                      <font>
@@ -78,7 +78,7 @@
                      </font>
                   </Text>
                   <ChoiceBox fx:id="quantidadeDeFilmesNaLista" layoutX="712.0" layoutY="157.0" opacity="0.0" prefHeight="69.0" prefWidth="150.0" />
-                  <Text fx:id="quantidadeDeFilmesTexto" fill="WHITE" layoutX="780.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
+                  <Text fx:id="quantidadeDeFilmesTexto" fill="WHITE" layoutX="780.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="6">
                      <font>
                         <Font name="Corbel Bold" size="29.0" />
                      </font>
@@ -115,18 +115,6 @@
                   </Text>
                   <TextField fx:id="nomeNovoFilme6" layoutX="243.0" layoutY="537.0" prefHeight="32.0" prefWidth="389.0" />
                   <Text fx:id="nomeFilme6Texto" fill="WHITE" layoutX="96.0" layoutY="558.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome do filme">
-                     <font>
-                        <Font name="Corbel Bold" size="19.0" />
-                     </font>
-                  </Text>
-                  <TextField fx:id="nomeNovoFilme7" layoutX="243.0" layoutY="589.0" prefHeight="32.0" prefWidth="389.0" />
-                  <Text fx:id="nomeFilme7Texto" fill="WHITE" layoutX="96.0" layoutY="610.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome do filme">
-                     <font>
-                        <Font name="Corbel Bold" size="19.0" />
-                     </font>
-                  </Text>
-                  <TextField fx:id="nomeNovoFilme8" layoutX="243.0" layoutY="641.0" prefHeight="32.0" prefWidth="389.0" />
-                  <Text fx:id="nomeFilme8Texto" fill="WHITE" layoutX="96.0" layoutY="662.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome do filme">
                      <font>
                         <Font name="Corbel Bold" size="19.0" />
                      </font>

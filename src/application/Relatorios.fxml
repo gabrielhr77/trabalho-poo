@@ -47,7 +47,7 @@
             <Font name="Corbel Bold" size="23.0" />
          </font>
       </Text>
-      <ScrollPane hbarPolicy="NEVER" layoutX="39.0" layoutY="187.0" prefHeight="2398.0" prefWidth="950.0" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="157.0">
+      <ScrollPane hbarPolicy="NEVER" layoutX="39.0" layoutY="187.0" prefHeight="2398.0" prefWidth="950.0" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="-1500.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="157.0">
          <content>
             <AnchorPane maxWidth="1244.0" prefHeight="2385.0" prefWidth="950.0" style="-fx-background-color: #202020;">
                <children>
@@ -68,7 +68,7 @@
                         <Font name="Corbel Bold" size="23.0" />
                      </font>
                   </Text>
-                  <RadioButton fx:id="radioUsuarios" layoutX="406.0" layoutY="162.0" mnemonicParsing="false" text="Usuários" textFill="WHITE">
+                  <RadioButton fx:id="radioUsuarios" layoutX="406.0" layoutY="162.0" mnemonicParsing="false" onAction="#escolhaRelatorio" text="Usuários" textFill="WHITE">
                      <font>
                         <Font name="Corbel Bold" size="19.0" />
                      </font>
@@ -76,17 +76,17 @@
                         <ToggleGroup fx:id="ecolhaRelatorio" />
                      </toggleGroup>
                   </RadioButton>
-                  <RadioButton fx:id="radioFilmes" layoutX="530.0" layoutY="162.0" mnemonicParsing="false" text="Filmes" textFill="WHITE" toggleGroup="$ecolhaRelatorio">
+                  <RadioButton fx:id="radioFilmes" layoutX="530.0" layoutY="162.0" mnemonicParsing="false" onAction="#escolhaRelatorio" text="Filmes" textFill="WHITE" toggleGroup="$ecolhaRelatorio">
                      <font>
                         <Font name="Corbel Bold" size="19.0" />
                      </font>
                   </RadioButton>
-                  <RadioButton fx:id="radioComentClass" layoutX="639.0" layoutY="162.0" mnemonicParsing="false" text="Comentários e Classificações" textFill="WHITE" toggleGroup="$ecolhaRelatorio">
+                  <RadioButton fx:id="radioComentClass" layoutX="639.0" layoutY="162.0" mnemonicParsing="false" onAction="#escolhaRelatorio" text="Comentários e Classificações" textFill="WHITE" toggleGroup="$ecolhaRelatorio">
                      <font>
                         <Font name="Corbel Bold" size="19.0" />
                      </font>
                   </RadioButton>
-                  <RadioButton fx:id="radioUser" layoutX="171.0" layoutY="162.0" mnemonicParsing="false" selected="true" text="Usuário em específico" textFill="WHITE" toggleGroup="$ecolhaRelatorio">
+                  <RadioButton fx:id="radioUser" layoutX="171.0" layoutY="162.0" mnemonicParsing="false" onAction="#escolhaRelatorio" selected="true" text="Usuário em específico" textFill="WHITE" toggleGroup="$ecolhaRelatorio">
                      <font>
                         <Font name="Corbel Bold" size="19.0" />
                      </font>
@@ -112,7 +112,7 @@
                         <Font name="Corbel Bold" size="19.0" />
                      </font>
                   </Text>
-                  <Text fx:id="nomeUsuario1" layoutX="377.0" layoutY="461.0" strokeType="OUTSIDE" strokeWidth="0.0" text="................" wrappingWidth="144.0">
+                  <Text fx:id="quantidadeComentarios" layoutX="377.0" layoutY="461.0" strokeType="OUTSIDE" strokeWidth="0.0" text="................" wrappingWidth="144.0">
                      <font>
                         <Font name="Corbel Bold" size="19.0" />
                      </font>
@@ -122,17 +122,17 @@
                         <Font name="Corbel Bold" size="19.0" />
                      </font>
                   </Text>
-                  <Text fx:id="nomeUsuario2" layoutX="377.0" layoutY="511.0" strokeType="OUTSIDE" strokeWidth="0.0" text="................" wrappingWidth="144.0">
+                  <Text fx:id="quantidadeCriticas" layoutX="377.0" layoutY="511.0" strokeType="OUTSIDE" strokeWidth="0.0" text="................" wrappingWidth="144.0">
                      <font>
                         <Font name="Corbel Bold" size="19.0" />
                      </font>
                   </Text>
-                  <Text layoutX="73.0" layoutY="563.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantidade de comentários" wrappingWidth="229.08334350585938">
+                  <Text layoutX="73.0" layoutY="563.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantidade de listas feitas" wrappingWidth="229.08334350585938">
                      <font>
                         <Font name="Corbel Bold" size="19.0" />
                      </font>
                   </Text>
-                  <Text fx:id="nomeUsuario11" layoutX="377.0" layoutY="561.0" strokeType="OUTSIDE" strokeWidth="0.0" text="................" wrappingWidth="144.0">
+                  <Text fx:id="quantidadeListas" layoutX="377.0" layoutY="561.0" strokeType="OUTSIDE" strokeWidth="0.0" text="................" wrappingWidth="144.0">
                      <font>
                         <Font name="Corbel Bold" size="19.0" />
                      </font>
@@ -142,12 +142,12 @@
                         <Font name="Corbel Bold" size="19.0" />
                      </font>
                   </Text>
-                  <Text fx:id="nomeUsuario3" layoutX="778.0" layoutY="413.0" strokeType="OUTSIDE" strokeWidth="0.0" text="................" wrappingWidth="95.74996948242188">
+                  <Text fx:id="ehCritico" layoutX="778.0" layoutY="413.0" strokeType="OUTSIDE" strokeWidth="0.0" text="................" wrappingWidth="95.74996948242188">
                      <font>
                         <Font name="Corbel Bold" size="19.0" />
                      </font>
                   </Text>
-                  <VBox layoutX="74.0" layoutY="640.0" prefHeight="912.0" prefWidth="315.0">
+                  <VBox fx:id="listaDosFilmes" layoutX="74.0" layoutY="640.0" prefHeight="912.0" prefWidth="315.0">
                      <children>
                         <Text fx:id="filme1" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
                            <font>
@@ -501,12 +501,12 @@
                         </Text>
                      </children>
                   </VBox>
-                  <Text layoutX="73.0" layoutY="611.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nomes dos filmes" wrappingWidth="229.08334350585938">
+                  <Text fx:id="textoNomesDosFilmes" layoutX="73.0" layoutY="611.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nomes dos filmes" wrappingWidth="276.0">
                      <font>
                         <Font name="Corbel Bold" size="19.0" />
                      </font>
                   </Text>
-                  <VBox layoutX="482.0" layoutY="640.0" prefHeight="800.0" prefWidth="371.0">
+                  <VBox fx:id="listaDasListas" layoutX="482.0" layoutY="640.0" prefHeight="800.0" prefWidth="371.0">
                      <children>
                         <Text fx:id="lista1" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="370.41668701171875">
                            <font>
@@ -730,7 +730,7 @@
                         </Text>
                      </children>
                   </VBox>
-                  <Text layoutX="481.0" layoutY="611.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nomes das listas" wrappingWidth="229.08334350585938">
+                  <Text fx:id="textoNomesDasListas" layoutX="481.0" layoutY="611.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nomes das listas" wrappingWidth="229.08334350585938">
                      <font>
                         <Font name="Corbel Bold" size="19.0" />
                      </font>
@@ -745,7 +745,7 @@
                         <Font name="Corbel Bold" size="19.0" />
                      </font>
                   </Text>
-                  <Text fx:id="textoNomeDoUsuario1" layoutX="767.0" layoutY="299.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PESQUISAR" wrappingWidth="107.74996948242188">
+                  <Text fx:id="textoPesquisarUsuario" layoutX="767.0" layoutY="299.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PESQUISAR" wrappingWidth="107.74996948242188">
                      <font>
                         <Font name="Corbel Bold" size="19.0" />
                      </font>
@@ -782,6 +782,6 @@
       </Text>
       <Button fx:id="botaoInicio" layoutX="583.0" layoutY="88.0" mnemonicParsing="false" onAction="#botaoPaginaInicial" opacity="0.0" prefHeight="34.0" prefWidth="76.0" />
       <Line endY="40.0" layoutX="567.0" layoutY="85.0" stroke="#dba15c" strokeWidth="3.0" />
-      <ChoiceBox fx:id="opcoesNavegacaoAddFilme" layoutX="459.0" layoutY="93.0" opacity="0.0" prefWidth="87.0" style="-fx-background-color: #323232;" />
+      <ChoiceBox fx:id="opcoesNavegacaoRelatorio" layoutX="459.0" layoutY="93.0" opacity="0.0" prefWidth="87.0" style="-fx-background-color: #323232;" />
    </children>
 </AnchorPane>

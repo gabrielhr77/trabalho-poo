@@ -11,8 +11,8 @@ public class Usuario extends Pessoa{
     private boolean critico;
     private Date dataDeAprovacao;
 
-    public Usuario(String nome, int id, Date dataDeNascimento, String senha, float pesoClassificacao){
-        super (nome, id, dataDeNascimento);
+    public Usuario(String nome, int id, String senha, float pesoClassificacao){
+        super (nome, id);
         this.senha = senha;
         this.flagSuspenso = false;
         this.pesoClassificacao = pesoClassificacao;

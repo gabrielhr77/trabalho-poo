@@ -28,12 +28,6 @@ public class ManipulacaoDados {
 		}
 		return false;
 	}
-//import entidadesFilmes.Ator;
-//import entidadesFilmes.Diretor;
-//import entidadesFilmes.Filme;
-//
-//public class ManipulacaoDados {
-
 
 	
 	

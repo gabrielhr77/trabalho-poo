@@ -46,7 +46,7 @@
             <Font name="Corbel Bold" size="23.0" />
          </font>
       </Text>
-      <ScrollPane hbarPolicy="NEVER" layoutX="39.0" layoutY="187.0" prefHeight="494.0" prefWidth="950.0" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="-0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="157.0">
+      <ScrollPane hbarPolicy="NEVER" layoutX="39.0" layoutY="187.0" prefHeight="494.0" prefWidth="950.0" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="157.0">
          <content>
             <AnchorPane maxWidth="1244.0" prefHeight="1044.0" prefWidth="950.0" style="-fx-background-color: #202020;">
                <children>
@@ -56,27 +56,27 @@
                      </font>
                   </Text>
                   <Line endY="300.0" layoutX="241.0" layoutY="-20.0" rotate="-90.0" stroke="#dba15c" strokeWidth="3.0" AnchorPane.topAnchor="-21.5" />
-                  <ImageView fitHeight="150.0" fitWidth="35.0" layoutX="713.0" layoutY="396.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="150.0" fitWidth="35.0" layoutX="713.0" layoutY="529.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@imagens/estrelaDourada.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="150.0" fitWidth="35.0" layoutX="748.0" layoutY="396.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="150.0" fitWidth="35.0" layoutX="748.0" layoutY="529.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@imagens/estrelaDourada.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="150.0" fitWidth="35.0" layoutX="782.0" layoutY="396.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="150.0" fitWidth="35.0" layoutX="782.0" layoutY="529.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@imagens/estrelaDourada.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="150.0" fitWidth="35.0" layoutX="816.0" layoutY="396.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="150.0" fitWidth="35.0" layoutX="816.0" layoutY="529.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@imagens/estrelaDourada.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="150.0" fitWidth="35.0" layoutX="851.0" layoutY="396.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="150.0" fitWidth="35.0" layoutX="851.0" layoutY="529.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@imagens/estrelaDourada.png" />
                      </image>
@@ -88,7 +88,7 @@
                         <Font name="Corbel Bold" size="19.0" />
                      </font>
                   </Text>
-                  <Line endY="128.1936798095703" layoutX="800.0" layoutY="318.0" rotate="-90.0" stroke="#dba15c" strokeWidth="3.0" />
+                  <Line endY="128.1936798095703" layoutX="800.0" layoutY="451.0" rotate="-90.0" stroke="#dba15c" strokeWidth="3.0" />
                   <TextField fx:id="anoNovoFilme" layoutX="280.0" layoutY="226.0" prefHeight="32.0" prefWidth="88.0" />
                   <Text fill="WHITE" layoutX="96.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ano de lançamento">
                      <font>
@@ -148,21 +148,21 @@
                      </font>
                   </Text>
                   <Rectangle arcHeight="100.0" arcWidth="5.0" fill="#dba15c" height="86.0" layoutX="686.0" layoutY="174.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeMiterLimit="26.0" width="200.0" AnchorPane.topAnchor="173.5" />
-                  <Text layoutX="737.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Acrescentar imagens" textAlignment="CENTER" wrappingWidth="102.43475341796875">
+                  <Text layoutX="737.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Acrescentar imagem da capa" textAlignment="CENTER" wrappingWidth="102.43475341796875">
                      <font>
                         <Font name="Corbel Bold" size="19.0" />
                      </font>
                   </Text>
-                  <Text fill="WHITE" layoutX="740.0" layoutY="326.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOTA INICIAL" textAlignment="CENTER" wrappingWidth="120.20947265625">
+                  <Text fill="WHITE" layoutX="740.0" layoutY="459.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOTA INICIAL" textAlignment="CENTER" wrappingWidth="120.20947265625">
                      <font>
                         <Font name="Corbel Bold" size="27.0" />
                      </font>
                   </Text>
-                  <Button fx:id="estrela1NotaNovoFilme" layoutX="715.0" layoutY="398.0" mnemonicParsing="false" opacity="0.0" prefHeight="34.0" prefWidth="30.0" />
-                  <Button fx:id="estrela2NotaNovoFilme" layoutX="750.0" layoutY="398.0" mnemonicParsing="false" opacity="0.0" prefHeight="34.0" prefWidth="30.0" />
-                  <Button fx:id="estrela3NotaNovoFilme" layoutX="785.0" layoutY="398.0" mnemonicParsing="false" opacity="0.0" prefHeight="34.0" prefWidth="30.0" />
-                  <Button fx:id="estrela4NotaNovoFilme" layoutX="820.0" layoutY="398.0" mnemonicParsing="false" opacity="0.0" prefHeight="34.0" prefWidth="30.0" />
-                  <Button fx:id="estrela5NotaNovoFilme" layoutX="854.0" layoutY="398.0" mnemonicParsing="false" opacity="0.0" prefHeight="34.0" prefWidth="30.0" />
+                  <Button fx:id="estrela1NotaNovoFilme" layoutX="715.0" layoutY="531.0" mnemonicParsing="false" opacity="0.0" prefHeight="34.0" prefWidth="30.0" />
+                  <Button fx:id="estrela2NotaNovoFilme" layoutX="750.0" layoutY="531.0" mnemonicParsing="false" opacity="0.0" prefHeight="34.0" prefWidth="30.0" />
+                  <Button fx:id="estrela3NotaNovoFilme" layoutX="785.0" layoutY="531.0" mnemonicParsing="false" opacity="0.0" prefHeight="34.0" prefWidth="30.0" />
+                  <Button fx:id="estrela4NotaNovoFilme" layoutX="820.0" layoutY="531.0" mnemonicParsing="false" opacity="0.0" prefHeight="34.0" prefWidth="30.0" />
+                  <Button fx:id="estrela5NotaNovoFilme" layoutX="854.0" layoutY="531.0" mnemonicParsing="false" opacity="0.0" prefHeight="34.0" prefWidth="30.0" />
                   <Text fill="WHITE" layoutX="96.0" layoutY="629.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sinopse" AnchorPane.leftAnchor="96.0">
                      <font>
                         <Font name="Corbel Bold" size="19.0" />
@@ -182,6 +182,14 @@
                      </font>
                   </Text>
                   <Button fx:id="botaoVerificaSeFilmeExiste" layoutX="445.0" layoutY="223.0" mnemonicParsing="false" opacity="0.0" prefHeight="40.0" prefWidth="186.0" />
+                  <Button fx:id="botaoAdicionarCapa" layoutX="687.0" layoutY="174.0" mnemonicParsing="false" onAction="#adicionarImagens" opacity="0.0" prefHeight="85.0" prefWidth="198.0" />
+                  <Rectangle arcHeight="100.0" arcWidth="5.0" fill="#dba15c" height="86.0" layoutX="686.0" layoutY="308.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeMiterLimit="26.0" width="200.0" />
+                  <Text layoutX="724.0" layoutY="334.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Acrescentar imagem do plano de fundo" textAlignment="CENTER" wrappingWidth="126.434814453125">
+                     <font>
+                        <Font name="Corbel Bold" size="19.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="botaoAdicionarPlanoDeFundo" layoutX="687.0" layoutY="308.0" mnemonicParsing="false" onAction="#adicionarImagens" opacity="0.0" prefHeight="85.0" prefWidth="198.0" />
                </children>
             </AnchorPane>
          </content>

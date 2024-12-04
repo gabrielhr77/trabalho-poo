@@ -2,17 +2,15 @@ package entidadesUsuarios;
 
 
 
-import java.util.Date;
+//import java.util.Date;
 
 public abstract class Pessoa {
     private String nome;
     private int id;
-    private Date dataDeNascimento;
     
-    public Pessoa(String nome, int id, Date dataDeNascimento) {
+    public Pessoa(String nome, int id) {
         this.nome = nome;
         this.id = id;
-        this.dataDeNascimento = dataDeNascimento;
     }
     
     public void setNome(String nome) {
@@ -25,14 +23,6 @@ public abstract class Pessoa {
     
     public int getID() {
         return this.id;
-    }
-    
-    public void setData(Date data) {
-        this.dataDeNascimento = data;
-    }
-    
-    public Date getData() {
-        return this.dataDeNascimento;
     }
     
     public abstract boolean isGerenciador();

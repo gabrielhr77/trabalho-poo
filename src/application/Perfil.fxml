@@ -3,13 +3,11 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
-<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
@@ -46,148 +44,96 @@
             <Font name="Corbel Bold" size="23.0" />
          </font>
       </Text>
-      <ScrollPane hbarPolicy="NEVER" layoutX="39.0" layoutY="187.0" prefHeight="494.0" prefWidth="950.0" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="157.0">
+      <ScrollPane hbarPolicy="NEVER" layoutX="39.0" layoutY="187.0" prefHeight="494.0" prefWidth="950.0" vbarPolicy="ALWAYS" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="157.0">
          <content>
-            <AnchorPane maxWidth="1244.0" prefHeight="1374.0" prefWidth="950.0" style="-fx-background-color: #202020;">
+            <AnchorPane maxWidth="1244.0" prefHeight="1271.0" prefWidth="950.0" style="-fx-background-color: #202020;">
                <children>
-                  <Text fill="WHITE" layoutX="88.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOVO FILME" wrappingWidth="368.0">
+                  <Text fill="WHITE" layoutX="88.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOME DO USER" wrappingWidth="368.0">
                      <font>
-                        <Font name="Corbel Bold" size="34.0" />
+                        <Font name="Corbel Bold" size="27.0" />
                      </font>
                   </Text>
                   <Line endY="300.0" layoutX="241.0" layoutY="-20.0" rotate="-90.0" stroke="#dba15c" strokeWidth="3.0" AnchorPane.topAnchor="-21.5" />
-                  <ImageView fitHeight="150.0" fitWidth="35.0" layoutX="713.0" layoutY="396.0" pickOnBounds="true" preserveRatio="true">
+                  <Text fill="WHITE" layoutX="91.0" layoutY="442.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Último comentário postado" AnchorPane.leftAnchor="91.0">
+                     <font>
+                        <Font name="Corbel Bold" size="19.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="91.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Está suspenso no momento?">
+                     <font>
+                        <Font name="Corbel Bold" size="19.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="textoEstaSuspensoPerfil" fill="WHITE" layoutX="361.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="........">
+                     <font>
+                        <Font name="Corbel Bold" size="19.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="91.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha">
+                     <font>
+                        <Font name="Corbel Bold" size="19.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="textoSenhaPerfil" fill="WHITE" layoutX="361.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="........">
+                     <font>
+                        <Font name="Corbel Bold" size="19.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="91.0" layoutY="288.0" strokeType="OUTSIDE" strokeWidth="0.0" text="É crítico?">
+                     <font>
+                        <Font name="Corbel Bold" size="19.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="textoECriticoPerfil" fill="WHITE" layoutX="361.0" layoutY="288.0" strokeType="OUTSIDE" strokeWidth="0.0" text="........">
+                     <font>
+                        <Font name="Corbel Bold" size="19.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="91.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantidade de comentários">
+                     <font>
+                        <Font name="Corbel Bold" size="19.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="textoQuantidadeComentariosPerfil" fill="WHITE" layoutX="361.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="........">
+                     <font>
+                        <Font name="Corbel Bold" size="19.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="91.0" layoutY="388.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantidade de críticas">
+                     <font>
+                        <Font name="Corbel Bold" size="19.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="textoQuantidadeCriticasPerfil" fill="WHITE" layoutX="361.0" layoutY="388.0" strokeType="OUTSIDE" strokeWidth="0.0" text="........">
+                     <font>
+                        <Font name="Corbel Bold" size="19.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="91.0" layoutY="850.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Última crítica postada">
+                     <font>
+                        <Font name="Corbel Bold" size="19.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="456.0" fitWidth="752.0" layoutX="91.0" layoutY="461.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@imagens/estrelaDourada.png" />
+                        <Image url="@imagens/fundoSinopsePerfil.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="150.0" fitWidth="35.0" layoutX="748.0" layoutY="396.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="456.0" fitWidth="752.0" layoutX="91.0" layoutY="868.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@imagens/estrelaDourada.png" />
+                        <Image url="@imagens/fundoSinopsePerfil.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="150.0" fitWidth="35.0" layoutX="782.0" layoutY="396.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@imagens/estrelaDourada.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="150.0" fitWidth="35.0" layoutX="816.0" layoutY="396.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@imagens/estrelaDourada.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="150.0" fitWidth="35.0" layoutX="851.0" layoutY="396.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@imagens/estrelaDourada.png" />
-                     </image>
-                  </ImageView>
-                  <Line endY="402.0" layoutX="663.0" layoutY="175.0" stroke="#a2a2a2" strokeWidth="3.0" AnchorPane.topAnchor="173.5" />
-                  <TextField fx:id="nomeNovoFilme" layoutX="243.0" layoutY="173.0" prefHeight="32.0" prefWidth="389.0" AnchorPane.topAnchor="173.0" />
-                  <Text fill="WHITE" layoutX="96.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome do filme">
+                  <Text fx:id="ultimoComentarioPostado" layoutX="114.0" layoutY="497.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="704.5">
                      <font>
                         <Font name="Corbel Bold" size="19.0" />
                      </font>
                   </Text>
-                  <Line endY="128.1936798095703" layoutX="800.0" layoutY="306.0" rotate="-90.0" stroke="#dba15c" strokeWidth="3.0" />
-                  <TextField fx:id="anoNovoFilme" layoutX="280.0" layoutY="226.0" prefHeight="32.0" prefWidth="88.0" />
-                  <Text fill="WHITE" layoutX="96.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ano de lançamento">
+                  <Text fx:id="ultimaCriticaPostada" layoutX="114.0" layoutY="905.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="704.5">
                      <font>
                         <Font name="Corbel Bold" size="19.0" />
                      </font>
                   </Text>
-                  <TextField fx:id="diretorNovoFilme" layoutX="175.0" layoutY="278.0" prefHeight="32.0" prefWidth="457.0" />
-                  <Text fill="WHITE" layoutX="96.0" layoutY="299.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Diretor">
-                     <font>
-                        <Font name="Corbel Bold" size="19.0" />
-                     </font>
-                  </Text>
-                  <Text fill="WHITE" layoutX="96.0" layoutY="352.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ator 1">
-                     <font>
-                        <Font name="Corbel Bold" size="19.0" />
-                     </font>
-                  </Text>
-                  <TextField fx:id="ator1NovoFilme" layoutX="175.0" layoutY="331.0" prefHeight="32.0" prefWidth="457.0" />
-                  <TextField fx:id="ator2NovoFilme" layoutX="175.0" layoutY="385.0" prefHeight="32.0" prefWidth="457.0" />
-                  <Text fill="WHITE" layoutX="96.0" layoutY="406.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ator 2">
-                     <font>
-                        <Font name="Corbel Bold" size="19.0" />
-                     </font>
-                  </Text>
-                  <Text fill="WHITE" layoutX="96.0" layoutY="459.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ator 3">
-                     <font>
-                        <Font name="Corbel Bold" size="19.0" />
-                     </font>
-                  </Text>
-                  <TextField fx:id="ator3NovoFilme" layoutX="175.0" layoutY="438.0" prefHeight="32.0" prefWidth="457.0" />
-                  <TextField fx:id="horasNovoFilme" layoutX="195.0" layoutY="491.0" prefHeight="32.0" prefWidth="68.0" />
-                  <Text fill="WHITE" layoutX="96.0" layoutY="512.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Duração">
-                     <font>
-                        <Font name="Corbel Bold" size="19.0" />
-                     </font>
-                  </Text>
-                  <Text fill="WHITE" layoutX="96.0" layoutY="565.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Faixa etária">
-                     <font>
-                        <Font name="Corbel Bold" size="19.0" />
-                     </font>
-                  </Text>
-                  <TextField fx:id="faixaEtariaNovoFilme" layoutX="222.0" layoutY="544.0" prefHeight="32.0" prefWidth="68.0" />
-                  <Text fill="WHITE" layoutX="276.0" layoutY="512.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Horas">
-                     <font>
-                        <Font name="Corbel Bold" size="19.0" />
-                     </font>
-                  </Text>
-                  <TextField fx:id="minutosNovoFilme" layoutX="356.0" layoutY="491.0" prefHeight="32.0" prefWidth="68.0" />
-                  <Text fill="WHITE" layoutX="437.0" layoutY="512.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Minutos">
-                     <font>
-                        <Font name="Corbel Bold" size="19.0" />
-                     </font>
-                  </Text>
-                  <Text fill="WHITE" layoutX="306.0" layoutY="566.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Anos">
-                     <font>
-                        <Font name="Corbel Bold" size="19.0" />
-                     </font>
-                  </Text>
-                  <Rectangle arcHeight="100.0" arcWidth="5.0" fill="#dba15c" height="86.0" layoutX="686.0" layoutY="174.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeMiterLimit="26.0" width="200.0" AnchorPane.topAnchor="173.5" />
-                  <Text layoutX="737.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Acrescentar imagens" textAlignment="CENTER" wrappingWidth="102.43475341796875">
-                     <font>
-                        <Font name="Corbel Bold" size="19.0" />
-                     </font>
-                  </Text>
-                  <Text fill="WHITE" layoutX="764.0" layoutY="354.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOTA">
-                     <font>
-                        <Font name="Corbel Bold" size="27.0" />
-                     </font>
-                  </Text>
-                  <Button fx:id="estrela1NotaNovoFilme" layoutX="715.0" layoutY="398.0" mnemonicParsing="false" opacity="0.0" prefHeight="34.0" prefWidth="30.0" />
-                  <Button fx:id="estrela2NotaNovoFilme" layoutX="750.0" layoutY="398.0" mnemonicParsing="false" opacity="0.0" prefHeight="34.0" prefWidth="30.0" />
-                  <Button fx:id="estrela3NotaNovoFilme" layoutX="785.0" layoutY="398.0" mnemonicParsing="false" opacity="0.0" prefHeight="34.0" prefWidth="30.0" />
-                  <Button fx:id="estrela4NotaNovoFilme" layoutX="820.0" layoutY="398.0" mnemonicParsing="false" opacity="0.0" prefHeight="34.0" prefWidth="30.0" />
-                  <Button fx:id="estrela5NotaNovoFilme" layoutX="854.0" layoutY="398.0" mnemonicParsing="false" opacity="0.0" prefHeight="34.0" prefWidth="30.0" />
-                  <Text fill="WHITE" layoutX="96.0" layoutY="629.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sinopse" AnchorPane.leftAnchor="96.0">
-                     <font>
-                        <Font name="Corbel Bold" size="19.0" />
-                     </font>
-                  </Text>
-                  <TextArea fx:id="sinopseNovoFilme" layoutX="96.0" layoutY="648.0" prefHeight="200.0" prefWidth="741.0" promptText="Faça um texto curto de apenas UM parágrafo sobre o que se trata o filme em questão..." AnchorPane.leftAnchor="96.0" />
-                  <Text fill="WHITE" layoutX="96.0" layoutY="905.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Crítica">
-                     <font>
-                        <Font name="Corbel Bold" size="19.0" />
-                     </font>
-                  </Text>
-                  <TextArea fx:id="criticaNovoFilme" layoutX="96.0" layoutY="924.0" prefHeight="200.0" prefWidth="741.0" promptText="Faça um texto curto de apenas UM parágrafo descrevendo sua opinião acerca do filme em questão..." />
-                  <Text fill="WHITE" layoutX="350.0" layoutY="1221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ENVIAR SOLICITAÇÃO">
-                     <font>
-                        <Font name="Corbel Bold" size="27.0" />
-                     </font>
-                  </Text>
-                  <Button fx:id="botaoEnviarSolicitacaoFiilmeNovo" layoutX="342.0" layoutY="1184.0" mnemonicParsing="false" opacity="0.0" prefHeight="53.0" prefWidth="287.0" />
-                  <Rectangle arcHeight="100.0" arcWidth="5.0" fill="#dba15c" height="42.0" layoutX="445.0" layoutY="222.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeMiterLimit="26.0" width="187.0" />
-                  <Text layoutX="458.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Verificar se já existe">
-                     <font>
-                        <Font name="Corbel Bold" size="19.0" />
-                     </font>
-                  </Text>
-                  <Button fx:id="botaoVerificaSeFilmeExiste" layoutX="445.0" layoutY="223.0" mnemonicParsing="false" opacity="0.0" prefHeight="40.0" prefWidth="186.0" />
                </children>
             </AnchorPane>
          </content>
@@ -200,6 +146,6 @@
       </Text>
       <Button fx:id="botaoInicio" layoutX="583.0" layoutY="88.0" mnemonicParsing="false" onAction="#botaoPaginaInicial" opacity="0.0" prefHeight="34.0" prefWidth="76.0" />
       <Line endY="40.0" layoutX="567.0" layoutY="85.0" stroke="#dba15c" strokeWidth="3.0" />
-      <ChoiceBox fx:id="opcoesNavegacaoAddFilme" layoutX="459.0" layoutY="93.0" opacity="0.0" prefWidth="87.0" style="-fx-background-color: #323232;" />
+      <ChoiceBox fx:id="opcoesNavegacaoPerfil" layoutX="459.0" layoutY="93.0" opacity="0.0" prefWidth="87.0" style="-fx-background-color: #323232;" />
    </children>
 </AnchorPane>

@@ -3,11 +3,15 @@ package application;
 import java.util.ArrayList;
 import javafx.fxml.Initializable;
 
+import java.io.File;
 import java.io.InputStream;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import entidadesFilmes.Filme;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
@@ -16,9 +20,12 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 import principal. *;
+import entidadesUsuarios. *;
 
 public class Controlador implements Initializable {
 	
@@ -105,6 +112,14 @@ public class Controlador implements Initializable {
 	
 	@FXML
 	private ImageView capaFilmeCarrossel,filme1Lista1,filme2Lista1,filme3Lista1,filme4Lista1,filme1Lista2,filme2Lista2,filme3Lista2,filme4Lista2,filme1Lista3,filme2Lista3,filme3Lista3,filme4Lista3,filme1Lista4,filme2Lista4,filme3Lista4,filme4Lista4;
+	@FXML
+	private ImageView estrela1F1L1,estrela2F1L1,estrela3F1L1,estrela4F1L1,estrela5F1L1,estrela1F2L1,estrela2F2L1,estrela3F2L1,estrela4F2L1,estrela5F2L1,estrela1F3L1,estrela2F3L1,estrela3F3L1,estrela4F3L1,estrela5F3L1,estrela1F4L1,estrela2F4L1,estrela3F4L1,estrela4F4L1,estrela5F4L1;
+	@FXML
+	private ImageView estrela1F1L2,estrela2F1L2,estrela3F1L2,estrela4F1L2,estrela5F1L2,estrela1F2L2,estrela2F2L2,estrela3F2L2,estrela4F2L2,estrela5F2L2,estrela1F3L2,estrela2F3L2,estrela3F3L2,estrela4F3L2,estrela5F3L2,estrela1F4L2,estrela2F4L2,estrela3F4L2,estrela4F4L2,estrela5F4L2;
+	@FXML
+	private ImageView estrela1F1L3,estrela2F1L3,estrela3F1L3,estrela4F1L3,estrela5F1L3,estrela1F2L3,estrela2F2L3,estrela3F2L3,estrela4F2L3,estrela5F2L3,estrela1F3L3,estrela2F3L3,estrela3F3L3,estrela4F3L3,estrela5F3L3,estrela1F4L3,estrela2F4L3,estrela3F4L3,estrela4F4L3,estrela5F4L3;
+	@FXML
+	private ImageView estrela1F1L4,estrela2F1L4,estrela3F1L4,estrela4F1L4,estrela5F1L4,estrela1F2L4,estrela2F2L4,estrela3F2L4,estrela4F2L4,estrela5F2L4,estrela1F3L4,estrela2F3L4,estrela3F3L4,estrela4F3L4,estrela5F3L4,estrela1F4L4,estrela2F4L4,estrela3F4L4,estrela4F4L4,estrela5F4L4;
 	
 	@FXML
 	private Image imagem;
@@ -116,19 +131,72 @@ public class Controlador implements Initializable {
 	private Button botaoPassaCarrosselImagens,botaoVoltaCarrosselImagens,botaoProximaPagina,botaoPaginaAnterior;
 	
 	@FXML
-	private ChoiceBox<String> opcoesNavegacaoPagInicial, opcoesNavegacaoAddFilme, opcoesNavegacaoAddLista, opcoesNavegacaoRelatorio;
+	private ChoiceBox<String> opcoesNavegacaoPagInicial, opcoesNavegacaoPerfil, opcoesNavegacaoAddFilme, opcoesNavegacaoAddLista, opcoesNavegacaoRelatorio;
+	
+	
+	
+	
+	
+	
 	//tem que ser do tipo não primitivo String pois o método para add os itens só pode adicionar uma collection
 	private String[] palavrasOpcoesNavegacaoPagIni = {"PERFIL","ADICIONAR FILME","ADICIONAR LISTA","GERAR RELATÓRIO"};
 	private String[] palavrasOpcoesNavegacaoAddFilme = {"PERFIL","ADICIONAR LISTA","GERAR RELATÓRIO"};
 	private String[] palavrasOpcoesNavegacaoAddLista = {"PERFIL","ADICIONAR FILME","GERAR RELATÓRIO"};
-	private String[] palavrasOpcoesNavegacaoRelatorio = {"PERFIL","ADICIONAR FILME","ADICIONAR LISTA"};
+	private String[] palavrasOpcoesNavegacaoRelatorio = {"ADICIONAR FILME","ADICIONAR LISTA"};
+	private String[] palavrasOpcoesNavegacaoPerfil = {"ADICIONAR FILME","ADICIONAR LISTA"};
 	
 	private int numeroDaPaginaAtual=0;
+	private ArrayList<Lista> listasPaginaAtual = Main.retorna4Listas(numeroDaPaginaAtual);
+	
 	public void passaListasDaPaginaInicial(ActionEvent event) {
-		
+		numeroDaPaginaAtual++;
+		if(Main.retornaArrayListListas().size()%4==0) {
+			if(numeroDaPaginaAtual>Main.retornaArrayListListas().size()/4){
+				numeroDaPaginaAtual=0;
+			}
+		}else if(Main.retornaArrayListListas().size()%4!=0) {
+			if(numeroDaPaginaAtual>(Main.retornaArrayListListas().size()/4)+1){
+				numeroDaPaginaAtual=0;
+			}
+		}	
+		listasPaginaAtual=Main.retorna4Listas(numeroDaPaginaAtual);
+		atualizaPaginaPrincipal(listasPaginaAtual);
 	}
+	
 	public void voltaListasDaPaginaInicial(ActionEvent event) {
-		
+		numeroDaPaginaAtual--;
+		if(numeroDaPaginaAtual<0) {
+			if(Main.retornaArrayListListas().size()%4==0) {
+				numeroDaPaginaAtual=(Main.retornaArrayListListas().size()/4);
+			}else {
+				numeroDaPaginaAtual=(Main.retornaArrayListListas().size()/4)+1;
+			}
+		}
+		listasPaginaAtual=Main.retorna4Listas(numeroDaPaginaAtual);
+		atualizaPaginaPrincipal(listasPaginaAtual);
+	}
+	
+	
+	public void atualizaPaginaPrincipal(ArrayList<Lista> arrayDeListas) {
+		filme1Lista1.setImage(imagem);
+	}
+	
+	public void selecaoNavegacaoPerfil(ActionEvent event) {
+		String escolha = opcoesNavegacaoPerfil.getValue();
+		switch(escolha) {
+			case "PERFIL":
+				Main.mudarPagina(3);
+				break;
+			case "ADICIONAR FILME":
+				Main.mudarPagina(4);
+				break;
+			case "ADICIONAR LISTA":
+				Main.mudarPagina(5);
+				break;
+			default: 
+				Main.mudarPagina(1);
+				break;
+		}
 	}
 	
 	public void selecaoNavegacaoPagIni(ActionEvent event) {
@@ -189,9 +257,6 @@ public class Controlador implements Initializable {
 	public void selecaoNavegacaoRelatorio(ActionEvent event) {
 		String escolha = opcoesNavegacaoRelatorio.getValue();
 		switch(escolha) {
-			case "PERFIL":
-				Main.mudarPagina(3);
-				break;
 			case "ADICIONAR FILME":
 				Main.mudarPagina(4);
 				break;
@@ -260,6 +325,16 @@ public class Controlador implements Initializable {
 	    if (opcoesNavegacaoAddLista != null) {
 	        opcoesNavegacaoAddLista.getItems().addAll(palavrasOpcoesNavegacaoAddLista);
 	        opcoesNavegacaoAddLista.setOnAction(this::selecaoNavegacaoAddLista);
+	    }
+	    
+	    if (opcoesNavegacaoRelatorio != null) {
+	        opcoesNavegacaoRelatorio.getItems().addAll(palavrasOpcoesNavegacaoRelatorio);
+	        opcoesNavegacaoRelatorio.setOnAction(this::selecaoNavegacaoRelatorio);
+	    }
+	    
+	    if (opcoesNavegacaoPerfil != null) {
+	        opcoesNavegacaoPerfil.getItems().addAll(palavrasOpcoesNavegacaoPerfil);
+	        opcoesNavegacaoPerfil.setOnAction(this::selecaoNavegacaoPerfil);
 	    }
 	}
 	
@@ -388,12 +463,47 @@ public class Controlador implements Initializable {
 	
 	//------------------------------ADICIONA FILME OU LISTA-------------------------------------------------------------------------
 	
+	public Image uploadDeImagem(Stage primaryStage) {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Selecione uma Imagem");
+        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Imagens Suportadas", "*.png", "*.jpg", "*.jpeg"));
+
+        File file = fileChooser.showOpenDialog(primaryStage);
+
+        if (file != null) {
+            try {
+                // Retorna uma instância da imagem
+                return new Image(file.toURI().toString());
+            } catch (Exception e) {
+                e.printStackTrace();
+                System.out.println("Erro ao carregar a imagem.");
+            }
+        }
+        return null; // Retorna null se nenhum arquivo foi selecionado
+    }
+    
 	
 	
+	@FXML
+	private Button botaoAdicionarImagens; // Botão associado ao upload
+
+	@FXML
+	private ImageView imageView; // Componente para exibir a imagem
 	
-	
-	
-	
+	@FXML
+	private void adicionarImagens() {
+		UploadDeImagens uploader = new UploadDeImagens(); // Instância do uploader
+	    Stage stage = (Stage) botaoAdicionarImagens.getScene().getWindow(); // Obtém a janela principal
+
+	    Image image = uploader.uploadImage(stage); // Chama o método de upload
+
+	    if (image != null) {
+	        imageView.setImage(image); // Define a imagem no ImageView
+	    } else {
+	        System.out.println("Nenhuma imagem foi selecionada.");
+	    }
+	}
+
 	
 	public static void selecionaArquivo() {
 		FileChooser arqSelecionado = new FileChooser();
@@ -410,6 +520,76 @@ public class Controlador implements Initializable {
 		
 	}
 	
+	//------------------------------RELATÓRIO-------------------------------------------------------------------------
+
+	
+	@FXML
+	private RadioButton radioUser, radioUsuarios, radioFilmes, radioComentClass;
+	@FXML
+	private Text textoPesquisarUsuario,textoNomeDoUsuario,textoNomesDosFilmes,textoNomesDasListas,nomeUsuario,usuarioJaFoiSuspenso,ehCritico,quantidadeListas,quantidadeCriticas,quantidadeComentarios;
+	@FXML
+	private TextField nomeUsuarioPesquisado;
+	@FXML
+	private VBox listaDasListas,listaDosFilmes;
+	
+	public void declaraNomesDosFilmes(VBox vbox, ArrayList<Filme> listaDeFilmes) {
+		for(int i=0;i<vbox.getChildren().size();i++) {
+			Text texto = (Text) vbox.getChildren().get(i);//força o tipo Node, que é o tipo dos filhos do vbox, para Text para que eu possa usat setText()
+			texto.setText(listaDeFilmes.get(i).getNomeFilme());
+		}
+	}
+	public void declaraNomesDasListas(VBox vbox, ArrayList<Lista> listaDeListas) {
+		for(int i=0;i<vbox.getChildren().size();i++) {
+			Text texto = (Text) vbox.getChildren().get(i);
+			texto.setText(listaDeListas.get(i).getNome());
+		}
+	}
+	public void declaraNomesDosUsuarios(VBox vbox, ArrayList<Usuario> listaDosUsuarios) {
+		for(int i=0;i<vbox.getChildren().size();i++) {
+			Text texto = (Text) vbox.getChildren().get(i);
+			texto.setText(listaDosUsuarios.get(i).getNome());
+		}
+	}
+	
+	//métodos ACTIONEVENT, ou seja, não precisam ser chamados na "main", eles ocorrem quando há "ação" no app
+	public void escolhaRelatorio(ActionEvent event) {
+		if(radioUsuarios.isSelected()) {
+			nomeUsuarioPesquisado.setVisible(false);
+			textoNomeDoUsuario.setVisible(false);
+			textoPesquisarUsuario.setVisible(false);
+			textoNomesDosFilmes.setText("Nomes dos usuários existentes");
+			if(Main.retornaArrayListUsuarios().size()<70) {
+				declaraNomesDosUsuarios(listaDosFilmes,Main.retornaArrayListUsuarios());
+			}else {
+				ArrayList<Usuario> lista1DosUsuarios = new ArrayList<>();
+				ArrayList<Usuario> lista2DosUsuarios = new ArrayList<>();
+				for(int j=0;j<70;j++) {
+					lista1DosUsuarios.add(Main.retornaArrayListUsuarios().get(j));
+				}
+				for(int i=70;i<Main.retornaArrayListUsuarios().size();i++) {
+					lista2DosUsuarios.add(Main.retornaArrayListUsuarios().get(i));
+				}
+				declaraNomesDosUsuarios(listaDosFilmes,lista1DosUsuarios);
+				declaraNomesDosUsuarios(listaDasListas,lista2DosUsuarios);
+			}
+		}else if(radioFilmes.isSelected()) {
+			nomeUsuarioPesquisado.setVisible(false);
+			textoNomeDoUsuario.setVisible(false);
+			textoPesquisarUsuario.setVisible(false);
+			textoNomesDosFilmes.setText("Nomes dos filmes existentes");
+			textoNomesDasListas.setText("Nomes das listas existentes");
+			declaraNomesDosFilmes(listaDosFilmes,Main.retornaArrayListFilmes());
+			declaraNomesDasListas(listaDasListas,Main.retornaArrayListListas());
+		}else if(radioComentClass.isSelected()) {
+			nomeUsuarioPesquisado.setVisible(false);
+			textoNomeDoUsuario.setVisible(false);
+			textoPesquisarUsuario.setVisible(false);
+		}else if(radioUser.isSelected()) {
+			nomeUsuarioPesquisado.setVisible(true);
+			textoNomeDoUsuario.setVisible(true);
+			textoPesquisarUsuario.setVisible(true);
+		}
+	}
 	
 
 }

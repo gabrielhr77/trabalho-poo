@@ -51,7 +51,7 @@
             <Font name="Corbel Bold" size="23.0" />
          </font>
       </Text>
-      <ScrollPane hbarPolicy="NEVER" layoutX="39.0" layoutY="187.0" prefHeight="650.0" prefWidth="950.0" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="157.0">
+      <ScrollPane hbarPolicy="NEVER" layoutX="39.0" layoutY="187.0" prefHeight="650.0" prefWidth="950.0" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="-2000.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="157.0">
          <content>
             <AnchorPane maxWidth="950.0" prefHeight="2235.0" prefWidth="950.0" style="-fx-background-color: #202020;">
                <children>
@@ -104,7 +104,7 @@
                   <RadioButton fx:id="filme3Carrossel" layoutX="466.0" layoutY="288.0" mnemonicParsing="false" onAction="#filmeRelativoAoRadioButton" prefHeight="2.0" prefWidth="7.0" toggleGroup="$filmesCarrossel" />
                   <RadioButton fx:id="filme4Carrossel" layoutX="498.0" layoutY="288.0" mnemonicParsing="false" onAction="#filmeRelativoAoRadioButton" prefHeight="2.0" prefWidth="7.0" toggleGroup="$filmesCarrossel" />
                   <RadioButton fx:id="filme5Carrossel" layoutX="529.0" layoutY="288.0" mnemonicParsing="false" onAction="#filmeRelativoAoRadioButton" prefHeight="2.0" prefWidth="7.0" toggleGroup="$filmesCarrossel" />
-                  <Text fx:id="textoGeneroCarrossel1" fill="WHITE" layoutX="75.0" layoutY="407.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FICÇÃO CIENTÍFICA">
+                  <Text fx:id="nomeLista1" fill="WHITE" layoutX="75.0" layoutY="407.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FICÇÃO CIENTÍFICA">
                      <font>
                         <Font name="Corbel Bold" size="18.0" />
                      </font>
@@ -236,13 +236,13 @@
                   <Button fx:id="botaoFilme2Lista" layoutX="229.0" layoutY="716.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
                   <Button fx:id="botaoFilme3Lista" layoutX="388.0" layoutY="716.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
                   <Button fx:id="botaoFilme4Lista" layoutX="550.0" layoutY="716.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
-                  <Button fx:id="botaoEntraNaLista" layoutX="760.0" layoutY="510.0" mnemonicParsing="false" opacity="0.0" prefHeight="57.0" prefWidth="56.0" />
-                  <Text fx:id="textoGeneroCarrossel11" fill="WHITE" layoutX="237.0" layoutY="406.0" strokeType="OUTSIDE" strokeWidth="0.0" text="POR__Pac" AnchorPane.rightAnchor="100.0">
+                  <Button fx:id="botaoEntraNaLista" layoutX="761.0" layoutY="919.0" mnemonicParsing="false" opacity="0.0" prefHeight="57.0" prefWidth="56.0" />
+                  <Text fx:id="nomeCriadorLista1" fill="WHITE" layoutX="237.0" layoutY="406.0" strokeType="OUTSIDE" strokeWidth="0.0" text="POR__Pac" AnchorPane.rightAnchor="100.0">
                      <font>
                         <Font name="Corbel Bold" size="18.0" />
                      </font>
                   </Text>
-                  <Text fx:id="textoGeneroCarrossel12" fill="WHITE" layoutX="75.0" layoutY="826.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AÇÃO E AVENTURA">
+                  <Text fx:id="nomeLista2" fill="WHITE" layoutX="75.0" layoutY="826.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AÇÃO E AVENTURA">
                      <font>
                         <Font name="Corbel Bold" size="18.0" />
                      </font>
@@ -270,7 +270,7 @@
                   </ImageView>
                   <Button layoutX="64.0" layoutY="1134.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
                   <Button layoutX="760.0" layoutY="929.0" mnemonicParsing="false" opacity="0.0" prefHeight="57.0" prefWidth="56.0" />
-                  <Text fx:id="textoGeneroCarrossel111" fill="WHITE" layoutX="662.0" layoutY="825.0" strokeType="OUTSIDE" strokeWidth="0.0" text="POR__Neto" AnchorPane.rightAnchor="100.0">
+                  <Text fx:id="nomeCriadorLista2" fill="WHITE" layoutX="662.0" layoutY="825.0" strokeType="OUTSIDE" strokeWidth="0.0" text="POR__Neto" AnchorPane.rightAnchor="100.0">
                      <font>
                         <Font name="Corbel Bold" size="18.0" />
                      </font>
@@ -331,7 +331,7 @@
                   <Button layoutX="234.0" layoutY="1135.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
                   <Button layoutX="393.0" layoutY="1135.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
                   <Button layoutX="555.0" layoutY="1135.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
-                  <Text fx:id="textoGeneroCarrossel121" fill="WHITE" layoutX="75.0" layoutY="1244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TERROR">
+                  <Text fx:id="nomeLista3" fill="WHITE" layoutX="75.0" layoutY="1244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TERROR">
                      <font>
                         <Font name="Corbel Bold" size="18.0" />
                      </font>
@@ -383,8 +383,7 @@
                      </image>
                   </ImageView>
                   <Button layoutX="64.0" layoutY="1552.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
-                  <Button layoutX="760.0" layoutY="1347.0" mnemonicParsing="false" opacity="0.0" prefHeight="57.0" prefWidth="56.0" />
-                  <Text fx:id="textoGeneroCarrossel1111" fill="WHITE" layoutX="662.0" layoutY="1243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="POR__Neto" AnchorPane.rightAnchor="100.0">
+                  <Text fx:id="nomeCriadorLista3" fill="WHITE" layoutX="662.0" layoutY="1243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="POR__Neto" AnchorPane.rightAnchor="100.0">
                      <font>
                         <Font name="Corbel Bold" size="18.0" />
                      </font>
@@ -520,7 +519,7 @@
                   <Button layoutX="234.0" layoutY="1553.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
                   <Button layoutX="393.0" layoutY="1553.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
                   <Button layoutX="555.0" layoutY="1553.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
-                  <Text fx:id="textoGeneroCarrossel122" fill="WHITE" layoutX="75.0" layoutY="1662.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AÇÃO E AVENTURA">
+                  <Text fx:id="nomeLista4" fill="WHITE" layoutX="75.0" layoutY="1662.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AÇÃO E AVENTURA">
                      <font>
                         <Font name="Corbel Bold" size="18.0" />
                      </font>
@@ -573,7 +572,7 @@
                   </ImageView>
                   <Button layoutX="64.0" layoutY="1970.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
                   <Button layoutX="760.0" layoutY="1765.0" mnemonicParsing="false" opacity="0.0" prefHeight="57.0" prefWidth="56.0" />
-                  <Text fx:id="textoGeneroCarrossel1112" fill="WHITE" layoutX="662.0" layoutY="1661.0" strokeType="OUTSIDE" strokeWidth="0.0" text="POR__Neto" AnchorPane.rightAnchor="100.0">
+                  <Text fx:id="nomeCriadorLista4" fill="WHITE" layoutX="662.0" layoutY="1661.0" strokeType="OUTSIDE" strokeWidth="0.0" text="POR__Neto" AnchorPane.rightAnchor="100.0">
                      <font>
                         <Font name="Corbel Bold" size="18.0" />
                      </font>
@@ -1006,6 +1005,15 @@
                         <Image url="@imagens/estrelaBranca.png" />
                      </image>
                   </ImageView>
+                  <Button fx:id="botaoEntraNaLista2" layoutX="759.0" layoutY="932.0" mnemonicParsing="false" opacity="0.0" prefHeight="57.0" prefWidth="56.0" />
+                  <Button fx:id="botaoEntraNaLista1" layoutX="759.0" layoutY="511.0" mnemonicParsing="false" opacity="0.0" prefHeight="57.0" prefWidth="56.0" />
+                  <Button fx:id="botaoEntraNaLista21" layoutX="769.0" layoutY="942.0" mnemonicParsing="false" opacity="0.0" prefHeight="57.0" prefWidth="56.0" />
+                  <Button fx:id="botaoEntraNaLista11" layoutX="769.0" layoutY="521.0" mnemonicParsing="false" opacity="0.0" prefHeight="57.0" prefWidth="56.0" />
+                  <Button fx:id="botaoEntraNaLista22" layoutX="769.0" layoutY="942.0" mnemonicParsing="false" opacity="0.0" prefHeight="57.0" prefWidth="56.0" />
+                  <Button fx:id="botaoEntraNaLista12" layoutX="769.0" layoutY="521.0" mnemonicParsing="false" opacity="0.0" prefHeight="57.0" prefWidth="56.0" />
+                  <Button fx:id="botaoEntraNaLista23" layoutX="769.0" layoutY="942.0" mnemonicParsing="false" opacity="0.0" prefHeight="57.0" prefWidth="56.0" />
+                  <Button fx:id="botaoEntraNaLista3" layoutX="760.0" layoutY="1347.0" mnemonicParsing="false" opacity="0.0" prefHeight="57.0" prefWidth="56.0" />
+                  <Button fx:id="botaoEntraNaLista4" layoutX="761.0" layoutY="1765.0" mnemonicParsing="false" opacity="0.0" prefHeight="57.0" prefWidth="56.0" />
                </children>
             </AnchorPane>
          </content>
