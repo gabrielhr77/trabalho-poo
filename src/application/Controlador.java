@@ -136,7 +136,7 @@ public class Controlador implements Initializable {
 	//------------------------------PAGINA INICIAL-------------------------------------------------------------------------
 
 	@FXML
-	private Text textoFilmeCarrossel,textoGeneroCarrossel;
+	private Text textoFilmeCarrossel,textoGeneroCarrossel,nomeLista1,nomeLista2,nomeLista3,nomeLista4,nomeL1Filme1,nomeL1Filme2,nomeL1Filme3,nomeL1Filme4,nomeL2Filme1,nomeL2Filme2,nomeL2Filme3,nomeL2Filme4,nomeL3Filme1,nomeL3Filme2,nomeL3Filme3,nomeL3Filme4,nomeL4Filme1,nomeL4Filme2,nomeL4Filme3,nomeL4Filme4;
 	
 	@FXML
 	private ImageView capaFilmeCarrossel,filme1Lista1,filme2Lista1,filme3Lista1,filme4Lista1,filme1Lista2,filme2Lista2,filme3Lista2,filme4Lista2,filme1Lista3,filme2Lista3,filme3Lista3,filme4Lista3,filme1Lista4,filme2Lista4,filme3Lista4,filme4Lista4;
@@ -156,7 +156,7 @@ public class Controlador implements Initializable {
 	private RadioButton filme1Carrossel,filme2Carrossel,filme3Carrossel,filme4Carrossel,filme5Carrossel;
 	
 	@FXML
-	private Button botaoPassaCarrosselImagens,botaoVoltaCarrosselImagens,botaoProximaPagina,botaoPaginaAnterior;
+	private Button botaoPassaCarrosselImagens,botaoVoltaCarrosselImagens,botaoProximaPagina,botaoPaginaAnterior,botaoFilme1,botaoFilme2,botaoFilme3,botaoFilme4,botaoFilme5,botaoFilme6,botaoFilme7,botaoFilme8,botaoFilme9,botaoFilme10,botaoFilme11,botaoFilme12,botaoFilme13,botaoFilme14,botaoFilme15,botaoFilme16;
 	
 	@FXML
 	private ChoiceBox<String> opcoesNavegacaoPagInicial, opcoesNavegacaoPerfil, opcoesNavegacaoAddFilme, opcoesNavegacaoAddLista, opcoesNavegacaoRelatorio;
@@ -173,18 +173,102 @@ public class Controlador implements Initializable {
 	private String[] palavrasOpcoesNavegacaoRelatorio = {"ADICIONAR FILME","ADICIONAR LISTA"};
 	private String[] palavrasOpcoesNavegacaoPerfil = {"ADICIONAR FILME","ADICIONAR LISTA"};
 	
-	private int numeroDaPaginaAtual=0;
+	private int numeroDaPaginaAtual=1;
 	private ArrayList<Lista> listasPaginaAtual = Main.retorna4Listas(numeroDaPaginaAtual);
+	
+	
+	
+	public void clicouNoBotaoIrParaOFilme(ActionEvent event) {
+		 Button botaoClicado = (Button) event.getSource();
+
+	        // Obtém o ID do botão
+	        String botaoId = botaoClicado.getId();
+
+	        // Verifica o ID para decidir a ação
+	        switch (botaoId) {
+	            case "botaoFilme1":
+	            	entraNoFilme(0);
+	                break;
+	            case "botaoFilme2":
+	            	entraNoFilme(1); 
+	                break;
+	            case "botaoFilme3":
+	            	entraNoFilme(2); 
+	                break;
+	            case "botaoFilme4":
+	            	entraNoFilme(3); 
+	                break;
+	            case "botaoFilme5":
+	            	entraNoFilme(4);
+	                break;
+	            case "botaoFilme6":
+	            	entraNoFilme(5); 
+	                break;
+	            case "botaoFilme7":
+	            	entraNoFilme(6); 
+	                break;
+	            case "botaoFilme8":
+	            	entraNoFilme(7); 
+	                break;
+	            case "botaoFilme9":
+	            	entraNoFilme(8);
+	                break;
+	            case "botaoFilme10":
+	            	entraNoFilme(9); 
+	                break;
+	            case "botaoFilme11":
+	            	entraNoFilme(10); 
+	                break;
+	            case "botaoFilme12":
+	            	entraNoFilme(11); 
+	                break;
+	            case "botaoFilme13":
+	            	entraNoFilme(12);
+	                break;
+	            case "botaoFilme14":
+	            	entraNoFilme(13); 
+	                break;
+	            case "botaoFilme15":
+	            	entraNoFilme(14); 
+	                break;
+	            case "botaoFilme16":
+	            	entraNoFilme(15); 
+	                break;
+	            default:
+	                System.err.println("Botão desconhecido: " + botaoId);
+	        }
+	}
+	
+	
+	
+	@FXML
+	private Text nomeFilme,lancamentoFilme,diretorFilme,ator1Filme,ator2Filme,ator3Filme,horasFilme,minutosFilme,faixaEtariaFilme,sinopseFilme,criticaFilme;
+	
+	
+	
+	public void entraNoFilme(int filme) {
+		if(filme<4) {	
+			listasPaginaAtual.get(0).retornaFilmesDaLista().get(filme);
+			Main.mudarPagina(2);
+			
+		}else if(filme>=4&&filme<8) {
+			listasPaginaAtual.get(1).retornaFilmesDaLista().get(filme-4);
+		}else if(filme>=8&&filme<12) {
+			listasPaginaAtual.get(2).retornaFilmesDaLista().get(filme-8);
+		}else if(filme>=12) {
+			listasPaginaAtual.get(3).retornaFilmesDaLista().get(filme-12);
+		}
+	}
 	
 	public void passaListasDaPaginaInicial(ActionEvent event) {
 		numeroDaPaginaAtual++;
 		if(Main.retornaArrayListListas().size()%4==0) {
 			if(numeroDaPaginaAtual>Main.retornaArrayListListas().size()/4){
-				numeroDaPaginaAtual=0;
+				numeroDaPaginaAtual=1;
 			}
 		}else if(Main.retornaArrayListListas().size()%4!=0) {
 			if(numeroDaPaginaAtual>(Main.retornaArrayListListas().size()/4)+1){
-				numeroDaPaginaAtual=0;
+				numeroDaPaginaAtual=1;
 			}
 		}	
 		listasPaginaAtual=Main.retorna4Listas(numeroDaPaginaAtual);
@@ -193,7 +277,7 @@ public class Controlador implements Initializable {
 	
 	public void voltaListasDaPaginaInicial(ActionEvent event) {
 		numeroDaPaginaAtual--;
-		if(numeroDaPaginaAtual<0) {
+		if(numeroDaPaginaAtual<1) {
 			if(Main.retornaArrayListListas().size()%4==0) {
 				numeroDaPaginaAtual=(Main.retornaArrayListListas().size()/4);
 			}else {
@@ -207,7 +291,32 @@ public class Controlador implements Initializable {
 //	public void entraNaLista
 	
 	public void atualizaPaginaPrincipal(ArrayList<Lista> arrayDeListas) {
-		filme1Lista1.setImage(imagem);
+		nomeLista1.setText(listasPaginaAtual.get(0).getNome());
+		nomeLista2.setText(listasPaginaAtual.get(1).getNome());
+		nomeLista3.setText(listasPaginaAtual.get(2).getNome());
+		nomeLista4.setText(listasPaginaAtual.get(3).getNome());
+		
+		nomeL1Filme1.setText(listasPaginaAtual.get(0).retornaFilmesDaLista().get(0).getNomeFilme());
+		nomeL1Filme2.setText(listasPaginaAtual.get(0).retornaFilmesDaLista().get(1).getNomeFilme());
+		nomeL1Filme3.setText(listasPaginaAtual.get(0).retornaFilmesDaLista().get(2).getNomeFilme());
+		nomeL1Filme4.setText(listasPaginaAtual.get(0).retornaFilmesDaLista().get(3).getNomeFilme());
+		
+		nomeL2Filme1.setText(listasPaginaAtual.get(1).retornaFilmesDaLista().get(0).getNomeFilme());
+		nomeL2Filme2.setText(listasPaginaAtual.get(1).retornaFilmesDaLista().get(1).getNomeFilme());
+		nomeL2Filme3.setText(listasPaginaAtual.get(1).retornaFilmesDaLista().get(2).getNomeFilme());
+		nomeL2Filme4.setText(listasPaginaAtual.get(1).retornaFilmesDaLista().get(3).getNomeFilme());
+		
+		nomeL3Filme1.setText(listasPaginaAtual.get(2).retornaFilmesDaLista().get(0).getNomeFilme());
+		nomeL3Filme2.setText(listasPaginaAtual.get(2).retornaFilmesDaLista().get(1).getNomeFilme());
+		nomeL3Filme3.setText(listasPaginaAtual.get(2).retornaFilmesDaLista().get(2).getNomeFilme());
+		nomeL3Filme4.setText(listasPaginaAtual.get(2).retornaFilmesDaLista().get(3).getNomeFilme());
+		
+		nomeL4Filme1.setText(listasPaginaAtual.get(3).retornaFilmesDaLista().get(0).getNomeFilme());
+		nomeL4Filme2.setText(listasPaginaAtual.get(3).retornaFilmesDaLista().get(1).getNomeFilme());
+		nomeL4Filme3.setText(listasPaginaAtual.get(3).retornaFilmesDaLista().get(2).getNomeFilme());
+		nomeL4Filme4.setText(listasPaginaAtual.get(3).retornaFilmesDaLista().get(3).getNomeFilme());
+		
+		
 	}
 	
 	public void selecaoNavegacaoPerfil(ActionEvent event) {

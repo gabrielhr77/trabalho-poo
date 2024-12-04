@@ -47,7 +47,7 @@
             <Font name="Corbel Bold" size="23.0" />
          </font>
       </Text>
-      <ScrollPane hbarPolicy="NEVER" layoutX="39.0" layoutY="187.0" prefHeight="494.0" prefWidth="950.0" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="157.0">
+      <ScrollPane hbarPolicy="NEVER" layoutX="39.0" layoutY="187.0" prefHeight="494.0" prefWidth="950.0" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="-2500.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="157.0">
          <content>
             <AnchorPane maxWidth="1244.0" prefHeight="2690.0" prefWidth="950.0" style="-fx-background-color: #202020;">
                <children>
@@ -70,7 +70,7 @@
                         </ImageView>
                      </children>
                   </AnchorPane>
-                  <Text fill="WHITE" layoutX="87.0" layoutY="505.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Interestelar" wrappingWidth="276.0">
+                  <Text fx:id="nomeFilme" fill="WHITE" layoutX="87.0" layoutY="505.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Interestelar" wrappingWidth="276.0">
                      <font>
                         <Font name="Corbel Bold" size="55.0" />
                      </font>
@@ -121,7 +121,7 @@
                         <Font name="Corbel Bold" size="22.0" />
                      </font>
                   </Text>
-                  <Text fx:id="lancamentoFilme1" fill="WHITE" layoutX="453.0" layoutY="638.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Christopher Nolan">
+                  <Text fx:id="diretorFilme" fill="WHITE" layoutX="453.0" layoutY="638.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Christopher Nolan">
                      <font>
                         <Font name="Corbel Bold" size="22.0" />
                      </font>
@@ -131,17 +131,17 @@
                         <Font name="Corbel Bold" size="22.0" />
                      </font>
                   </Text>
-                  <Text fx:id="lancamentoFilme11" fill="WHITE" layoutX="453.0" layoutY="665.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Matthew McConaughey">
+                  <Text fx:id="ator1Filme" fill="WHITE" layoutX="453.0" layoutY="665.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Matthew McConaughey">
                      <font>
                         <Font name="Corbel Bold" size="22.0" />
                      </font>
                   </Text>
-                  <Text fx:id="lancamentoFilme111" fill="WHITE" layoutX="453.0" layoutY="689.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jessica Chastain">
+                  <Text fx:id="ator2Filme" fill="WHITE" layoutX="453.0" layoutY="689.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jessica Chastain">
                      <font>
                         <Font name="Corbel Bold" size="22.0" />
                      </font>
                   </Text>
-                  <Text fx:id="lancamentoFilme1111" fill="WHITE" layoutX="452.0" layoutY="713.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Anne Hathaway">
+                  <Text fx:id="ator3Filme" fill="WHITE" layoutX="452.0" layoutY="713.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Anne Hathaway">
                      <font>
                         <Font name="Corbel Bold" size="22.0" />
                      </font>
@@ -151,7 +151,7 @@
                         <Font name="Corbel Bold" size="22.0" />
                      </font>
                   </Text>
-                  <Text fx:id="lancamentoFilme12" fill="WHITE" layoutX="453.0" layoutY="739.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2h 49'">
+                  <Text fx:id="horasFilme" fill="WHITE" layoutX="453.0" layoutY="739.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2">
                      <font>
                         <Font name="Corbel Bold" size="22.0" />
                      </font>
@@ -161,7 +161,7 @@
                         <Font name="Corbel Bold" size="22.0" />
                      </font>
                   </Text>
-                  <Text fx:id="lancamentoFilme121" fill="WHITE" layoutX="453.0" layoutY="765.0" strokeType="OUTSIDE" strokeWidth="0.0" text="14">
+                  <Text fx:id="faixaEtariaFilme" fill="WHITE" layoutX="453.0" layoutY="765.0" strokeType="OUTSIDE" strokeWidth="0.0" text="14">
                      <font>
                         <Font name="Corbel Bold" size="22.0" />
                      </font>
@@ -172,18 +172,18 @@
                      </font>
                   </Text>
                   <Line endY="180.0" layoutX="197.0" layoutY="886.0" rotate="90.0" stroke="#dba15c" strokeWidth="3.0" />
-                  <Text layoutX="105.0" layoutY="1268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CRÍTICA" wrappingWidth="108.00001525878906">
+                  <Text layoutX="105.0" layoutY="1270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CRÍTICA  --&gt;" wrappingWidth="170.66668701171875">
                      <font>
                         <Font name="Corbel" size="26.0" />
                      </font>
                   </Text>
-                  <Line endY="180.0" layoutX="197.0" layoutY="1197.0" rotate="90.0" stroke="#dba15c" strokeWidth="3.0" />
+                  <Line endY="600.0" layoutX="360.0" layoutY="1039.0" rotate="90.0" stroke="#dba15c" strokeWidth="3.0" />
                   <Text layoutX="107.0" layoutY="1318.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Escrito por:">
                      <font>
                         <Font name="Corbel Bold" size="15.0" />
                      </font>
                   </Text>
-                  <Text layoutX="187.0" layoutY="1318.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Laura Righi">
+                  <Text fx:id="nomeDoCritico" layoutX="187.0" layoutY="1318.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Laura Righi">
                      <font>
                         <Font name="Corbel Bold" size="15.0" />
                      </font>
@@ -305,7 +305,7 @@
                         <Image url="@imagens/fitaDeFundo3.png" />
                      </image>
                   </ImageView>
-                  <Text layoutX="105.0" layoutY="1019.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Após ver a Terra consumindo boa parte de suas reservas naturais, um grupo de astronautas recebe a missão de verificar possíveis planetas para receberem a população mundial, possibilitando a continuação da espécie. Cooper (Matthew McConaughey) é chamado para liderar o grupo e aceita a missão sabendo que pode nunca mais ver os filhos. Ao lado de Brand (Anne Hathaway), Jenkins (Marlon Sanders) e Doyle (Wes Bentley), ele seguirá em busca de uma nova casa. Com o passar dos anos, sua filha Murph (Mackenzie Foy e Jessica Chastain) investirá numa própria jornada para também tentar salvar a população do planeta." wrappingWidth="732.0000610351562">
+                  <Text fx:id="sinopseFilme" layoutX="105.0" layoutY="1019.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Após ver a Terra consumindo boa parte de suas reservas naturais, um grupo de astronautas recebe a missão de verificar possíveis planetas para receberem a população mundial, possibilitando a continuação da espécie. Cooper (Matthew McConaughey) é chamado para liderar o grupo e aceita a missão sabendo que pode nunca mais ver os filhos. Ao lado de Brand (Anne Hathaway), Jenkins (Marlon Sanders) e Doyle (Wes Bentley), ele seguirá em busca de uma nova casa. Com o passar dos anos, sua filha Murph (Mackenzie Foy e Jessica Chastain) investirá numa própria jornada para também tentar salvar a população do planeta." wrappingWidth="732.0000610351562">
                      <font>
                         <Font name="Corbel" size="18.0" />
                      </font>
@@ -320,9 +320,30 @@
                         <Image url="@imagens/fitaDeFundo3.png" />
                      </image>
                   </ImageView>
-                  <Text layoutX="105.0" layoutY="1367.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aliando os gêneros terror, mistério, aventura, comédia e um toque de romance, o filme “IT – A coisa”, de 2017, é uma adaptação do livro de mesmo nome escrito por Stephen King e lançado em 1986. O livro já havia sido adaptado para os cinemas em 1990, com a obra intitulada “It”, e, para mim, o atual remake conseguiu resgatar de forma primorosa o terror que arrepiou a criançada nos anos 90.  Na obra acompanhamos as aventuras do Clube dos Perdedores em 1984, crianças que vivem em um contexto de bullyng na escola e que apresentam problemas no convívio familiar.  Nesse sentido, apesar da trama principal ser a busca por Georgie, acredito que o diretor Andrés Muschietti fez um ótimo trabalho nos envolvendo na vida de todos os personagens, permitindo que nos apeguemos a eles. A cena inicial em que Georgie, irmão do protagonista Bill, é pego pelo palhaço, me permitiu imergir na história logo de cara, devido a peculiaridade e horror da cena. Dá para perceber, logo nesse começo, que será um filme que não medirá esforços em criar uma atmosfera macabra.  Além disso, por abordar situações como bullying, racismo, estupro, intolerância religiosa e outras agressões, " wrappingWidth="732.0000610351562">
+                  <Text fx:id="criticaFilme" layoutX="105.0" layoutY="1367.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aliando os gêneros terror, mistério, aventura, comédia e um toque de romance, o filme “IT – A coisa”, de 2017, é uma adaptação do livro de mesmo nome escrito por Stephen King e lançado em 1986. O livro já havia sido adaptado para os cinemas em 1990, com a obra intitulada “It”, e, para mim, o atual remake conseguiu resgatar de forma primorosa o terror que arrepiou a criançada nos anos 90.  Na obra acompanhamos as aventuras do Clube dos Perdedores em 1984, crianças que vivem em um contexto de bullyng na escola e que apresentam problemas no convívio familiar.  Nesse sentido, apesar da trama principal ser a busca por Georgie, acredito que o diretor Andrés Muschietti fez um ótimo trabalho nos envolvendo na vida de todos os personagens, permitindo que nos apeguemos a eles. A cena inicial em que Georgie, irmão do protagonista Bill, é pego pelo palhaço, me permitiu imergir na história logo de cara, devido a peculiaridade e horror da cena. Dá para perceber, logo nesse começo, que será um filme que não medirá esforços em criar uma atmosfera macabra.  Além disso, por abordar situações como bullying, racismo, estupro, intolerância religiosa e outras agressões, " wrappingWidth="732.0000610351562">
                      <font>
                         <Font name="Corbel" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="469.0" layoutY="740.0" strokeType="OUTSIDE" strokeWidth="0.0" text="h">
+                     <font>
+                        <Font name="Corbel Bold" size="22.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="minutosFilme" fill="WHITE" layoutX="490.0" layoutY="739.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2">
+                     <font>
+                        <Font name="Corbel Bold" size="22.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="513.0" layoutY="740.0" strokeType="OUTSIDE" strokeWidth="0.0" text="'">
+                     <font>
+                        <Font name="Corbel Bold" size="22.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="tituloCriticaNova" alignment="CENTER" layoutX="281.0" layoutY="1951.0" promptText="TÍTULO" />
+                  <Text layoutX="281.0" layoutY="1275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="327.47003173828125">
+                     <font>
+                        <Font name="Corbel Bold" size="18.0" />
                      </font>
                   </Text>
                </children>

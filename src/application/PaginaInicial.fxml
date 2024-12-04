@@ -150,7 +150,7 @@
                         <Image url="@imagens/estrelaBranca.png" />
                      </image>
                   </ImageView>
-                  <Text fx:id="textoFilmeCarrossel2" fill="WHITE" layoutX="77.0" layoutY="707.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Duna">
+                  <Text fx:id="nomeL1Filme1" fill="WHITE" layoutX="77.0" layoutY="707.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Duna">
                      <font>
                         <Font name="Corbel" size="15.0" />
                      </font>
@@ -160,13 +160,13 @@
                         <Image url="@imagens/textoNavegarParaPaginaDoFilme.png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="botaoFilme1Lista" layoutX="64.0" layoutY="715.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
+                  <Button fx:id="botaoFilme1" layoutX="64.0" layoutY="715.0" mnemonicParsing="false" onAction="#entraNoFilme" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
                   <ImageView fx:id="filme2Lista1" fitHeight="190.0" fitWidth="144.0" layoutX="237.0" layoutY="453.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@imagens/capaLugarSilenciosoDia1.jpg" />
                      </image>
                   </ImageView>
-                  <Text fx:id="textoFilmeCarrossel21" fill="WHITE" layoutX="238.0" layoutY="706.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Um Lugar Silencioso">
+                  <Text fx:id="nomeL1Filme2" fill="WHITE" layoutX="238.0" layoutY="706.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Um Lugar Silencioso">
                      <font>
                         <Font name="Corbel" size="15.0" />
                      </font>
@@ -182,7 +182,7 @@
                         <Image url="@imagens/capaOPoco2.jpg" />
                      </image>
                   </ImageView>
-                  <Text fx:id="textoFilmeCarrossel22" fill="WHITE" layoutX="400.0" layoutY="705.0" strokeType="OUTSIDE" strokeWidth="0.0" text="O Poço 2">
+                  <Text fx:id="nomeL1Filme3" fill="WHITE" layoutX="400.0" layoutY="705.0" strokeType="OUTSIDE" strokeWidth="0.0" text="O Poço 2">
                      <font>
                         <Font name="Corbel" size="15.0" />
                      </font>
@@ -223,7 +223,7 @@
                         <Image url="@imagens/estrelaBranca.png" />
                      </image>
                   </ImageView>
-                  <Text fx:id="textoFilmeCarrossel212" fill="WHITE" layoutX="560.0" layoutY="705.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pequenos Invasores">
+                  <Text fx:id="nomeL1Filme4" fill="WHITE" layoutX="560.0" layoutY="705.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pequenos Invasores">
                      <font>
                         <Font name="Corbel" size="15.0" />
                      </font>
@@ -233,9 +233,9 @@
                         <Image url="@imagens/textoNavegarParaPaginaDoFilme.png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="botaoFilme2Lista" layoutX="229.0" layoutY="716.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
-                  <Button fx:id="botaoFilme3Lista" layoutX="388.0" layoutY="716.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
-                  <Button fx:id="botaoFilme4Lista" layoutX="550.0" layoutY="716.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
+                  <Button fx:id="botaoFilme2" layoutX="229.0" layoutY="716.0" mnemonicParsing="false" onAction="#entraNoFilme" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
+                  <Button fx:id="botaoFilme3" layoutX="388.0" layoutY="716.0" mnemonicParsing="false" onAction="#entraNoFilme" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
+                  <Button fx:id="botaoFilme4" layoutX="550.0" layoutY="716.0" mnemonicParsing="false" onAction="#entraNoFilme" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
                   <Button fx:id="botaoEntraNaLista" layoutX="761.0" layoutY="919.0" mnemonicParsing="false" opacity="0.0" prefHeight="57.0" prefWidth="56.0" />
                   <Text fx:id="nomeCriadorLista1" fill="WHITE" layoutX="237.0" layoutY="406.0" strokeType="OUTSIDE" strokeWidth="0.0" text="POR__Pac" AnchorPane.rightAnchor="100.0">
                      <font>
@@ -258,7 +258,7 @@
                         <Image url="@imagens/capaDuna1.jpg" />
                      </image>
                   </ImageView>
-                  <Text fx:id="textoFilmeCarrossel23" fill="WHITE" layoutX="77.0" layoutY="1126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Duna">
+                  <Text fx:id="nomeL2Filme1" fill="WHITE" layoutX="77.0" layoutY="1126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Duna">
                      <font>
                         <Font name="Corbel" size="15.0" />
                      </font>
@@ -268,7 +268,7 @@
                         <Image url="@imagens/textoNavegarParaPaginaDoFilme.png" />
                      </image>
                   </ImageView>
-                  <Button layoutX="64.0" layoutY="1134.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
+                  <Button fx:id="botaoFilme5" layoutX="64.0" layoutY="1134.0" mnemonicParsing="false" onAction="#entraNoFilme" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
                   <Button layoutX="760.0" layoutY="929.0" mnemonicParsing="false" opacity="0.0" prefHeight="57.0" prefWidth="56.0" />
                   <Text fx:id="nomeCriadorLista2" fill="WHITE" layoutX="662.0" layoutY="825.0" strokeType="OUTSIDE" strokeWidth="0.0" text="POR__Neto" AnchorPane.rightAnchor="100.0">
                      <font>
@@ -285,7 +285,7 @@
                         <Image url="@imagens/capaLugarSilenciosoDia1.jpg" />
                      </image>
                   </ImageView>
-                  <Text fx:id="textoFilmeCarrossel211" fill="WHITE" layoutX="240.0" layoutY="1126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Um Lugar Silencioso">
+                  <Text fx:id="nomeL2Filme2" fill="WHITE" layoutX="240.0" layoutY="1126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Um Lugar Silencioso">
                      <font>
                         <Font name="Corbel" size="15.0" />
                      </font>
@@ -301,7 +301,7 @@
                         <Image url="@imagens/capaOPoco2.jpg" />
                      </image>
                   </ImageView>
-                  <Text fx:id="textoFilmeCarrossel221" fill="WHITE" layoutX="402.0" layoutY="1125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="O Poço 2">
+                  <Text fx:id="nomeL2Filme3" fill="WHITE" layoutX="402.0" layoutY="1125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="O Poço 2">
                      <font>
                         <Font name="Corbel" size="15.0" />
                      </font>
@@ -317,7 +317,7 @@
                         <Image url="@imagens/capaPequenosInvasores.jpg" />
                      </image>
                   </ImageView>
-                  <Text fx:id="textoFilmeCarrossel2121" fill="WHITE" layoutX="562.0" layoutY="1125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pequenos Invasores">
+                  <Text fx:id="nomeL2Filme4" fill="WHITE" layoutX="562.0" layoutY="1125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pequenos Invasores">
                      <font>
                         <Font name="Corbel" size="15.0" />
                      </font>
@@ -328,9 +328,9 @@
                      </image>
                   </ImageView>
                   <Button layoutX="231.0" layoutY="1136.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
-                  <Button layoutX="234.0" layoutY="1135.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
-                  <Button layoutX="393.0" layoutY="1135.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
-                  <Button layoutX="555.0" layoutY="1135.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
+                  <Button fx:id="botaoFilme6" layoutX="234.0" layoutY="1135.0" mnemonicParsing="false" onAction="#entraNoFilme" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
+                  <Button fx:id="botaoFilme7" layoutX="393.0" layoutY="1135.0" mnemonicParsing="false" onAction="#entraNoFilme" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
+                  <Button fx:id="botaoFilme8" layoutX="555.0" layoutY="1135.0" mnemonicParsing="false" onAction="#entraNoFilme" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
                   <Text fx:id="nomeLista3" fill="WHITE" layoutX="75.0" layoutY="1244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TERROR">
                      <font>
                         <Font name="Corbel Bold" size="18.0" />
@@ -372,7 +372,7 @@
                         <Image url="@imagens/estrelaBranca.png" />
                      </image>
                   </ImageView>
-                  <Text fx:id="textoFilmeCarrossel231" fill="WHITE" layoutX="77.0" layoutY="1544.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Duna">
+                  <Text fx:id="nomeL3Filme1" fill="WHITE" layoutX="77.0" layoutY="1544.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Duna">
                      <font>
                         <Font name="Corbel" size="15.0" />
                      </font>
@@ -382,7 +382,7 @@
                         <Image url="@imagens/textoNavegarParaPaginaDoFilme.png" />
                      </image>
                   </ImageView>
-                  <Button layoutX="64.0" layoutY="1552.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
+                  <Button fx:id="botaoFilme9" layoutX="64.0" layoutY="1552.0" mnemonicParsing="false" onAction="#entraNoFilme" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
                   <Text fx:id="nomeCriadorLista3" fill="WHITE" layoutX="662.0" layoutY="1243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="POR__Neto" AnchorPane.rightAnchor="100.0">
                      <font>
                         <Font name="Corbel Bold" size="18.0" />
@@ -423,7 +423,7 @@
                         <Image url="@imagens/estrelaBranca.png" />
                      </image>
                   </ImageView>
-                  <Text fx:id="textoFilmeCarrossel2111" fill="WHITE" layoutX="240.0" layoutY="1544.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Um Lugar Silencioso">
+                  <Text fx:id="nomeL3Filme2" fill="WHITE" layoutX="240.0" layoutY="1544.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Um Lugar Silencioso">
                      <font>
                         <Font name="Corbel" size="15.0" />
                      </font>
@@ -464,7 +464,7 @@
                         <Image url="@imagens/estrelaBranca.png" />
                      </image>
                   </ImageView>
-                  <Text fx:id="textoFilmeCarrossel2211" fill="WHITE" layoutX="402.0" layoutY="1543.0" strokeType="OUTSIDE" strokeWidth="0.0" text="O Poço 2">
+                  <Text fx:id="nomeL3Filme3" fill="WHITE" layoutX="402.0" layoutY="1543.0" strokeType="OUTSIDE" strokeWidth="0.0" text="O Poço 2">
                      <font>
                         <Font name="Corbel" size="15.0" />
                      </font>
@@ -505,7 +505,7 @@
                         <Image url="@imagens/estrelaBranca.png" />
                      </image>
                   </ImageView>
-                  <Text fx:id="textoFilmeCarrossel21211" fill="WHITE" layoutX="562.0" layoutY="1543.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pequenos Invasores">
+                  <Text fx:id="nomeL3Filme4" fill="WHITE" layoutX="562.0" layoutY="1543.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pequenos Invasores">
                      <font>
                         <Font name="Corbel" size="15.0" />
                      </font>
@@ -516,9 +516,9 @@
                      </image>
                   </ImageView>
                   <Button layoutX="231.0" layoutY="1554.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
-                  <Button layoutX="234.0" layoutY="1553.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
-                  <Button layoutX="393.0" layoutY="1553.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
-                  <Button layoutX="555.0" layoutY="1553.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
+                  <Button fx:id="botaoFilme10" layoutX="234.0" layoutY="1553.0" mnemonicParsing="false" onAction="#entraNoFilme" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
+                  <Button fx:id="botaoFilme11" layoutX="393.0" layoutY="1553.0" mnemonicParsing="false" onAction="#entraNoFilme" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
+                  <Button fx:id="botaoFilme12" layoutX="555.0" layoutY="1553.0" mnemonicParsing="false" onAction="#entraNoFilme" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
                   <Text fx:id="nomeLista4" fill="WHITE" layoutX="75.0" layoutY="1662.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AÇÃO E AVENTURA">
                      <font>
                         <Font name="Corbel Bold" size="18.0" />
@@ -560,7 +560,7 @@
                         <Image url="@imagens/estrelaBranca.png" />
                      </image>
                   </ImageView>
-                  <Text fx:id="textoFilmeCarrossel232" fill="WHITE" layoutX="77.0" layoutY="1962.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Duna">
+                  <Text fx:id="nomeL4Filme1" fill="WHITE" layoutX="77.0" layoutY="1962.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Duna">
                      <font>
                         <Font name="Corbel" size="15.0" />
                      </font>
@@ -570,7 +570,7 @@
                         <Image url="@imagens/textoNavegarParaPaginaDoFilme.png" />
                      </image>
                   </ImageView>
-                  <Button layoutX="64.0" layoutY="1970.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
+                  <Button fx:id="botaoFilme13" layoutX="64.0" layoutY="1970.0" mnemonicParsing="false" onAction="#entraNoFilme" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
                   <Button layoutX="760.0" layoutY="1765.0" mnemonicParsing="false" opacity="0.0" prefHeight="57.0" prefWidth="56.0" />
                   <Text fx:id="nomeCriadorLista4" fill="WHITE" layoutX="662.0" layoutY="1661.0" strokeType="OUTSIDE" strokeWidth="0.0" text="POR__Neto" AnchorPane.rightAnchor="100.0">
                      <font>
@@ -612,7 +612,7 @@
                         <Image url="@imagens/estrelaBranca.png" />
                      </image>
                   </ImageView>
-                  <Text fx:id="textoFilmeCarrossel2112" fill="WHITE" layoutX="240.0" layoutY="1962.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Um Lugar Silencioso">
+                  <Text fx:id="nomeL4Filme2" fill="WHITE" layoutX="240.0" layoutY="1962.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Um Lugar Silencioso">
                      <font>
                         <Font name="Corbel" size="15.0" />
                      </font>
@@ -653,7 +653,7 @@
                         <Image url="@imagens/estrelaBranca.png" />
                      </image>
                   </ImageView>
-                  <Text fx:id="textoFilmeCarrossel2212" fill="WHITE" layoutX="402.0" layoutY="1961.0" strokeType="OUTSIDE" strokeWidth="0.0" text="O Poço 2">
+                  <Text fx:id="nomeL4Filme3" fill="WHITE" layoutX="402.0" layoutY="1961.0" strokeType="OUTSIDE" strokeWidth="0.0" text="O Poço 2">
                      <font>
                         <Font name="Corbel" size="15.0" />
                      </font>
@@ -694,7 +694,7 @@
                         <Image url="@imagens/estrelaBranca.png" />
                      </image>
                   </ImageView>
-                  <Text fx:id="textoFilmeCarrossel21212" fill="WHITE" layoutX="562.0" layoutY="1961.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pequenos Invasores">
+                  <Text fx:id="nomeL4Filme4" fill="WHITE" layoutX="562.0" layoutY="1961.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pequenos Invasores">
                      <font>
                         <Font name="Corbel" size="15.0" />
                      </font>
@@ -705,9 +705,9 @@
                      </image>
                   </ImageView>
                   <Button layoutX="231.0" layoutY="1972.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
-                  <Button layoutX="234.0" layoutY="1971.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
-                  <Button layoutX="393.0" layoutY="1971.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
-                  <Button layoutX="555.0" layoutY="1971.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
+                  <Button fx:id="botaoFilme14" layoutX="234.0" layoutY="1971.0" mnemonicParsing="false" onAction="#entraNoFilme" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
+                  <Button fx:id="botaoFilme15" layoutX="393.0" layoutY="1971.0" mnemonicParsing="false" onAction="#entraNoFilme" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
+                  <Button fx:id="botaoFilme16" layoutX="555.0" layoutY="1971.0" mnemonicParsing="false" onAction="#entraNoFilme" opacity="0.0" prefHeight="48.0" prefWidth="125.0" />
                   <ImageView fitHeight="40.0" fitWidth="30.0" layoutX="520.0" layoutY="2089.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="400.0">
                      <image>
                         <Image url="@imagens/passaImagemFundoEscuro.png" />

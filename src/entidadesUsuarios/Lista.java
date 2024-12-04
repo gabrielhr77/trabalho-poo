@@ -9,10 +9,14 @@ public class Lista extends Publicacao {
 	private ArrayList<Filme> Filmes;
 		
 	
-	public Lista(String id, Usuario Usuario, String nome) {
+	public Lista(int id, Usuario Usuario, String nome) {
 		super(id, Usuario);
 		this.titulo = nome;
 		Filmes = new ArrayList<>();
+	}
+	
+	public ArrayList<Filme> retornaFilmesDaLista(){
+		return Filmes;
 	}
 	
 	public void setNome(String nome) {
