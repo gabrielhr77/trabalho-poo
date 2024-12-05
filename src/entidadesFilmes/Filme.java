@@ -10,7 +10,7 @@ public class Filme implements Serializable {
 	private float mediaNumeroDeEstrelas;
 //	private Ator ator1, ator2, ator3;
 //	private Diretor diretor;
-	private String diretor,ator1,ator2,ator3;
+	private String diretor,ator1,ator2,ator3,sinopse;
 	
 	public Filme() {
 	}
@@ -29,7 +29,7 @@ public class Filme implements Serializable {
 		float mediaNumeroDeEstrelas= numeroDeEstrelas/(float)numeroAvaliacoes;
 	}
 	*/
-	public Filme(int _IDFilme, String nomeFilme, String diretor, int anoLancamento, String ator1, String ator2, String ator3, String horas, String minutos, int faixaEtaria) {
+	public Filme(int _IDFilme, String nomeFilme, String diretor, int anoLancamento, String ator1, String ator2, String ator3, String horas, String minutos, int faixaEtaria, String sinopse) {
 		this._IDFilme=_IDFilme;
 		this.nomeFilme=nomeFilme;
 		this.diretor=diretor;
@@ -43,12 +43,19 @@ public class Filme implements Serializable {
 		this.horas=horas;
 		this.minutos=minutos;
 		this.faixaEtaria=faixaEtaria;
+		this.sinopse=sinopse;
 	}
 	
 	
 	
 	
 	// métodos getters
+	public int getFaixaEtaria() {
+		return faixaEtaria;
+	}
+	public String getSinopse() {
+		return sinopse;
+	}
 	public int getIDFilme() {
 		return _IDFilme;
 	}
@@ -97,6 +104,9 @@ public class Filme implements Serializable {
 	}
 	
 	// métodos setters
+	public void setSinopse(String sinopse) {
+		this.sinopse=sinopse;
+	}
 	public void setNomeFilme(String nomeFilme) {
 		this.nomeFilme=nomeFilme;
 	}
@@ -113,6 +123,9 @@ public class Filme implements Serializable {
 //	public void setAtor3(Ator ator3) {
 //		this.ator3=ator3;
 //	}
+	public void setFaixaEtaria(int faixaEtaria) {
+		this.faixaEtaria=faixaEtaria;
+	}
 	public void setDiretor(String diretor) {
 		this.diretor=diretor;
 	}

@@ -34,6 +34,8 @@ public class Main extends Application{
 	public static final String caminhoArquivoFilmes = "./dados/Filmes.ser";
 	public static final String caminhoArquivoListas = "./dados/Listas.ser";
 	public static final String caminhoArquivoUsuarios = "./dados/Usuarios.ser";
+	public static final String caminhoArquivoCriticas = "./dados/Criticas.ser";
+	public static final String caminhoArquivoComentarios = "./dados/Comentarios.ser";
 	//===========================javafx========================================
 	private static Stage stage;
 	private static Scene loginScene;
@@ -47,6 +49,8 @@ public class Main extends Application{
 	private static ArrayList<Filme> todosOsFilmes = new ArrayList<>();
 	private static ArrayList<Lista> todasAsListas = new ArrayList<>();
 	private static ArrayList<Usuario> todosOsUsuarios = new ArrayList<>();
+	private static ArrayList<Comentario> todosOsComentarios = new ArrayList<>();
+	private static ArrayList<Critica> todasAsCriticas = new ArrayList<>();
 	
 	
     @Override
@@ -115,6 +119,12 @@ public class Main extends Application{
     }
     public static ArrayList<Lista> retornaArrayListListas(){
     	return todasAsListas;
+    }
+    public static ArrayList<Critica> retornaArrayListCriticas(){
+    	return todasAsCriticas;
+    }
+    public static ArrayList<Comentario> retornaArrayListComentarios(){
+    	return todosOsComentarios;
     }
     
     public static void mudarPagina(int pagina) {
@@ -202,28 +212,6 @@ public class Main extends Application{
           return listaCarregada;
       }
       
-      //função que salva os dados serializados
-      /*
-      public static <T> boolean salvaLista(String caminho, ArrayList<T> lista) {
-    	  try {
-              // Abrir o arquivo para gravar em modo de append
-              FileOutputStream fos = new FileOutputStream(caminho, true); // true permite o append no arquivo
-              ObjectOutputStream oos = new ObjectOutputStream(fos) {
-                  @Override
-                  protected void writeStreamHeader() throws IOException {
-                      // Sobrescreve o cabeçalho para não adicionar o cabeçalho novamente
-                  }
-              };
-              
-              oos.writeObject(lista); 
-              oos.close(); 
-              System.out.println("Lista salva no arquivo com sucesso.");
-              return true;
-          } catch (IOException e) {
-              System.err.println("Erro ao salvar a lista: " + e.getMessage());
-              return false;
-          } 
-      */
       public static <T> boolean salvaLista(String caminho, ArrayList<T> lista) {
     	  verificarOuCriarArquivo(caminho);
     	  try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(caminho))) {
@@ -251,25 +239,17 @@ public class Main extends Application{
       public static void main(String[] args) {
     	    verificarOuCriarArquivo(caminhoArquivoFilmes);
     	    verificarOuCriarArquivo(caminhoArquivoListas);
-    	    verificarOuCriarArquivo(caminhoArquivoUsuarios);
-
+    	    verificarOuCriarArquivo(caminhoArquivoUsuarios); 
+    	    verificarOuCriarArquivo(caminhoArquivoCriticas);
+    	    verificarOuCriarArquivo(caminhoArquivoComentarios);
+    	    
     	    todosOsFilmes = carregaLista(caminhoArquivoFilmes);
     	    todasAsListas = carregaLista(caminhoArquivoListas);
     	    todosOsUsuarios = carregaLista(caminhoArquivoUsuarios);
+    	    todasAsCriticas = carregaLista(caminhoArquivoCriticas);
+    	    todosOsComentarios = carregaLista(caminhoArquivoComentarios);
     	    
     	    launch(args);
     	}
-	
-		//função que permite enviar o caminho dos arquivos à classe Catalogo
-		public static final String retornaCaminhoArquivo(String entidadeDoArquivo) {
-			switch(entidadeDoArquivo) {
-				case "filme":
-					return caminhoArquivoFilmes;
-				case "diretor":
-					return caminhoArquivoUsuarios;
-				default: 
-					return "-1";
-		}
-	}
 
 }

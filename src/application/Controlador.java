@@ -17,6 +17,7 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.RadioButton;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -180,11 +181,7 @@ public class Controlador implements Initializable {
 	
 	public void clicouNoBotaoIrParaOFilme(ActionEvent event) {
 		 Button botaoClicado = (Button) event.getSource();
-
-	        // Obtém o ID do botão
-	        String botaoId = botaoClicado.getId();
-
-	        // Verifica o ID para decidir a ação
+	        String botaoId = botaoClicado.getId();//pega o id do botao
 	        switch (botaoId) {
 	            case "botaoFilme1":
 	            	entraNoFilme(0);
@@ -242,22 +239,106 @@ public class Controlador implements Initializable {
 	
 	
 	@FXML
-	private Text nomeFilme,lancamentoFilme,diretorFilme,ator1Filme,ator2Filme,ator3Filme,horasFilme,minutosFilme,faixaEtariaFilme,sinopseFilme,criticaFilme;
+	private Text nomeDoCritico,tituloCritica,nomeFilme,lancamentoFilme,diretorFilme,ator1Filme,ator2Filme,ator3Filme,horasFilme,minutosFilme,faixaEtariaFilme,sinopseFilme,criticaFilme;
 	
 	
 	
 	public void entraNoFilme(int filme) {
+		Main.mudarPagina(2);
 		if(filme<4) {	
-			listasPaginaAtual.get(0).retornaFilmesDaLista().get(filme);
-			Main.mudarPagina(2);
-			
+			for(int i=0;i<Main.retornaArrayListCriticas().size();i++) {
+				if(Main.retornaArrayListCriticas().get(i).getFilme().equals(listasPaginaAtual.get(0).retornaFilmesDaLista().get(filme))){
+					Critica critica = Main.retornaArrayListCriticas().get(i);
+					tituloCritica.setText(critica.getTitulo());
+					criticaFilme.setText(critica.getConteudo());
+					nomeDoCritico.setText(critica.getUsuario().getNome());
+				}else {
+					tituloCritica.setText("");
+					criticaFilme.setText("AINDA NÃO HÁ CRÍTICAS DESSE FILME");
+					nomeDoCritico.setText("SEJA O PRIMEIRO A CRITICAR ESTE FILME!");
+				}
+			}
+			sinopseFilme.setText(listasPaginaAtual.get(0).retornaFilmesDaLista().get(filme).getSinopse());
+			nomeFilme.setText(listasPaginaAtual.get(0).retornaFilmesDaLista().get(filme).getNomeFilme());
+			lancamentoFilme.setText(String.valueOf(listasPaginaAtual.get(0).retornaFilmesDaLista().get(filme).getAnoLancamento()));
+			diretorFilme.setText(listasPaginaAtual.get(0).retornaFilmesDaLista().get(filme).getDiretor());
+			ator1Filme.setText(listasPaginaAtual.get(0).retornaFilmesDaLista().get(filme).getAtor1());
+			ator2Filme.setText(listasPaginaAtual.get(0).retornaFilmesDaLista().get(filme).getAtor2());
+			ator3Filme.setText(listasPaginaAtual.get(0).retornaFilmesDaLista().get(filme).getAtor3());
+			horasFilme.setText(String.valueOf(listasPaginaAtual.get(0).retornaFilmesDaLista().get(filme).getHorasFilme()));
+			minutosFilme.setText(String.valueOf(listasPaginaAtual.get(0).retornaFilmesDaLista().get(filme).getMinutosFilme()));
+			faixaEtariaFilme.setText(String.valueOf(listasPaginaAtual.get(0).retornaFilmesDaLista().get(filme).getFaixaEtaria()));
 		}else if(filme>=4&&filme<8) {
-			listasPaginaAtual.get(1).retornaFilmesDaLista().get(filme-4);
+			for(int i=0;i<Main.retornaArrayListCriticas().size();i++) {
+				if(Main.retornaArrayListCriticas().get(i).getFilme().equals(listasPaginaAtual.get(1).retornaFilmesDaLista().get(filme-4))){
+					Critica critica = Main.retornaArrayListCriticas().get(i);
+					tituloCritica.setText(critica.getTitulo());
+					criticaFilme.setText(critica.getConteudo());
+					nomeDoCritico.setText(critica.getUsuario().getNome());
+				}else {
+					tituloCritica.setText("");
+					criticaFilme.setText("AINDA NÃO HÁ CRÍTICAS DESSE FILME");
+					nomeDoCritico.setText("SEJA O PRIMEIRO A CRITICAR ESTE FILME!");
+				}
+			}
+			sinopseFilme.setText(listasPaginaAtual.get(1).retornaFilmesDaLista().get(filme-4).getSinopse());
+			nomeFilme.setText(listasPaginaAtual.get(1).retornaFilmesDaLista().get(filme-4).getNomeFilme());
+			lancamentoFilme.setText(String.valueOf(listasPaginaAtual.get(1).retornaFilmesDaLista().get(filme-4).getAnoLancamento()));
+			diretorFilme.setText(listasPaginaAtual.get(1).retornaFilmesDaLista().get(filme-4).getDiretor());
+			ator1Filme.setText(listasPaginaAtual.get(1).retornaFilmesDaLista().get(filme-4).getAtor1());
+			ator2Filme.setText(listasPaginaAtual.get(1).retornaFilmesDaLista().get(filme-4).getAtor2());
+			ator3Filme.setText(listasPaginaAtual.get(1).retornaFilmesDaLista().get(filme-4).getAtor3());
+			horasFilme.setText(String.valueOf(listasPaginaAtual.get(1).retornaFilmesDaLista().get(filme-4).getHorasFilme()));
+			minutosFilme.setText(String.valueOf(listasPaginaAtual.get(1).retornaFilmesDaLista().get(filme-4).getMinutosFilme()));
+			faixaEtariaFilme.setText(String.valueOf(listasPaginaAtual.get(1).retornaFilmesDaLista().get(filme-4).getFaixaEtaria()));
 		}else if(filme>=8&&filme<12) {
-			listasPaginaAtual.get(2).retornaFilmesDaLista().get(filme-8);
+			for(int i=0;i<Main.retornaArrayListCriticas().size();i++) {
+				if(Main.retornaArrayListCriticas().get(i).getFilme().equals(listasPaginaAtual.get(2).retornaFilmesDaLista().get(filme-8))){
+					Critica critica = Main.retornaArrayListCriticas().get(i);
+					tituloCritica.setText(critica.getTitulo());
+					criticaFilme.setText(critica.getConteudo());
+					nomeDoCritico.setText(critica.getUsuario().getNome());
+				}else {
+					tituloCritica.setText("");
+					criticaFilme.setText("AINDA NÃO HÁ CRÍTICAS DESSE FILME");
+					nomeDoCritico.setText("SEJA O PRIMEIRO A CRITICAR ESTE FILME!");
+				}
+			}
+			sinopseFilme.setText(listasPaginaAtual.get(2).retornaFilmesDaLista().get(filme-8).getSinopse());
+			nomeFilme.setText(listasPaginaAtual.get(2).retornaFilmesDaLista().get(filme-8).getNomeFilme());
+			lancamentoFilme.setText(String.valueOf(listasPaginaAtual.get(2).retornaFilmesDaLista().get(filme-8).getAnoLancamento()));
+			diretorFilme.setText(listasPaginaAtual.get(2).retornaFilmesDaLista().get(filme-8).getDiretor());
+			ator1Filme.setText(listasPaginaAtual.get(2).retornaFilmesDaLista().get(filme-8).getAtor1());
+			ator2Filme.setText(listasPaginaAtual.get(2).retornaFilmesDaLista().get(filme-8).getAtor2());
+			ator3Filme.setText(listasPaginaAtual.get(2).retornaFilmesDaLista().get(filme-8).getAtor3());
+			horasFilme.setText(String.valueOf(listasPaginaAtual.get(2).retornaFilmesDaLista().get(filme-8).getHorasFilme()));
+			minutosFilme.setText(String.valueOf(listasPaginaAtual.get(2).retornaFilmesDaLista().get(filme-8).getMinutosFilme()));
+			faixaEtariaFilme.setText(String.valueOf(listasPaginaAtual.get(2).retornaFilmesDaLista().get(filme-8).getFaixaEtaria()));
 		}else if(filme>=12) {
-			listasPaginaAtual.get(3).retornaFilmesDaLista().get(filme-12);
+			for(int i=0;i<Main.retornaArrayListCriticas().size();i++) {
+				if(Main.retornaArrayListCriticas().get(i).getFilme().equals(listasPaginaAtual.get(3).retornaFilmesDaLista().get(filme-12))){
+					Critica critica = Main.retornaArrayListCriticas().get(i);
+					tituloCritica.setText(critica.getTitulo());
+					criticaFilme.setText(critica.getConteudo());
+					nomeDoCritico.setText(critica.getUsuario().getNome());
+				}else {
+					tituloCritica.setText("");
+					criticaFilme.setText("AINDA NÃO HÁ CRÍTICAS DESSE FILME");
+					nomeDoCritico.setText("SEJA O PRIMEIRO A CRITICAR ESTE FILME!");
+				}
+			}
+			sinopseFilme.setText(listasPaginaAtual.get(3).retornaFilmesDaLista().get(filme-12).getSinopse());
+			nomeFilme.setText(listasPaginaAtual.get(2).retornaFilmesDaLista().get(filme-8).getNomeFilme());
+			lancamentoFilme.setText(String.valueOf(listasPaginaAtual.get(2).retornaFilmesDaLista().get(filme-8).getAnoLancamento()));
+			diretorFilme.setText(listasPaginaAtual.get(2).retornaFilmesDaLista().get(filme-8).getDiretor());
+			ator1Filme.setText(listasPaginaAtual.get(2).retornaFilmesDaLista().get(filme-8).getAtor1());
+			ator2Filme.setText(listasPaginaAtual.get(2).retornaFilmesDaLista().get(filme-8).getAtor2());
+			ator3Filme.setText(listasPaginaAtual.get(2).retornaFilmesDaLista().get(filme-8).getAtor3());
+			horasFilme.setText(String.valueOf(listasPaginaAtual.get(2).retornaFilmesDaLista().get(filme-8).getHorasFilme()));
+			minutosFilme.setText(String.valueOf(listasPaginaAtual.get(2).retornaFilmesDaLista().get(filme-8).getMinutosFilme()));
+			faixaEtariaFilme.setText(String.valueOf(listasPaginaAtual.get(2).retornaFilmesDaLista().get(filme-8).getFaixaEtaria()));
 		}
+		
 	}
 	
 	public void passaListasDaPaginaInicial(ActionEvent event) {
@@ -598,70 +679,7 @@ public class Controlador implements Initializable {
 	
 
 	
-	public static void adicionaComentario(Usuario Usuario, Filme Filme, String conteudo, ArrayList<Comentario> comentarios) {
-        int id = 2000000 + comentarios.size();
-        Comentario comment = new Comentario(id, Usuario, Filme, conteudo);
-        comentarios.add(comment);
-    }
-    
-    public static void adicionaCritica(Usuario Usuario, Filme Filme, String titulo, String conteudo, float nota, ArrayList<Critica> criticas) {
-        int id = 3000000 + criticas.size();
-        Critica review = new Critica(id, Usuario, titulo, conteudo, Filme, nota);
-        criticas.add(review);
-    }
-    
-    public static void removeComentario(int id, ArrayList<Comentario> comentarios) {
-        int i = buscaComentario(id, comentarios);
-        comentarios.remove(i);
-    }
-    
-    public static void removeCritica(int id, ArrayList<Critica> criticas) {
-        int i = buscaCritica(id, criticas);
-        criticas.remove(i);
-    }
-    
-    public static int buscaComentario(int id, ArrayList<Comentario> comentarios) {
-        for(int i=0;i<comentarios.size();i++) {
-            if(comentarios.get(i).getID() == id){
-                return i;
-            }
-        }
-        return -1;
-    }
-    
-    public static int buscaCritica(int id, ArrayList<Critica> criticas) {
-        for(int i=0;i<criticas.size();i++) {
-            if(criticas.get(i).getID() == id){
-                return i;
-            }
-        }
-        return -1;
-    }
-    
-  //------------------------------PÁGINA DO FILME OU DA LISTA-------------------------------------------------------------------------
-    
-    
-//função para buscar todos os comentários sobre um filme
-    public static ArrayList<Comentario> buscaComentariosFilme(int idFilme, ArrayList<Comentario> comentarios){
-        ArrayList<Comentario> lista = new ArrayList<>();
-        for(int i=0; i<comentarios.size(); i++) {
-            if(comentarios.get(i).getFilme().getIDFilme() == idFilme) {
-                lista.add(comentarios.get(i));
-            }
-        }
-        return lista;
-    }
-    
-    //função para buscar todas as críticas sobre um filme
-    public static ArrayList<Critica> buscaCriticasFilme(int idFilme, ArrayList<Critica> criticas){
-        ArrayList<Critica> lista = new ArrayList<>();
-        for(int i=0; i<criticas.size(); i++) {
-            if(criticas.get(i).getFilme().getIDFilme() == idFilme) {
-                lista.add(criticas.get(i));
-            }
-        }
-        return lista;
-    }
+	
 	//------------------------------ADICIONA FILME OU LISTA-------------------------------------------------------------------------
 	
 	public Image uploadDeImagem(Stage primaryStage) {
@@ -722,7 +740,8 @@ public class Controlador implements Initializable {
 	
 	@FXML
 	private TextField nomeNovoFilme,anoNovoFilme,diretorNovoFilme,ator1NovoFilme,ator2NovoFilme,ator3NovoFilme,horasNovoFilme,minutosNovoFilme,faixaEtariaNovoFilme;
-	
+	@FXML
+	private TextArea sinopseNovoFilme;
 	
 	
 	public String retornaNomeNovoFilme() {
@@ -752,11 +771,13 @@ public class Controlador implements Initializable {
 	public int retornafaixaEtariaNovoFilme() {
 		return Integer.parseInt(faixaEtariaNovoFilme.getText());
 	}
-	
+	public String retornaSinopseNovoFilme() {
+		return sinopseNovoFilme.getText();
+	}
 	
 	
 	public void adicionarFilme(ActionEvent event) {
-		Filme filme = new Filme(Main.retornaArrayListFilmes().size()+1000,retornaNomeNovoFilme(),retornaDiretorNovoFilme(),retornaAnoNovoFilme(),retornaAtor1NovoFilme(),retornaAtor2NovoFilme(),retornaAtor3NovoFilme(),retornaHorasNovoFilme(),retornaMinutosNovoFilme(),retornafaixaEtariaNovoFilme());
+		Filme filme = new Filme(Main.retornaArrayListFilmes().size()+1000,retornaNomeNovoFilme(),retornaDiretorNovoFilme(),retornaAnoNovoFilme(),retornaAtor1NovoFilme(),retornaAtor2NovoFilme(),retornaAtor3NovoFilme(),retornaHorasNovoFilme(),retornaMinutosNovoFilme(),retornafaixaEtariaNovoFilme(),retornaSinopseNovoFilme());
 		ManipulacaoDados.adicionaFilme(filme,Main.retornaArrayListFilmes());
 	}
 	

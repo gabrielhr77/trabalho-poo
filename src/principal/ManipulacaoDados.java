@@ -49,7 +49,69 @@ public class ManipulacaoDados {
     }
 	
 	
-	
+    public static void adicionaComentario(Usuario Usuario, Filme Filme, String conteudo, ArrayList<Comentario> comentarios) {
+        int id = 2000000 + comentarios.size();
+        Comentario comment = new Comentario(id, Usuario, Filme, conteudo);
+        comentarios.add(comment);
+    }
+    
+    public static void adicionaCritica(Usuario Usuario, Filme Filme, String titulo, String conteudo, float nota, ArrayList<Critica> criticas) {
+        int id = 3000000 + criticas.size();
+        Critica review = new Critica(id, Usuario, titulo, conteudo, Filme, nota);
+        criticas.add(review);
+    }
+    
+    public static void removeComentario(int id, ArrayList<Comentario> comentarios) {
+        int i = buscaComentario(id, comentarios);
+        comentarios.remove(i);
+    }
+    
+    public static void removeCritica(int id, ArrayList<Critica> criticas) {
+        int i = buscaCritica(id, criticas);
+        criticas.remove(i);
+    }
+    
+    public static int buscaComentario(int id, ArrayList<Comentario> comentarios) {
+        for(int i=0;i<comentarios.size();i++) {
+            if(comentarios.get(i).getID() == id){
+                return i;
+            }
+        }
+        return -1;
+    }
+    
+    public static int buscaCritica(int id, ArrayList<Critica> criticas) {
+        for(int i=0;i<criticas.size();i++) {
+            if(criticas.get(i).getID() == id){
+                return i;
+            }
+        }
+        return -1;
+    }
+    
+    
+    
+//função para buscar todos os comentários sobre um filme
+    public static ArrayList<Comentario> buscaComentariosFilme(int idFilme, ArrayList<Comentario> comentarios){
+        ArrayList<Comentario> lista = new ArrayList<>();
+        for(int i=0; i<comentarios.size(); i++) {
+            if(comentarios.get(i).getFilme().getIDFilme() == idFilme) {
+                lista.add(comentarios.get(i));
+            }
+        }
+        return lista;
+    }
+    
+    //função para buscar todas as críticas sobre um filme
+    public static ArrayList<Critica> buscaCriticasFilme(int idFilme, ArrayList<Critica> criticas){
+        ArrayList<Critica> lista = new ArrayList<>();
+        for(int i=0; i<criticas.size(); i++) {
+            if(criticas.get(i).getFilme().getIDFilme() == idFilme) {
+                lista.add(criticas.get(i));
+            }
+        }
+        return lista;
+    }
 	
 	
 	//-------------------------------------FILMES, ATORES E DIRETORES----------------------------------------

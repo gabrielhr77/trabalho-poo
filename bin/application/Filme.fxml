@@ -172,18 +172,18 @@
                      </font>
                   </Text>
                   <Line endY="180.0" layoutX="197.0" layoutY="886.0" rotate="90.0" stroke="#dba15c" strokeWidth="3.0" />
-                  <Text layoutX="105.0" layoutY="1268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CRÍTICA" wrappingWidth="108.00001525878906">
+                  <Text layoutX="105.0" layoutY="1270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CRÍTICA  " wrappingWidth="170.66668701171875">
                      <font>
                         <Font name="Corbel" size="26.0" />
                      </font>
                   </Text>
-                  <Line endY="180.0" layoutX="197.0" layoutY="1197.0" rotate="90.0" stroke="#dba15c" strokeWidth="3.0" />
+                  <Line endY="600.0" layoutX="409.0" layoutY="989.0" rotate="90.0" stroke="#dba15c" strokeWidth="3.0" />
                   <Text layoutX="107.0" layoutY="1318.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Escrito por:">
                      <font>
                         <Font name="Corbel Bold" size="15.0" />
                      </font>
                   </Text>
-                  <Text layoutX="187.0" layoutY="1318.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Laura Righi">
+                  <Text fx:id="nomeDoCritico" layoutX="187.0" layoutY="1318.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Laura Righi">
                      <font>
                         <Font name="Corbel Bold" size="15.0" />
                      </font>
@@ -338,6 +338,12 @@
                   <Text fill="WHITE" layoutX="513.0" layoutY="740.0" strokeType="OUTSIDE" strokeWidth="0.0" text="'">
                      <font>
                         <Font name="Corbel Bold" size="22.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="tituloCriticaNova" alignment="CENTER" layoutX="281.0" layoutY="1951.0" promptText="TÍTULO" />
+                  <Text fx:id="tituloCritica" layoutX="274.0" layoutY="1269.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="431.47003173828125">
+                     <font>
+                        <Font name="Corbel Bold" size="18.0" />
                      </font>
                   </Text>
                </children>
