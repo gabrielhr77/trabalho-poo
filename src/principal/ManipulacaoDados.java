@@ -13,6 +13,7 @@ import java.util.ArrayList;
 
 import entidadesFilmes. *;
 import entidadesUsuarios. *;
+import javafx.event.ActionEvent;
 
 public class ManipulacaoDados {
 	
@@ -48,7 +49,9 @@ public class ManipulacaoDados {
         return null;
     }
 	
+    
 	
+    
     public static void adicionaComentario(Usuario Usuario, Filme Filme, String conteudo, ArrayList<Comentario> comentarios) {
         int id = 2000000 + comentarios.size();
         Comentario comment = new Comentario(id, Usuario, Filme, conteudo);
@@ -114,11 +117,14 @@ public class ManipulacaoDados {
     }
 	
 	
-	//-------------------------------------FILMES, ATORES E DIRETORES----------------------------------------
 	
 	//função para adicionar filme
 	public static void adicionaFilme(Filme filme, ArrayList<Filme> arraylistFilmes) {
 		arraylistFilmes.add(filme);
+	}
+	
+	public static void adicionaLista(Lista lista, ArrayList<Lista> arraylistListas) {
+		arraylistListas.add(lista);
 	}
 	
 	//função para remover filme

@@ -9,7 +9,7 @@ public class Usuario extends Pessoa implements Serializable {
     private String senha;
     private boolean flagSuspenso;
     private float pesoClassificacao;
-    private boolean critico;
+    private boolean critico,gerenciador;
     public boolean pediuParaSerCritico;
     private Date dataDeAprovacao;
     public int quantidadeComentarios,quantidadeCriticas,quantidadeListas;
@@ -27,6 +27,7 @@ public class Usuario extends Pessoa implements Serializable {
         this.quantidadeComentarios=0;
         this.quantidadeCriticas=0;
         this.quantidadeListas=0;
+        this.gerenciador=false;
     }
     
     public void aumentaUmaCritica() {
@@ -93,6 +94,10 @@ public class Usuario extends Pessoa implements Serializable {
     public boolean isGerenciador() {
 		return false;
 	}
+    
+    public void setGerenciador() {
+    	this.gerenciador=true;
+    }
 
     public void setCritico(){
         this.critico = true;

@@ -54,33 +54,22 @@
                      </font>
                   </Text>
                   <Line endY="300.0" layoutX="241.0" layoutY="-20.0" rotate="-90.0" stroke="#dba15c" strokeWidth="3.0" AnchorPane.topAnchor="-21.5" />
-                  <TextField fx:id="nomeNovoFilme" layoutX="243.0" layoutY="173.0" prefHeight="32.0" prefWidth="389.0" AnchorPane.topAnchor="173.0" />
+                  <TextField fx:id="nomeUsuarioCriandoLista" layoutX="243.0" layoutY="173.0" prefHeight="32.0" prefWidth="389.0" AnchorPane.topAnchor="173.0" />
                   <Text fill="WHITE" layoutX="96.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seu nome">
                      <font>
                         <Font name="Corbel Bold" size="19.0" />
                      </font>
                   </Text>
-                  <Text fill="WHITE" layoutX="671.0" layoutY="336.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ENVIAR SOLICITAÇÃO" textAlignment="CENTER" wrappingWidth="231.00732421875">
+                  <Text fill="WHITE" layoutX="671.0" layoutY="336.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CRIAR LISTA" textAlignment="CENTER" wrappingWidth="231.00732421875">
                      <font>
                         <Font name="Corbel Bold" size="27.0" />
                      </font>
                   </Text>
-                  <Button fx:id="botaoEnviarSolicitacaoListaNova" layoutX="665.0" layoutY="304.0" mnemonicParsing="false" opacity="0.0" prefHeight="84.0" prefWidth="244.0" />
-                  <TextField fx:id="nomeNovoFilme1" layoutX="243.0" layoutY="225.0" prefHeight="32.0" prefWidth="389.0" />
+                  <Button fx:id="botaoCriarListaNova" layoutX="665.0" layoutY="284.0" mnemonicParsing="false" onAction="#adicionarLista" opacity="0.0" prefHeight="84.0" prefWidth="244.0" />
+                  <TextField fx:id="nomeNovaLista" layoutX="243.0" layoutY="225.0" prefHeight="32.0" prefWidth="389.0" />
                   <Text fill="WHITE" layoutX="96.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome da lista">
                      <font>
                         <Font name="Corbel Bold" size="19.0" />
-                     </font>
-                  </Text>
-                  <Text fill="WHITE" layoutX="724.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantidade de filmes na lista" textAlignment="CENTER" wrappingWidth="130.36279296875">
-                     <font>
-                        <Font name="Corbel Bold" size="19.0" />
-                     </font>
-                  </Text>
-                  <ChoiceBox fx:id="quantidadeDeFilmesNaLista" layoutX="712.0" layoutY="157.0" opacity="0.0" prefHeight="69.0" prefWidth="150.0" />
-                  <Text fx:id="quantidadeDeFilmesTexto" fill="WHITE" layoutX="780.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="6">
-                     <font>
-                        <Font name="Corbel Bold" size="29.0" />
                      </font>
                   </Text>
                   <TextField fx:id="nomeNovoFilme1" layoutX="243.0" layoutY="278.0" prefHeight="32.0" prefWidth="389.0" />

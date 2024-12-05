@@ -52,7 +52,6 @@ public class Main extends Application{
 	private static ArrayList<Comentario> todosOsComentarios = new ArrayList<>();
 	private static ArrayList<Critica> todasAsCriticas = new ArrayList<>();
 	
-	
     @Override
     public void start(Stage primaryStage) {
         try {
@@ -168,8 +167,7 @@ public class Main extends Application{
       }
        
       
-      
-    
+
       public Image uploadDeImagem(Stage primaryStage) {
           FileChooser fileChooser = new FileChooser();
           fileChooser.setTitle("Selecione uma Imagem");
@@ -242,6 +240,8 @@ public class Main extends Application{
     	    verificarOuCriarArquivo(caminhoArquivoUsuarios); 
     	    verificarOuCriarArquivo(caminhoArquivoCriticas);
     	    verificarOuCriarArquivo(caminhoArquivoComentarios);
+    	    
+    	    
     	    
     	    todosOsFilmes = carregaLista(caminhoArquivoFilmes);
     	    todasAsListas = carregaLista(caminhoArquivoListas);

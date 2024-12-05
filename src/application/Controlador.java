@@ -37,9 +37,6 @@ public class Controlador implements Initializable {
 	@FXML
 	private TextField userLogin,senhaLogin,emailRegistro,userRegistro,senhaRegistro;
 	
-	
-	
-	
 	//métodos ACTIONEVENT, ou seja, não precisam ser chamados na "main", eles ocorrem quando há "ação" no app
 	public String escolhaLoginRegistro(ActionEvent event) {
 		if(loginRButton.isSelected()) {
@@ -83,25 +80,23 @@ public class Controlador implements Initializable {
 	}
 	
 	public void enviarParaVerificacao(ActionEvent event) {
-//		Main.mudarPagina(1);
 		if(loginRButton.isSelected()) {	
 			String nome = retornaUserLogin();
 			String senha = retornaSenhaLogin();
-//			boolean existente = ManipulacaoDados.verificaLoginESenha(nome,senha);
 			if(ManipulacaoDados.verificaLoginESenha(nome,senha)) Main.mudarPagina(1);
 			else {
 				alertaErroLogin();
-//				for(int i=0;i<Main.retornaArrayListUsuarios().size();i++) {
-//					System.out.println(Main.retornaArrayListUsuarios().get(i).getNome());
-//				}
 			}
 		}else {
 			String nome = retornaUserRegistro();
 			String senha = retornaSenhaRegistro();
 			boolean existente = ManipulacaoDados.verificaNomeExistente(nome);
 			if(existente) alertaErroRegistro();
-			else registraNovoUsuario(nome,senha);
-			Main.mudarPagina(1);
+			else {
+				registraNovoUsuario(nome,senha);
+				Main.mudarPagina(1);
+			}
+			
 		}
 	}
 	
@@ -132,8 +127,6 @@ public class Controlador implements Initializable {
 	}
 	
 	
-	
-	
 	//------------------------------PAGINA INICIAL-------------------------------------------------------------------------
 
 	@FXML
@@ -162,11 +155,6 @@ public class Controlador implements Initializable {
 	@FXML
 	private ChoiceBox<String> opcoesNavegacaoPagInicial, opcoesNavegacaoPerfil, opcoesNavegacaoAddFilme, opcoesNavegacaoAddLista, opcoesNavegacaoRelatorio;
 	
-	
-	
-	
-	
-	
 	//tem que ser do tipo não primitivo String pois o método para add os itens só pode adicionar uma collection
 	private String[] palavrasOpcoesNavegacaoPagIni = {"PERFIL","ADICIONAR FILME","ADICIONAR LISTA","GERAR RELATÓRIO"};
 	private String[] palavrasOpcoesNavegacaoAddFilme = {"PERFIL","ADICIONAR LISTA","GERAR RELATÓRIO"};
@@ -176,8 +164,6 @@ public class Controlador implements Initializable {
 	
 	private int numeroDaPaginaAtual=1;
 	private ArrayList<Lista> listasPaginaAtual = Main.retorna4Listas(numeroDaPaginaAtual);
-	
-	
 	
 	public void clicouNoBotaoIrParaOFilme(ActionEvent event) {
 		 Button botaoClicado = (Button) event.getSource();
@@ -235,7 +221,6 @@ public class Controlador implements Initializable {
 	                System.err.println("Botão desconhecido: " + botaoId);
 	        }
 	}
-	
 	
 	
 	@FXML
@@ -314,7 +299,7 @@ public class Controlador implements Initializable {
 			horasFilme.setText(String.valueOf(listasPaginaAtual.get(2).retornaFilmesDaLista().get(filme-8).getHorasFilme()));
 			minutosFilme.setText(String.valueOf(listasPaginaAtual.get(2).retornaFilmesDaLista().get(filme-8).getMinutosFilme()));
 			faixaEtariaFilme.setText(String.valueOf(listasPaginaAtual.get(2).retornaFilmesDaLista().get(filme-8).getFaixaEtaria()));
-		}else if(filme>=12) {
+		}else {
 			for(int i=0;i<Main.retornaArrayListCriticas().size();i++) {
 				if(Main.retornaArrayListCriticas().get(i).getFilme().equals(listasPaginaAtual.get(3).retornaFilmesDaLista().get(filme-12))){
 					Critica critica = Main.retornaArrayListCriticas().get(i);
@@ -328,15 +313,15 @@ public class Controlador implements Initializable {
 				}
 			}
 			sinopseFilme.setText(listasPaginaAtual.get(3).retornaFilmesDaLista().get(filme-12).getSinopse());
-			nomeFilme.setText(listasPaginaAtual.get(2).retornaFilmesDaLista().get(filme-8).getNomeFilme());
+			nomeFilme.setText(listasPaginaAtual.get(3).retornaFilmesDaLista().get(filme-12).getNomeFilme());
 			lancamentoFilme.setText(String.valueOf(listasPaginaAtual.get(2).retornaFilmesDaLista().get(filme-8).getAnoLancamento()));
-			diretorFilme.setText(listasPaginaAtual.get(2).retornaFilmesDaLista().get(filme-8).getDiretor());
-			ator1Filme.setText(listasPaginaAtual.get(2).retornaFilmesDaLista().get(filme-8).getAtor1());
-			ator2Filme.setText(listasPaginaAtual.get(2).retornaFilmesDaLista().get(filme-8).getAtor2());
-			ator3Filme.setText(listasPaginaAtual.get(2).retornaFilmesDaLista().get(filme-8).getAtor3());
-			horasFilme.setText(String.valueOf(listasPaginaAtual.get(2).retornaFilmesDaLista().get(filme-8).getHorasFilme()));
-			minutosFilme.setText(String.valueOf(listasPaginaAtual.get(2).retornaFilmesDaLista().get(filme-8).getMinutosFilme()));
-			faixaEtariaFilme.setText(String.valueOf(listasPaginaAtual.get(2).retornaFilmesDaLista().get(filme-8).getFaixaEtaria()));
+			diretorFilme.setText(listasPaginaAtual.get(3).retornaFilmesDaLista().get(filme-12).getDiretor());
+			ator1Filme.setText(listasPaginaAtual.get(3).retornaFilmesDaLista().get(filme-12).getAtor1());
+			ator2Filme.setText(listasPaginaAtual.get(3).retornaFilmesDaLista().get(filme-12).getAtor2());
+			ator3Filme.setText(listasPaginaAtual.get(3).retornaFilmesDaLista().get(filme-12).getAtor3());
+			horasFilme.setText(String.valueOf(listasPaginaAtual.get(3).retornaFilmesDaLista().get(filme-12).getHorasFilme()));
+			minutosFilme.setText(String.valueOf(listasPaginaAtual.get(3).retornaFilmesDaLista().get(filme-12).getMinutosFilme()));
+			faixaEtariaFilme.setText(String.valueOf(listasPaginaAtual.get(3).retornaFilmesDaLista().get(filme-12).getFaixaEtaria()));
 		}
 		
 	}
@@ -369,7 +354,6 @@ public class Controlador implements Initializable {
 		atualizaPaginaPrincipal(listasPaginaAtual);
 	}
 	
-//	public void entraNaLista
 	
 	public void atualizaPaginaPrincipal(ArrayList<Lista> arrayDeListas) {
 		nomeLista1.setText(listasPaginaAtual.get(0).getNome());
@@ -396,8 +380,6 @@ public class Controlador implements Initializable {
 		nomeL4Filme2.setText(listasPaginaAtual.get(3).retornaFilmesDaLista().get(1).getNomeFilme());
 		nomeL4Filme3.setText(listasPaginaAtual.get(3).retornaFilmesDaLista().get(2).getNomeFilme());
 		nomeL4Filme4.setText(listasPaginaAtual.get(3).retornaFilmesDaLista().get(3).getNomeFilme());
-		
-		
 	}
 	
 	public void selecaoNavegacaoPerfil(ActionEvent event) {
@@ -503,28 +485,6 @@ public class Controlador implements Initializable {
 	private ArrayList<Image> imagens = new ArrayList<>();
 	private int indiceCarrossel = 0;
 	
-	//precisa ter esse nome pois é uma função da interface INITIALIZABLE, a qual nos obriga a ter essa função "initialize"
-	//PQ USAR INITIALIZABLE? pq ela permite que, quando o FXML é executado, automaticamente o que a gente quiser de métodos
-	//será iniciado em primeiro lugar, evitando os erros que eu tava enfrentando para iniciar o carrossel
-//	public void initialize(URL location, ResourceBundle resources) {
-//        iniciaCarrossel(); // Inicia o carrossel ao carregar a interface
-//        atualizaCarrossel(); // Exibe a primeira imagem e texto do carrossel
-//    }
-//	
-	
-	
-//	public void initialize(URL location, ResourceBundle resources) {
-//	    if (capaFilmeCarrossel != null) {
-//	        iniciaCarrossel(); // Inicia o carrossel ao carregar a interface
-//	        atualizaCarrossel(); // Exibe a primeira imagem e texto do carrossel
-//	        opcoesNavegacaoPagInicial.getItems().addAll(palavrasOpcoesNavegacaoPagIni);
-//	        opcoesNavegacaoPagInicial.setOnAction(this::selecaoNavegacaoPagIni);
-//	        opcoesNavegacaoAddFilme.getItems().addAll(palavrasOpcoesNavegacaoAddFilme);
-//	        opcoesNavegacaoAddFilme.setOnAction(this::selecaoNavegacaoAddFilme);
-//	        opcoesNavegacaoAddLista.getItems().addAll(palavrasOpcoesNavegacaoAddLista);
-//	        opcoesNavegacaoAddLista.setOnAction(this::selecaoNavegacaoAddLista);
-//	    }
-//	}
 	public void initialize(URL location, ResourceBundle resources) {
 	    if (capaFilmeCarrossel != null) {
 	        iniciaCarrossel(); // Inicia o carrossel ao carregar a interface
@@ -739,7 +699,7 @@ public class Controlador implements Initializable {
 	}
 	
 	@FXML
-	private TextField nomeNovoFilme,anoNovoFilme,diretorNovoFilme,ator1NovoFilme,ator2NovoFilme,ator3NovoFilme,horasNovoFilme,minutosNovoFilme,faixaEtariaNovoFilme;
+	private TextField nomeNovaLista,nomeUsuarioCriandoLista,nomeNovoFilme,anoNovoFilme,diretorNovoFilme,ator1NovoFilme,ator2NovoFilme,ator3NovoFilme,horasNovoFilme,minutosNovoFilme,faixaEtariaNovoFilme;
 	@FXML
 	private TextArea sinopseNovoFilme;
 	
@@ -781,7 +741,10 @@ public class Controlador implements Initializable {
 		ManipulacaoDados.adicionaFilme(filme,Main.retornaArrayListFilmes());
 	}
 	
-	
+	public void adicionarLista(ActionEvent event) {
+		Lista lista = new Lista(Main.retornaArrayListListas().size()+1000000,ManipulacaoDados.buscaUsuarioPorNome(nomeUsuarioCriandoLista.getText()),nomeNovaLista.getText());
+		ManipulacaoDados.adicionaLista(lista,Main.retornaArrayListListas());
+	}
 	
 	
 	//------------------------------RELATÓRIO-------------------------------------------------------------------------
@@ -801,6 +764,10 @@ public class Controlador implements Initializable {
 			for(int i=0;i<listaDeFilmes.size();i++) {
 				Text texto = (Text) vbox.getChildren().get(i);//força o tipo Node, que é o tipo dos filhos do vbox, para Text para que eu possa usat setText()
 				texto.setText(listaDeFilmes.get(i).getNomeFilme());
+				for(int j=listaDeFilmes.size();j<vbox.getChildren().size();j++) {
+					Text texto1 = (Text) vbox.getChildren().get(j);
+					texto1.setText("");
+				}
 			}
 		}
 	}
@@ -809,6 +776,10 @@ public class Controlador implements Initializable {
 			for(int i=0;i<listaDeListas.size();i++) {
 				Text texto = (Text) vbox.getChildren().get(i);
 				texto.setText(listaDeListas.get(i).getNome());
+				for(int j=listaDeListas.size();j<vbox.getChildren().size();j++) {
+					Text texto1 = (Text) vbox.getChildren().get(j);
+					texto1.setText("");
+				}
 			}
 		}
 	}
@@ -944,11 +915,18 @@ public class Controlador implements Initializable {
 	}
 	
 	public void liberarUsuario(ActionEvent event) {
+		if (ManipulacaoDados.buscaUsuarioPorNome(nomeUsuario.getText()) == null) {
+	        System.out.println("Usuário não encontrado: " + nomeUsuario);
+	        return; //evita null
+		}    
 		ManipulacaoDados.buscaUsuarioPorNome(nomeUsuario.getText()).suspender(false);
 	}
 	
+	@FXML
+	private Text nomeDoUsuario;
 	
-	
-	
+	public void pedirPraSerCritico(ActionEvent event) {
+		ManipulacaoDados.buscaUsuarioPorNome(nomeDoUsuario.getText()).pediuParaSerCritico();
+	}
 	
 }

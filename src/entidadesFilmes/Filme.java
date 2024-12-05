@@ -15,20 +15,7 @@ public class Filme implements Serializable {
 	public Filme() {
 	}
 
-	/*
-	public Filme(int _IDFilme, String nomeFilme, Diretor diretor, int anoLancamento, Ator ator1, Ator ator2, Ator ator3) {
-		this._IDFilme=_IDFilme;
-		this.nomeFilme=nomeFilme;
-		this.diretor=diretor;
-		this.anoLancamento=anoLancamento;
-		this.ator1=ator1;
-		this.ator2=ator2;
-		this.ator3=ator3;
-		this.numeroDeEstrelas=0;
-		int numeroAvaliacoes=0;
-		float mediaNumeroDeEstrelas= numeroDeEstrelas/(float)numeroAvaliacoes;
-	}
-	*/
+	
 	public Filme(int _IDFilme, String nomeFilme, String diretor, int anoLancamento, String ator1, String ator2, String ator3, String horas, String minutos, int faixaEtaria, String sinopse) {
 		this._IDFilme=_IDFilme;
 		this.nomeFilme=nomeFilme;

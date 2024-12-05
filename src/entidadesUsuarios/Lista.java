@@ -2,9 +2,11 @@ package entidadesUsuarios;
 
 
 import entidadesFilmes.Filme;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Lista extends Publicacao {
+public class Lista extends Publicacao implements Serializable {
 	private String titulo;
 	private ArrayList<Filme> Filmes;
 		
@@ -17,6 +19,10 @@ public class Lista extends Publicacao {
 	
 	public ArrayList<Filme> retornaFilmesDaLista(){
 		return Filmes;
+	}
+	
+	public void setFilmesDaLista(ArrayList<Filme> lista) {
+		this.Filmes=lista;
 	}
 	
 	public void setNome(String nome) {

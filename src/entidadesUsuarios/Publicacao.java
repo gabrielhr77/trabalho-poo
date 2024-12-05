@@ -1,8 +1,8 @@
 package entidadesUsuarios;
 
+import java.io.Serializable;
 
-
-public class Publicacao {
+public class Publicacao implements Serializable {
 	private int id;
 	private Usuario Usuario;
 	
